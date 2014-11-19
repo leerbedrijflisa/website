@@ -121,22 +121,6 @@
 	margin-top: 0px;
 }
 
-.artikelen h2
-{
-	margin: 0px;
-	font-size: 15px;
-	font-weight: normal;
-	position: absolute;
-	top: 210px;
-	z-index: 2;
-	color: white;
-	background-color: rgba(0,0,0,0.5);
-	padding-left: 5px;
-	padding-right: 5px;
-	width: 340px;
-	height: 20px;
-}
-
 .artikelen a
 {
 	padding: 0px;
@@ -165,6 +149,35 @@
 	margin-top: 0px;
 	padding: 0px;
 	float: left;
+}
+
+.artikelen p
+{
+	color: white;
+	width: 340px;
+	height: 210px;
+	background-color: rgba(0,0,0,0.5);
+	margin-top: 20px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.artikelen h2
+{
+	margin: 0px;
+	font-size: 15px;
+	font-weight: normal;
+	position: absolute;
+	top: 210px;
+	z-index: 3;
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 340px;
+	height: 20px;
 }
 
 .artikelen
