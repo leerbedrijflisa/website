@@ -7,14 +7,15 @@ $( "#js-hover1,#js-hover2,#js-hover3,#js-hover4,#js-hover5,#js-hover6,#js-hover7
 
 function hover_in()
 {
-	$( ".artikelen h2" ).css( "top", "0px" );
-	$( ".artikelen p" ).show();
+	$(this).find('h2').css( "top", "0px" );
+	$(this).find('p').show();
 	//$( ".artikelen p" ).SlideDown();
 }
 
 function hover_out()
 {
-	$( ".artikelen p" ).hide();
-	$( ".artikelen h2" ).css( "top", "210px" );
+	$(this).find('p').hide();
+	$(this).find('h2').css( "top", "210px" );
 	//$( ".artikelen p" ).SlideUp();
 }
+
