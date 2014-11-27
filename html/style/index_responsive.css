@@ -49,8 +49,8 @@
 .content li
 {
 	display: inline;
-	width: 30%;
-	height: 200px;
+	width: 96%;
+	height: auto;
 	background-color: #DEDEDE;
 	margin-left: 2%;
 	margin-right: 0px;
@@ -69,10 +69,11 @@
 
 .content img
 {
-	width: 100%;
+	width: 100px;
 	height: auto;
 	padding: 0px;
 	margin: 0px;
+	float: left;
 }
 
 .content p
@@ -83,17 +84,19 @@
 	padding-top: 5px;
 	margin: 0px;
 	font-size: 10px;
+	float: left;
 }
 
 .content h2
 {
 	margin: 0px;
-	font-size: 15px;
+	font-size: 13px;
 	padding-top: 5px;
 	padding-left: 5px;
 	padding-right: 5px;
 	padding-bottom: 0px;
 	font-weight: normal;
+	float: left;
 }
 
 .content div

@@ -13,9 +13,10 @@ body
 	width: 40%;
 	padding: 0px;
 	margin: 0px;
-	height: 70%;
+	height: auto;
 	z-index: 50;
 	top: 0px;
+	display: none;
 }
 
 .menu ul
@@ -69,14 +70,71 @@ body
 	height: 35px;
 }
 
+#responsive-menu
+{
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+	width: 30px;
+	height: 30px;
+	position: fixed;
+	float: left;
+	z-index: 20;
+	background-color: #DC0000;
+	border-bottom-right-radius: 6px;
+}
+
+#responsive-menu:hover
+{
+	cursor: pointer;
+}
+
+#responsive-menu ul
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+#responsive-menu li
+{
+	padding: 0px;
+	margin: 0px;
+	display: inline;
+}
+
+#responsive-menu a
+{
+	padding: 0px;
+	margin: 0px;
+	width: 30px;
+	height: 30px;
+}
+
+#responsive-menu span
+{
+	content: '';
+    width: 20px;
+    height: 4px;
+    background-color: white;
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 1px;
+	margin-top: 1px;
+    border-radius: 5px;
+}
+
+#responsive-menu span:first-child
+{
+	margin-top: 7px;
+}
+
 #responsive-close a
 {
 	background-color: #ADADAD;
 	display: inline;
 	color: black;
 }
-
-
 
 #responsive-close a:hover
 {

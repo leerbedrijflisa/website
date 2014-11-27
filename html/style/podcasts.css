@@ -135,7 +135,7 @@
 
 .podcast a:hover
 {
-	cursor: hand;
+	cursor: pointer;
 }
 
 .podcast img
