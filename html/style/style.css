@@ -96,19 +96,20 @@ body
 {
 	width: 100%;
 	color: white;
-	position: relative;
-	padding-bottom: 21%;
-	background-image: url("../image/footer.png");
-	background-size: 100%;
-	background-repeat: no-repeat;
+	background-image: none;
+	padding: 0px;
 }
 
-.footer div
+#footerdiv
 {
-	position: absolute;
+	float: left;
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
+	background-image: url("../image/bottom.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding-bottom: 80px;
 }
 
 .footer p
