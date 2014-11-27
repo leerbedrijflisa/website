@@ -9,7 +9,41 @@
 	font-weight: normal;
 }
 
-.content a,
+.articleContent
+{
+	height: 0px;
+	margin-top: 0px;
+	position: absolute;
+	padding-left: 105px;
+	top: 0px;
+}
+
+.artikelen ul
+{
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+.artikelen img
+{
+	width: 100px;
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+	left: 0px;
+	top: 0px;
+	position: static;
+}
+
+.artikelen div
+{
+	max-width: 1130px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+}
+
 .artikelen a
 {
 	padding: 0px;
@@ -17,22 +51,80 @@
 	cursor: pointer;
 	color: black;
 	text-decoration: none;
+	position: relative;
+	width: 96%;
+	height: auto;
 }
 
-.content a:hover,
 .artikelen a:hover
 {
 	cursor: pointer;
 }
 
+.artikelen li
+{
+	display: inline;
+	width: 96%;
+	height: auto;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	padding: 0px;
+	float: left;
+	background-color: #DEDEDE;
+}
+
+.artikelen p
+{
+	color: black;
+	width: auto;
+	height: 0px;
+	background-color: rgba(0,0,0,0);
+	margin-top: 0px ;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	padding-left: 2%;
+	padding-right: 2%;
+	float: left;
+}
+
+.artikelen h2
+{
+	margin: 0px;
+	font-size: 15px;
+	font-weight: normal;
+	z-index: 1;
+	color: black;
+	background-color: rgba(0,0,0,0);
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	width: auto;
+	height: auto;
+	float: left;
+}
+
+.artikelen
+{
+	width: 100%;
+	min-height: 0px;
+	margin: 0px;
+	background-color: white;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
 .articleContent
 {
-	height: 0px;
+	height: auto;
 	margin-top: 0px;
 }
 
-.content h1,
-.artikelen h1
+.content h1
 {
 	padding-top: 10px;
 	margin-left: 2%;
@@ -43,8 +135,7 @@
 	font-size: 20px;
 }
 
-.content li,
-.artikelen li
+.content li
 {
 	display: inline;
 	width: 96%;
@@ -58,16 +149,14 @@
 	float: left;
 }
 
-.content ul,
-.artikelen ul
+.content ul
 {
 	margin: 0px;
 	padding: 0px;
 	overflow: hidden;
 }
 
-.content img,
-.artikelen img
+.content img
 {
 	width: 100px;
 	height: auto;
@@ -76,8 +165,7 @@
 	float: left;
 }
 
-.content p,
-.artikelen p
+.content p
 {
 	padding-left: 5px;
 	padding-right: 5px;
@@ -88,8 +176,7 @@
 	float: left;
 }
 
-.content h2,
-.artikelen h2
+.content h2
 {
 	margin: 0px;
 	font-size: 13px;
@@ -101,20 +188,21 @@
 	float: left;
 }
 
-.content div,
-.artikelen div
+.content div
 {
 	max-width: 1130px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.content,
-.artikelen
+.content
 {
 	width: 100%;
-	min-height: 200px;
-	padding: 0px;
+	min-height: 0px;
 	margin: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
 	background-color: white;
 }
