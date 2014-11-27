@@ -75,6 +75,11 @@ body
 	display: none;
 }
 
+#responsive-menu
+{
+	display: none;
+}
+
 .banner
 {
 	margin-top: 65px;
