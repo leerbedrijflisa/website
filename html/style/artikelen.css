@@ -34,7 +34,7 @@
 
 .content a:hover
 {
-	cursor: hand;
+	cursor: pointer;
 }
 
 .content ul
@@ -134,7 +134,7 @@
 
 .artikelen a:hover
 {
-	cursor: hand;
+	cursor: pointer;
 }
 
 .artikelen li
@@ -189,7 +189,8 @@
 	padding-left: 0px;
 }
 
-.articleContent{
+.articleContent
+{
 	height: 20px;
 	margin-top: 210px;
 }
