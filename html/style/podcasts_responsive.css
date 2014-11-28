@@ -1,0 +1,189 @@
+.banner h1
+{
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	position: absolute;
+	width: 100%;
+	margin-top: 10%;
+	font-weight: normal;
+}
+
+.content a
+{
+	color: black;
+	text-decoration: none;
+	width: 100%;
+	height: auto;
+}
+
+.content h1
+{
+	padding-top: 10px;
+	margin-left: 2%;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	font-weight: normal;
+	font-size: 20px;
+}
+
+.content li
+{
+	display: inline;
+	width: 96%;
+	height: auto;
+	background-color: #DEDEDE;
+	margin-left: 2%;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 0px;
+	float: left;
+}
+
+.content ul
+{
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+.content img
+{
+	width: 100px;
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+	float: left;
+}
+
+.content p
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin: 0px;
+	font-size: 10px;
+	float: left;
+}
+
+.content h2
+{
+	margin: 0px;
+	font-size: 13px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	float: left;
+}
+
+.content div
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content
+{
+	width: 100%;
+	min-height: 0px;
+	margin: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 10px;
+	background-color: white;
+}
+
+.podcast
+{
+	width: 100%;
+	min-height: 0px;
+	margin: 0px;
+	background-color: white;
+	padding: 0px;
+}
+
+#grey-podcast
+{
+	background-color: #DEDEDE;
+}
+
+.podcast ul
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.podcast li
+{
+	padding: 0px;
+	margin: 0px;
+	display: inline;
+}
+
+.podcast a
+{
+	padding: 0px;
+	margin: 0px;
+	cursor: pointer;
+	color: black;
+	text-decoration: none;
+}
+
+.podcast a:hover
+{
+	cursor: pointer;
+}
+
+.podcast img
+{
+	width: 100px;
+	height: auto;
+	padding-left: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	margin: 0px;
+	float: left;
+}
+
+.podcast h1
+{
+	font-size: 15px;
+	padding-top: 5px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+}
+
+.podcast h2
+{
+	font-size: 10px;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	font-weight: normal;
+}
+
+.podcast p
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 20px;
+	padding-top: 0px;
+	margin: 0px;
+	font-size: 10px;
+}
