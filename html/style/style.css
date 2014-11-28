@@ -59,6 +59,16 @@ body
 	background-color: #BE0000;
 }
 
+#logobutton a:hover
+{
+	background-color: #DC0000;
+}
+
+#logobutton a:active
+{
+	background-color: #DC0000;
+}
+
 .menu span
 {
 	position: relative;
