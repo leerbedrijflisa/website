@@ -16,6 +16,7 @@ body
 	height: 65px;
 	z-index: 50;
 	top: 0px;
+	display: inline;
 }
 
 .menu ul
