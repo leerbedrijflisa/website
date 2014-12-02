@@ -94,6 +94,9 @@ body
 .banner
 {
 	margin-top: 65px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
 	width: 100%;
 	color: white;
 	position: relative;
