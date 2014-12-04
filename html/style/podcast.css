@@ -74,7 +74,7 @@
 
 .podcast span
 {
-	max-width: 61%;
+	max-width: 100%;
 	background-color: #FAC8D0;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -84,24 +84,80 @@
 	margin-left: 5px;
 	margin-right: 0px;
 	margin-top: 0px;
-	margin-bottom: 0px;
+	margin-bottom: 15px;
 	display: block;
 }
 
 .podcast p
 {
-	width: 62%;
-	min-height: 150px;
+	width: 100%;
 	display: block;
 	margin-left: 5px;
+	margin-right: 4px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.podcast ul
+{
+	width: 35%;
+	min-height: 150px;
+	float: left;
+	display: block;
+	margin-left: 40px;
 	margin-right: 0px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	padding-left: 0px;
 	padding-right: 0px;
-	padding-top: 20px;
+	padding-top: 0px;
 	padding-bottom: 20px;
+}
+
+.podcast li
+{
+	width: 100%;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding: 0px;
+	display: inline-block;
+}
+
+#morespace
+{
+	margin-top: 20px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#leftcontainer
+{
+	width: 58%;
 	display: block;
+	margin: 0px;
+	padding-bottom: 15px;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-top: 0px;
+	float: left;
+}
+
+#button_container
+{
+	width: 100%;
+	background-color: #DEDEDE;
+	padding: 0px;
+	border: 0px solid black;
+	margin: 0px;
+	display: block;
+	overflow: hidden;
 }
 
 .reply
@@ -139,7 +195,7 @@
 	margin-bottom: 10px;
 	margin-top: 10px;
 	background-color: #DEDEDE;
-	max-width: 700px;
+	max-width: 58%;
 }
 
 .reply h3
