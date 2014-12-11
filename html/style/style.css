@@ -81,12 +81,12 @@ body
 	padding-top: 9px;
 }
 
-#responsive-close a
+.responsive-menu
 {
 	display: none;
-}
+}	
 
-#responsive-menu
+#responsive-button
 {
 	display: none;
 }
