@@ -1,3 +1,5 @@
+//Mobile Menu.
+
 $(document).ready(javascript_enabled);
 $(window).resize(javascript_enabled);
 $( "#responsive-close" ).click(hide_menu);
@@ -26,3 +28,7 @@ function javascript_enabled()
 		$(".menu").css( "display", "inline" );
 	}
 }
+
+//-------------------------------------------------------------------------
+//Page Jump.
+
