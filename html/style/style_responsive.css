@@ -313,3 +313,12 @@ body
 	padding-bottom: 0px;
 	padding-top: 0px;
 }
+
+.jump-button
+{
+	position: relative;
+	color: black;
+	padding-bottom: 0px;
+	top: -65px;
+	visibility: hidden;
+}
