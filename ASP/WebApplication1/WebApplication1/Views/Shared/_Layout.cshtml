@@ -1,0 +1,70 @@
+﻿<!Doctype html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("../Content/CSS/style.css")">
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("../Content/CSS/index.css")">
+        <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("../Content/CSS/style_responsive.css")">
+        <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("../Content/CSS/index_responsive.css")">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/icon" href="@Url.Content("../Content/Images/lisalogo_ico.png")" />
+    </head>
+    <body>
+        <div class="menu">
+            <ul>
+                <li id="logobutton"><a href="index.html"><img src="@Url.Content("../Content/Images/lisa-logo.png")"></li></a>
+                <li id="menubutton"><a href="index.html"><span>home</span></a></li>
+                <li id="menubutton"><a href="#artikelen-button"><span>Artikelen</span></a></li>
+                <li id="menubutton"><a href="#podcasts-button"><span>Podcasts</span></a></li>
+                <li id="menubutton"><a href="#projecten-button"><span>Projecten</span></a></li>
+                <li id="menubutton"><a href="#footer-button"><span>Contact</span></a></li>
+            </ul>
+        </div>
+
+        <div class="responsive-menu">
+            <ul>
+                <li id="logobutton"><a href="index.html"><img src="@Url.Content("../Content/Images/lisa-logo.png")"></li></a>
+                <li id="menubutton"><a href="#top-position"><span>home</span></a></li>
+                <li id="menubutton"><a href="#artikelen-button"><span>Artikelen</span></a></li>
+                <li id="menubutton"><a href="#podcasts-button"><span>Podcasts</span></a></li>
+                <li id="menubutton"><a href="#projecten-button"><span>Projecten</span></a></li>
+                <li id="menubutton"><a href="#footer-button"><span>Contact</span></a></li>
+                <li id="menubutton"><a id="responsive-close"><span>Sluiten</span></a></li>
+            </ul>
+        </div>
+
+        <div id="responsive-button">
+            <ul>
+                <li><a><span></span><span></span><span></span></a></li>
+            </ul>
+        </div>
+
+        <div class="banner">
+            <h1>Welkom bij Lisa</h1>
+            <div>
+                <h2>Titel</h2>
+                <p>content</p>
+            </div>
+        </div>
+
+        @RenderBody()
+
+        <div class="footer">
+            <span class="jump-button" id="footer-button">Contact</span>
+            <div id="footerdiv">
+                <h2 name="contact">Contact</h2>
+                <div id="content-footer">
+                    <p>E-mail: lisa@davinci.nl</p>
+                    <p>Telefoon:</p>
+                    <p>Adres:</p>
+                    <p>Blablabla:</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="@Url.Content("../Scripts/jquery1.11.1-min.js")"></script>
+        <script src="@Url.Content("../Scripts/script.js")"></script>
+
+    </body>
+</html>
