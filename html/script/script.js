@@ -2,7 +2,7 @@
 
 $(document).ready(javascript_enabled);
 $(window).resize(javascript_enabled);
-$( "#responsive-close" ).click(hide_menu);
+$( "#menubutton a" ).click(hide_menu);
 $( "#responsive-button" ).click(show_menu);
 
 function show_menu()
