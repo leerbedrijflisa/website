@@ -171,7 +171,8 @@ body
 {
 	position: relative;
 	color: black;
-	padding-bottom: 0px;
-	top: -65px;
+	bottom: 65px;
 	visibility: hidden;
+	float: left;
+	width: 0px;
 }
