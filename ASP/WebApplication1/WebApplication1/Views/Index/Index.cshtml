@@ -1,11 +1,48 @@
-﻿<div class="content">
+﻿<div class="menu">
+    <ul>
+        <li id="logobutton"><a href="index.html"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
+        <li id="menubutton"><a href="index.html"><span>home</span></a></li>
+        <li id="menubutton"><a href="#artikelen-button"><span>Artikelen</span></a></li>
+        <li id="menubutton"><a href="#podcasts-button"><span>Podcasts</span></a></li>
+        <li id="menubutton"><a href="#projecten-button"><span>Projecten</span></a></li>
+        <li id="menubutton"><a href="#footer-button"><span>Contact</span></a></li>
+    </ul>
+</div>
+
+<div class="responsive-menu">
+    <ul>
+        <li id="logobutton"><a href="index.html"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
+        <li id="menubutton"><a href="#top-position"><span>home</span></a></li>
+        <li id="menubutton"><a href="#artikelen-button"><span>Artikelen</span></a></li>
+        <li id="menubutton"><a href="#podcasts-button"><span>Podcasts</span></a></li>
+        <li id="menubutton"><a href="#projecten-button"><span>Projecten</span></a></li>
+        <li id="menubutton"><a href="#footer-button"><span>Contact</span></a></li>
+        <li id="menubutton"><a id="responsive-close"><span>Sluiten</span></a></li>
+    </ul>
+</div>
+
+<div id="responsive-button">
+    <ul>
+        <li><a><span></span><span></span><span></span></a></li>
+    </ul>
+</div>
+
+<div class="banner">
+    <h1>Welkom bij Lisa</h1>
+    <div>
+        <h2>Titel</h2>
+        <p>content</p>
+    </div>
+</div>
+
+<div class="content">
     <div>
         <span class="jump-button" id="artikelen-button">Artikelen</span>
         <h1>Artikelen</h1>
         <ul>
             <li>
                 <a>
-                    <img src="@Url.Content("../Content/Images/Penguin.png")">
+                    <img src="@Url.Content("~/Content/Images/Penguin.png")">
                     <h2>titel</h2>
                     <p>
                         tekst
@@ -15,7 +52,7 @@
 
             <li>
                 <a>
-                    <img src="@Url.Content("../Content/Images/Raven.png")">
+                    <img src="@Url.Content("~/Content/Images/Raven.png")">
                     <h2>titel</h2>
                     <p>
                         tekst
@@ -25,14 +62,14 @@
 
             <li>
                 <a>
-                    <img src="@Url.Content("../Content/Images/Kiwi.png")">
+                    <img src="@Url.Content("~/Content/Images/Kiwi.png")">
                     <h2>titel</h2>
                     <p>
                         tekst
                     </p>
                 </a>
             </li>
-            <li id="link"><a href="artikelen.html">Meer artikelen...</a></li>
+            <li id="link"><a href="@Url.Action("Index", "Articles")">Meer artikelen</a></li>
         </ul>
     </div>
 </div>
@@ -44,7 +81,7 @@
         <ul>
             <li>
                 <a>
-                    <img src="@Url.Content("../Content/Images/Penguin.png")">
+                    <img src="@Url.Content("~/Content/Images/Penguin.png")">
                     <h2>titel</h2>
                     <p>
                         tekst
@@ -54,7 +91,7 @@
 
             <li>
                 <a>
-                    <img src="@Url.Content("../Content/Images/Raven.png")">
+                    <img src="@Url.Content("~/Content/Images/Raven.png")">
                     <h2>titel</h2>
                     <p>
                         tekst
@@ -64,7 +101,7 @@
 
             <li>
                 <a>
-                    <img src="@Url.Content("../Content/Images/Kiwi.png")">
+                    <img src="@Url.Content("~/Content/Images/Kiwi.png")">
                     <h2>titel</h2>
                     <p>
                         tekst
@@ -83,7 +120,7 @@
         <ul>
             <li>
                 <a>
-                    <img src="@Url.Content("../Content/Images/Penguin.png")">
+                    <img src="@Url.Content("~/Content/Images/Penguin.png")">
                     <h2>titel</h2>
                     <p>
                         tekst
@@ -93,7 +130,7 @@
 
             <li>
                 <a>
-                    <img src="@Url.Content("../Content/Images/Raven.png")">
+                    <img src="@Url.Content("~/Content/Images/Raven.png")">
                     <h2>titel</h2>
                     <p>
                         tekst
@@ -103,7 +140,7 @@
 
             <li>
                 <a>
-                    <img src="@Url.Content("../Content/Images/Kiwi.png")">
+                    <img src="@Url.Content("~/Content/Images/Kiwi.png")">
                     <h2>titel</h2>
                     <p>
                         tekst

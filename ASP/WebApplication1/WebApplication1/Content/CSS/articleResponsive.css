@@ -1,0 +1,52 @@
+﻿.banner h1
+{
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	position: absolute;
+	width: 100%;
+	margin-top: 9%;
+	font-weight: normal;
+}
+
+.artikel
+{
+	min-height: 50px;
+	max-width: 1130px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+
+.artikel h2
+{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.artikel p
+{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.artikel img
+{
+	width: 300px;
+	height: auto;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	display: block;
+}

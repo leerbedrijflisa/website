@@ -4,13 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WebApplication1.Controllers
+namespace Lisa.Website.Controllers
 {
     public class IndexController : Controller
     {
         // GET: Index
         public ActionResult Index()
         {
+            ViewBag.css = "~/Content/CSS/index.css";
+            ViewBag.cssResponsive = "~/Content/CSS/indexResponsive.css";
             return View();
         }
     }
