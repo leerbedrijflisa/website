@@ -69,16 +69,19 @@
     </div>
 </div>
 
-<div class="artikelen">
+<div class="articlesContent">
     <div>
         <ul>
+            @int i = 0;
+
             @foreach (var article in Model)
             {
+                
                 string url = string.Format("~/Content/Images/{0}", article.Image);
-                <li>
-                    <a href="@Url.Action("Details", new { id = article.Id })" id="js-hover1">
+                <li id="articleButton">
+                    <a href="@Url.Action("Details", new { id = article.Id })">
                         <img src="@Url.Content(url)">
-                        <div class="articlecontent">
+                        <div class="articleInside">
                             <h2>@article.Title</h2>
                             <p>@article.Contents</p>
                         </div>

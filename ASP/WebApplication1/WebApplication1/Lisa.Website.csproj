@@ -89,7 +89,7 @@
     <Content Include="Content\CSS\style.css" />
     <Content Include="Content\CSS\styleResponsive.css" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\article.js" />
+    <Content Include="Scripts\Articles.js" />
     <Content Include="Scripts\jquery1.11.1-min.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Web.config" />

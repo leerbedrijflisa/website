@@ -94,14 +94,14 @@
 	padding-left: 0px;
 }
 
-.artikelen ul
+.articlesContent ul
 {
 	margin: 0px;
 	padding: 0px;
 	overflow: hidden;
 }
 
-.artikelen img
+.articlesContent img
 {
 	width: 350px;
 	height: 230px;
@@ -112,7 +112,7 @@
 	top: 0px;
 }
 
-.artikelen div
+.articlesContent div
 {
 	max-width: 1130px;
 	margin-left: auto;
@@ -120,7 +120,7 @@
 	margin-bottom: 0px;
 }
 
-.artikelen a
+.articlesContent a
 {
 	padding: 0px;
 	margin: 0px;
@@ -132,12 +132,12 @@
 	height: 230px;
 }
 
-.artikelen a:hover
+.articlesContent a:hover
 {
 	cursor: pointer;
 }
 
-.artikelen li
+.articlesContent li
 {
 	display: inline;
 	width: 350px;
@@ -150,7 +150,7 @@
 	float: left;
 }
 
-.artikelen p
+.articlesContent p
 {
 	color: white;
 	width: 340px;
@@ -164,7 +164,7 @@
     display: none;
 }
 
-.artikelen h2
+.articlesContent h2
 {
 	margin: 0px;
 	font-size: 15px;
@@ -178,7 +178,7 @@
 	height: 20px;
 }
 
-.artikelen
+.articlesContent
 {
 	width: 100%;
 	min-height: 350px;
@@ -190,7 +190,7 @@
 	padding-left: 0px;
 }
 
-.articleContent
+.articlesInside
 {
 	height: 20px;
 	margin-top: 210px;
