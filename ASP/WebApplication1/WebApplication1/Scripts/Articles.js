@@ -1,6 +1,4 @@
-﻿alert($(window).width());
-
-//If checks also if value is a Number to prevent problems.
+﻿//If checks also if value is a Number to prevent problems.
 
 if ($(window).width() > 800 && $.isNumeric($(window).width()))
 {
