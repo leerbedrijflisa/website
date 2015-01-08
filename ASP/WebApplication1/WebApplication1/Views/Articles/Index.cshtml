@@ -72,13 +72,16 @@
 <div class="articlesContent">
     <div>
         <ul>
-            @int i = 0;
+            @{int i = 0;}
 
             @foreach (var article in Model)
             {
+                i++;
+                
+                string idName = string.Format("articleButton{0}", i);
                 
                 string url = string.Format("~/Content/Images/{0}", article.Image);
-                <li id="articleButton">
+                <li id="@idName">
                     <a href="@Url.Action("Details", new { id = article.Id })">
                         <img src="@Url.Content(url)">
                         <div class="articleInside">
