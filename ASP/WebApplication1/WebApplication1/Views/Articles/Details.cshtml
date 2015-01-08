@@ -1,4 +1,11 @@
 ﻿@model Article
 
-<h1>@Model.Title</h1>
-<p>@Model.Contents</p>
+<div class="banner">
+	<h1>@Model.Title</h1>
+</div>
+		
+<div class="artikel">
+	<h2>@Model.Title</h2>
+    <img src="@Url.Content("~/Content/Images/" + Model.Image)"/>
+	<p>@Model.Contents</p>
+</div>
