@@ -1,4 +1,8 @@
-﻿if (screen.width > 650)
+﻿alert($(window).width());
+
+//If checks also if value is a Number to prevent problems.
+
+if ($(window).width() > 800 && $.isNumeric($(window).width()))
 {
     var numberOfString = $('.articlesContent').find('li').last().attr('id');
     var numberOf = numberOfString.replace("articleButton", "");
