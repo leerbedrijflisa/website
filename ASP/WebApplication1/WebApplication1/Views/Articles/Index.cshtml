@@ -54,6 +54,13 @@
             @foreach (var article in Model)
             {
                 i++;
+
+                string articleContent = article.Contents;
+                if(articleContent.Length > 690)
+                {
+                    articleContent = articleContent.Substring(0, 690);
+                    articleContent = articleContent + "...";
+                }
                 
                 string idName = string.Format("articleButton{0}", i);
                 
@@ -63,7 +70,7 @@
                         <img src="@Url.Content(url)">
                         <div class="articleInside">
                             <h2>@article.Title</h2>
-                            <p>@article.Contents</p>
+                            <p>@articleContent</p>
                         </div>
                     </a>
                 </li>
