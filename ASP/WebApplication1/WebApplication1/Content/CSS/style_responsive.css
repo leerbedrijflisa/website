@@ -168,7 +168,7 @@
 	height: 35px;
 }
 
-#responsive-button
+#responsiveButton
 {
 	display: none;
 	margin: 0px;
@@ -182,25 +182,25 @@
 	border-bottom-right-radius: 6px;
 }
 
-#responsive-button:hover
+#responsiveButton:hover
 {
 	cursor: pointer;
 }
 
-#responsive-button ul
+#responsiveButton ul
 {
 	margin: 0px;
 	padding: 0px;
 }
 
-#responsive-button li
+#responsiveButton li
 {
 	padding: 0px;
 	margin: 0px;
 	display: inline;
 }
 
-#responsive-button a
+#responsiveButton a
 {
 	padding: 0px;
 	margin: 0px;
@@ -208,7 +208,7 @@
 	height: 30px;
 }
 
-#responsive-button span
+#responsiveButton span
 {
 	content: '';
     width: 20px;
@@ -222,19 +222,19 @@
     border-radius: 5px;
 }
 
-#responsive-button span:first-child
+#responsiveButton span:first-child
 {
 	margin-top: 7px;
 }
 
-#responsive-close
+#responsiveClose
 {
 	background-color: #ADADAD;
 	display: inline;
 	color: black;
 }
 
-#responsive-close:hover
+#responsiveClose:hover
 {
 	background-color: #999999;
 }
@@ -298,6 +298,7 @@
 	margin-bottom: 0px;
 	font-weight: normal;
 	font-size: 15px;
+    color: yellow;
 }
 
 #content-footer
