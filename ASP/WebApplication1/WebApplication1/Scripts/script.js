@@ -17,10 +17,10 @@ function hide_menu()
 
 function javascript_enabled()
 {
-    if ($(document).width() < 801)
+    if ($(window).width() < 801)
     {
-        $("#responsiveButton").css("display", "inline");
         $(".menu").css("display", "none");
+        $("#responsiveButton").css("display", "inline");
     }
     else
     {
