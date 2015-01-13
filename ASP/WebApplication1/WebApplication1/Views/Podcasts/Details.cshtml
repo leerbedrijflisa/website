@@ -1,0 +1,12 @@
+﻿@model Podcast
+
+<div class="banner">
+    <h1>@Model.Title</h1>
+</div>
+
+<div class="artikel">
+    <h2>@Model.Title</h2>
+    <h2>@Model.Date</h2>
+    <img src="@Url.Content("~/Content/Images/" + Model.Image)" />
+    <p>@Model.Content</p>
+</div>

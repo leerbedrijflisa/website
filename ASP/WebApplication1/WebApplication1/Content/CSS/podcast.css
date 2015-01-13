@@ -1,0 +1,224 @@
+﻿.banner h1
+{
+	color: white;
+	text-align: center;
+	font-size: 50px;
+	position: absolute;
+	width: 100%;
+	margin-top: 10%;
+	font-weight: normal;
+}
+
+.podcast
+{
+	background-color: #DEDEDE;
+	width: 100%;
+	min-height: 50px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.podcast div
+{
+	max-width: 1130px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	padding-bottom: 60px;
+	padding-top: 40px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.podcast h2
+{
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	margin-left: 5px;
+	margin-right: 0px;
+	margin-bottom: 40px;
+	margin-top: 0px;
+	display: block;
+	width: 100%;
+}
+
+.podcast button
+{
+	background-color: #FAC8D0;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin-right: 5px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+	border: 1px solid black;
+	font-size: 15px;
+}
+
+.podcast img
+{
+	height: 12px;
+	width: 15px;
+	padding: 0px;
+	margin-right: 5px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.podcast span
+{
+	max-width: 100%;
+	background-color: #FAC8D0;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 2px solid black;
+	margin-left: 5px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	display: block;
+}
+
+.podcast p
+{
+	width: 100%;
+	display: block;
+	margin-left: 5px;
+	margin-right: 4px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.podcast ul
+{
+	width: 35%;
+	min-height: 150px;
+	float: left;
+	display: block;
+	margin-left: 5px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 20px;
+}
+
+.podcast li
+{
+	width: 100%;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding: 0px;
+	display: inline-block;
+}
+
+#morespace
+{
+	margin-top: 20px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#leftcontainer
+{
+	width: 58%;
+	display: block;
+	margin: 0px;
+	padding-bottom: 15px;
+	padding-right: 35px;
+	padding-left: 0px;
+	padding-top: 0px;
+	float: left;
+}
+
+#button_container
+{
+	width: 100%;
+	background-color: #DEDEDE;
+	padding: 0px;
+	border: 0px solid black;
+	margin: 0px;
+	display: block;
+	overflow: hidden;
+}
+
+.reply
+{
+	background-color: white;
+	max-width: 1130px;
+	min-height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	padding: 0px;
+}
+
+.reply h2
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.reply div
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	background-color: #DEDEDE;
+	max-width: 58%;
+}
+
+.reply h3
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 5%;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	font-size: 15px;
+}
+
+.reply p
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 5%;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}

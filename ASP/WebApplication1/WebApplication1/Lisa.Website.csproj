@@ -86,6 +86,8 @@
     <Content Include="Content\CSS\articlesResponsive.css" />
     <Content Include="Content\CSS\index.css" />
     <Content Include="Content\CSS\indexResponsive.css" />
+    <Content Include="Content\CSS\podcast.css" />
+    <Content Include="Content\CSS\podcastResponsive.css" />
     <Content Include="Content\CSS\podcasts.css" />
     <Content Include="Content\CSS\podcastsResponsive.css" />
     <Content Include="Content\CSS\style.css" />
@@ -117,6 +119,7 @@
     <Content Include="Views\Articles\Index.cshtml" />
     <Content Include="Views\Articles\Details.cshtml" />
     <Content Include="Views\Podcasts\Index.cshtml" />
+    <Content Include="Views\Podcasts\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
