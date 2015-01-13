@@ -8,7 +8,6 @@ namespace Lisa.Website.Controllers
 {
     public class IndexController : Controller
     {
-        // GET: Index
         public ActionResult Index()
         {
             ViewBag.css = "~/Content/CSS/index.css";

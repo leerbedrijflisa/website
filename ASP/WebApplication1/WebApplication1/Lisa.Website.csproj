@@ -86,6 +86,8 @@
     <Content Include="Content\CSS\articlesResponsive.css" />
     <Content Include="Content\CSS\index.css" />
     <Content Include="Content\CSS\indexResponsive.css" />
+    <Content Include="Content\CSS\podcasts.css" />
+    <Content Include="Content\CSS\podcastsResponsive.css" />
     <Content Include="Content\CSS\style.css" />
     <Content Include="Content\CSS\styleResponsive.css" />
     <Content Include="Global.asax" />
@@ -98,10 +100,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArticlesController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Controllers\PodcastsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\Podcast.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +116,7 @@
     <Content Include="Views\Index\Index.cshtml" />
     <Content Include="Views\Articles\Index.cshtml" />
     <Content Include="Views\Articles\Details.cshtml" />
+    <Content Include="Views\Podcasts\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
