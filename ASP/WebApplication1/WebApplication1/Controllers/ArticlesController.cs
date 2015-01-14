@@ -10,8 +10,8 @@ namespace Lisa.Website
     {
         public ActionResult Index()
         {
-            ViewBag.css = "~/Content/CSS/articles.css";
-            ViewBag.cssResponsive = "~/Content/CSS/articlesResponsive.css";
+            ViewBag.css = "Articles/articleIndex.css";
+            ViewBag.cssResponsive = "Articles/articleIndexResponsive.css";
             ViewBag.localScript = "~/Scripts/article.js";
             var articles = GetArticles();
             return View(articles);
@@ -19,8 +19,8 @@ namespace Lisa.Website
 
         public ActionResult Details(int id)
         {
-            ViewBag.css = "~/Content/CSS/article.css";
-            ViewBag.cssResponsive = "~/Content/CSS/articleResponsive.css";
+            ViewBag.css = "Articles/articleDetail.css";
+            ViewBag.cssResponsive = "Articles/articleDetailResponsive.css";
 
             var article = (from a in GetArticles()
                            where a.Id == id

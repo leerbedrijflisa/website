@@ -10,8 +10,8 @@ namespace Lisa.Website.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.css = "~/Content/CSS/index.css";
-            ViewBag.cssResponsive = "~/Content/CSS/indexResponsive.css";
+            ViewBag.css = "Index/index.css";
+            ViewBag.cssResponsive = "Index/indexResponsive.css";
             return View();
         }
     }
