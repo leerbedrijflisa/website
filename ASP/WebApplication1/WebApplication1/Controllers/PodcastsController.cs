@@ -38,7 +38,9 @@ namespace Lisa.Website.Controllers
                     File = "",
                     Image = "Penguin.png",
                     Date = "2014-04-01",
-                    Content = "iets van inhoud"
+                    Content = "iets van inhoud",
+                    Author = "Marsupilami",
+                    References = "www.marsipulami.org"
                 },
 
                 new Podcast
@@ -48,7 +50,9 @@ namespace Lisa.Website.Controllers
                     File = "",
                     Image = "Raven.png",
                     Date = "2014-03-11",
-                    Content = "Bla Bla Bla"
+                    Content = "Bla Bla Bla",
+                    Author = "Guust Flater",
+                    References = "www.guustflater.nl"
                 }
             };
         }

@@ -1,12 +1,37 @@
-﻿@model Podcast
+﻿@Model Podcasts
 
 <div class="banner">
     <h1>@Model.Title</h1>
 </div>
 
-<div class="artikel">
-    <h2>@Model.Title</h2>
-    <p>@Model.Date</p>
-    <img src="@Url.Content("~/Content/Images/" + Model.Image)" />
-    <p>@Model.Content</p>
+<div class="podcast">
+    <div>
+        <h2>@Model.Title</h2>
+
+        <div id="leftcontainer">
+            <span>*hier komt de podcast*</span>
+            <p>@Model.Content</p>
+        </div>
+        <ul>
+            <li>Geplaatst op:</li>
+            <li>@Model.Date</li>
+            <li id="morespace">Geplaatst door:</li>
+            <li>@Model.Author</li>
+            <li id="morespace">Links:</li>
+            <li><a>@Model.References</a></li>
+        </ul>
+        <span id="button_container">
+            <button><img src="@Url.Content("~/Content/Images/icon_arrow.png")" />Download</button>
+            <button><img src="@Url.Content("~/Content/Images/icon_rss.png")" />RSS</button>
+        </span>
+    </div>
+</div>
+
+<div class="reply">
+    <h2>Reacties</h2>
+    <div>
+        <h3></h3>
+        <h3>Datum</h3>
+        <p>hier komt de inhoud van een reactie</p>
+    </div>
 </div>
