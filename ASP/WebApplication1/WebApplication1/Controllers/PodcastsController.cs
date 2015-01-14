@@ -10,15 +10,15 @@ namespace Lisa.Website.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.css = "~/Content/CSS/podcasts.css";
-            ViewBag.cssResponsive = "~/Content/CSS/podcastsResponsive.css";
+            ViewBag.css = "~/Content/CSS/podcastIndex.css";
+            ViewBag.cssResponsive = "~/Content/CSS/podcastIndexResponsive.css";
             return View(GetPodcast());
         }
 
         public ActionResult Details(int id)
         {
-            ViewBag.css = "~/Content/CSS/podcast.css";
-            ViewBag.cssResponsive = "~/Content/CSS/podcastResponsive.css";
+            ViewBag.css = "~/Content/CSS/podcastDetail.css";
+            ViewBag.cssResponsive = "~/Content/CSS/podcastDetailResponsive.css";
 
             var podcast = (from a in GetPodcast()
                            where a.Id == id

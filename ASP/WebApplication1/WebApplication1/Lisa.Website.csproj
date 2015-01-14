@@ -86,10 +86,10 @@
     <Content Include="Content\CSS\articlesResponsive.css" />
     <Content Include="Content\CSS\index.css" />
     <Content Include="Content\CSS\indexResponsive.css" />
-    <Content Include="Content\CSS\podcast.css" />
-    <Content Include="Content\CSS\podcastResponsive.css" />
-    <Content Include="Content\CSS\podcasts.css" />
-    <Content Include="Content\CSS\podcastsResponsive.css" />
+    <Content Include="Content\CSS\podcastDetail.css" />
+    <Content Include="Content\CSS\podcastDetailResponsive.css" />
+    <Content Include="Content\CSS\podcastIndex.css" />
+    <Content Include="Content\CSS\podcastIndexResponsive.css" />
     <Content Include="Content\CSS\style.css" />
     <Content Include="Content\CSS\styleResponsive.css" />
     <Content Include="Global.asax" />
