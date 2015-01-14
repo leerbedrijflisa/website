@@ -68,7 +68,7 @@
     <div class="podcast" id="@idStatus">
         <ul>
             <li>
-                <a href="podcast.html">
+                <a href="@Url.Action("Details", new { id = podcast.Id })">
                     <img src="@Url.Content(url)">
                     <h1>@podcast.Title</h1>
                     <h2>@podcast.Date</h2>
