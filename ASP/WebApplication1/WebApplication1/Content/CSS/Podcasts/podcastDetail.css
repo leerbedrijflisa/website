@@ -46,7 +46,7 @@
 	width: 100%;
 }
 
-.podcast button
+.podcast a
 {
 	background-color: #FAC8D0;
 	padding-left: 10px;
@@ -59,6 +59,8 @@
 	margin-left: 5px;
 	border: 1px solid black;
 	font-size: 15px;
+    color: black;
+    text-decoration: none;
 }
 
 .podcast img
@@ -221,4 +223,10 @@
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-top: 0px;
+}
+
+.podcast audio
+{
+    width: 630px;
+    height: 35px;
 }

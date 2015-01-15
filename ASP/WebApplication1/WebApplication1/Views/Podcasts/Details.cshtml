@@ -9,7 +9,12 @@
         <h2>@Model.Title</h2>
 
         <div id="leftcontainer">
-            <span>*hier komt de podcast*</span>
+            <span>
+                <audio controls>
+                    <source src="@Url.Content("~/Content/Audio/" + Model.File)" type="audio/mpeg">
+                    Your browser cannot play this audio file.
+                </audio>
+            </span>
             <p>@Model.Content</p>
         </div>
         <ul>
@@ -21,8 +26,8 @@
             <li><a>@Model.References</a></li>
         </ul>
         <span id="button_container">
-            <button><img src="@Url.Content("~/Content/Images/icon_arrow.png")" />Download</button>
-            <button><img src="@Url.Content("~/Content/Images/icon_rss.png")" />RSS</button>
+            <a href="@Url.Content("~/Content/Audio/" + Model.File)" download="@Model.File"><img src="@Url.Content("~/Content/Images/icon_arrow.png")" />Download</a>
+            <a><img src="@Url.Content("~/Content/Images/icon_rss.png")" />RSS</a>
         </span>
     </div>
 </div>
