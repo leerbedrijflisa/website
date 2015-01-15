@@ -30,7 +30,7 @@ namespace Lisa.Website.Controllers
         private IEnumerable<Podcast> GetPodcast()
         {
             return new Podcast[]
-            {
+            { 
                 new Podcast
                 {
                     Id = 1,
@@ -40,7 +40,7 @@ namespace Lisa.Website.Controllers
                     Date = "2014-04-01",
                     Content = "iets van inhoud",
                     Author = "Marsupilami",
-                    References = "www.marsipulami.org"
+                    References = "www.marsipulami.org",
                 },
 
                 new Podcast

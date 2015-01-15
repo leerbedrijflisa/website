@@ -10,6 +10,5 @@
         public string Date { get; set; }
         public string Author { get; set; }
         public string References { get; set; }
-        
     }
 }
