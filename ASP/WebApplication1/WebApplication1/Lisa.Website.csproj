@@ -129,6 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Audio\" />
     <Folder Include="Content\Images\" />
   </ItemGroup>
   <PropertyGroup>

@@ -35,24 +35,36 @@ namespace Lisa.Website.Controllers
                 {
                     Id = 1,
                     Title = "De wonderbaarlijke wereld van stoeptegels",
-                    File = "",
+                    File = "Lisa Developers Podcast 2014-08-10.mp3",
                     Image = "Penguin.png",
-                    Date = "2014-04-01",
+                    Date = "2014-08-10",
                     Content = "iets van inhoud",
-                    Author = "Marsupilami",
-                    References = "www.marsipulami.org",
+                    Author = "Joost Ronkes Agerbeek, Wilco",
+                    References = "hier komt een linkje",
                 },
 
                 new Podcast
                 {
                     Id = 2,
                     Title = "Alles wat je wilt weten over regendruppels",
-                    File = "",
+                    File = "Lisa Developers Podcast 2014-08-31.mp3",
                     Image = "Raven.png",
-                    Date = "2014-03-11",
-                    Content = "Bla Bla Bla",
-                    Author = "Guust Flater",
-                    References = "www.guustflater.nl"
+                    Date = "2014-08-31",
+                    Content = "Developers podcast van leerwerkbedrijf Lisa.",
+                    Author = "Joost Ronkes Agerbeek, Wilco",
+                    References = "hier komt een linkje"
+                },
+
+                new Podcast
+                {
+                    Id = 3,
+                    Title = "De grote geheimen van de dropfabriek",
+                    File = "Lisa Developers Podcast 2014-09-28.mp3",
+                    Image = "Raven.png",
+                    Date = "2014-08-31",
+                    Content = "Developers podcast van leerwerkbedrijf Lisa.",
+                    Author = "Joost Ronkes Agerbeek, Wilco",
+                    References = "hier komt een linkje"
                 }
             };
         }
