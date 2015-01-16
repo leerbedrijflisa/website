@@ -27,6 +27,11 @@ namespace Lisa.Website.Controllers
             return View(podcast);
         }
 
+        public ActionResult RSS()
+        {
+            return View(GetPodcast());
+        }
+
         private IEnumerable<Podcast> GetPodcast()
         {
             return new Podcast[]

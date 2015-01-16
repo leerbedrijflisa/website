@@ -92,6 +92,7 @@
     <Content Include="Content\CSS\Podcasts\podcastIndexResponsive.css" />
     <Content Include="Content\CSS\style.css" />
     <Content Include="Content\CSS\styleResponsive.css" />
+    <Content Include="Content\RSS\rssFeed.xml" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\Articles.js" />
     <Content Include="Scripts\jquery1.11.1-min.js" />
@@ -120,6 +121,9 @@
     <Content Include="Views\Articles\Details.cshtml" />
     <Content Include="Views\Podcasts\Index.cshtml" />
     <Content Include="Views\Podcasts\Details.cshtml" />
+    <None Include="Views\Podcasts\RSS.cshtml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
