@@ -26,8 +26,8 @@
             <li><a>@Model.References</a></li>
         </ul>
         <span id="button_container">
-            <a href="@Url.Content("~/Content/Audio/" + Model.File)" download="@Model.File"><img src="@Url.Content("~/Content/Images/icon_arrow.png")" />Download</a>
-            <a><img src="@Url.Content("~/Content/Images/icon_rss.png")" />RSS</a>
+            <a class="podcastLink" id="downloadButton" href="@Url.Content("~/Content/Audio/" + Model.File)" download="@Model.File"><img src="@Url.Content("~/Content/Images/icon_arrow.png")" />Download</a>
+            <a class="podcastLink" id="RSS"><img src="@Url.Content("~/Content/Images/icon_rss.png")" />RSS</a>
         </span>
     </div>
 </div>
