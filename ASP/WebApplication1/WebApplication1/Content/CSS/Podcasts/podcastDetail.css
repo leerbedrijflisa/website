@@ -61,34 +61,32 @@
 	font-size: 15px;
     text-decoration: none;
     position: absolute;
+    color: black;
 }
 
 .podcastLink:hover 
 {
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
-.podcast a
+#references
 {
     color: blue;
     text-decoration: none;
 }
 
-.podcast a:hover
+#references:hover
 {
     color: red;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 #RSS
 {
     margin-left: 130px;
-    color: black;
-}
-
-#downloadButton
-{
     color: black;
 }
 

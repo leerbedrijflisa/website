@@ -23,10 +23,10 @@
             <li id="morespace">Geplaatst door:</li>
             <li>@Model.Author</li>
             <li id="morespace">Links:</li>
-            <li><a>@Model.References</a></li>
+            <li><a id="references">@Model.References</a></li>
         </ul>
         <span id="button_container">
-            <a class="podcastLink" id="downloadButton" href="@Url.Content("~/Content/Audio/" + Model.File)" download="@Model.File"><img src="@Url.Content("~/Content/Images/icon_arrow.png")" />Download</a>
+            <a class="podcastLink" href="@Url.Content("~/Content/Audio/" + Model.File)" download="@Model.File"><img src="@Url.Content("~/Content/Images/icon_arrow.png")" />Download</a>
             <a class="podcastLink" id="RSS"><img src="@Url.Content("~/Content/Images/icon_rss.png")" />RSS</a>
         </span>
     </div>
