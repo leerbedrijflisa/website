@@ -27,7 +27,7 @@
         </ul>
         <span id="button_container">
             <a class="podcastLink" href="@Url.Content("~/Content/Audio/" + Model.File)" download="@Model.File"><img src="@Url.Content("~/Content/Images/icon_arrow.png")" />Download</a>
-            <a class="podcastLink" id="RSS"><img src="@Url.Content("~/Content/Images/icon_rss.png")" />RSS</a>
+            <a class="podcastLink" id="RSS" rel="alternate" type="application/rss+xml" href="@Url.Action("RSS", "Podcasts")"><img src="@Url.Content("~/Content/Images/icon_rss.png")" />RSS</a>
         </span>
     </div>
 </div>
