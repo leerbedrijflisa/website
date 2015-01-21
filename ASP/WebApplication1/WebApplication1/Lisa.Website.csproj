@@ -109,9 +109,7 @@
       <DependentUpon>201501211203489_stringToDateTime.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\PodcastContext.cs" />
-    <Compile Include="Models\PodcastReply.cs" />
-    <Compile Include="Models\PodcastReplyContext.cs" />
+    <Compile Include="Models\WebsiteContext.cs" />
     <Content Include="Scripts\Articles.js" />
     <Content Include="Scripts\jquery1.11.1-min.js" />
     <Content Include="Scripts\script.js" />

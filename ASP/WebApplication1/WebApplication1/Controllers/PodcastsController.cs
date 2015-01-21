@@ -35,7 +35,7 @@ namespace Lisa.Website.Controllers
 
         private IEnumerable<Podcast> GetPodcast()
         {
-            var db = new PodcastContext();
+            var db = new WebsiteContext();
             return db.Podcasts.AsEnumerable();
         }
     }
