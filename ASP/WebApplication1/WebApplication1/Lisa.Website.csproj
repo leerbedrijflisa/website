@@ -38,6 +38,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -94,6 +100,18 @@
     <Content Include="Content\CSS\styleResponsive.css" />
     <Content Include="Content\RSS\rssFeed.xml" />
     <Content Include="Global.asax" />
+    <Compile Include="Migrations\201501211154087_initial.cs" />
+    <Compile Include="Migrations\201501211154087_initial.Designer.cs">
+      <DependentUpon>201501211154087_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501211203489_stringToDateTime.cs" />
+    <Compile Include="Migrations\201501211203489_stringToDateTime.Designer.cs">
+      <DependentUpon>201501211203489_stringToDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\PodcastContext.cs" />
+    <Compile Include="Models\PodcastReply.cs" />
+    <Compile Include="Models\PodcastReplyContext.cs" />
     <Content Include="Scripts\Articles.js" />
     <Content Include="Scripts\jquery1.11.1-min.js" />
     <Content Include="Scripts\script.js" />
@@ -121,9 +139,7 @@
     <Content Include="Views\Articles\Details.cshtml" />
     <Content Include="Views\Podcasts\Index.cshtml" />
     <Content Include="Views\Podcasts\Details.cshtml" />
-    <None Include="Views\Podcasts\RSS.cshtml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Views\Podcasts\RSS.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -135,6 +151,14 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\Audio\" />
     <Folder Include="Content\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201501211154087_initial.resx">
+      <DependentUpon>201501211154087_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501211203489_stringToDateTime.resx">
+      <DependentUpon>201501211203489_stringToDateTime.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
