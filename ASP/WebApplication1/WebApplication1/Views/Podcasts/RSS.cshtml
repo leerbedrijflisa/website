@@ -1,25 +1,24 @@
-﻿@{Layout = null;}
-@model IEnumerable<Podcast>
+﻿@model IEnumerable<Podcast>
+@{Layout = null; Response.ContentType = "text/xml";}<?xml version='1.0' encoding='UTF-8' ?>
+<rss version='2.0'>
+    <channel>
+        <title>RSS feed leerwerkbedrijf Lisa</title>
+        <description>Hier komt de beschrijving van de RSS feed van Lisa.</description>
+        <link>http://www.leerwerkbedrijflisa.nl</link>
 
-
-@{Response.ContentType = "text/xml";
-  
-
-Response.Write("<?xml version='1.0' encoding='UTF-8' ?>");
-Response.Write("<rss version='2.0'>");
-    Response.Write("<channel>");
-    Response.Write("<title>RSS feed leerwerkbedrijf Lisa</title>");
-    Response.Write("<description>Hier komt de beschrijving van de RSS feed van Lisa.</description>");
-    Response.Write("<link>http://www.leerwerkbedrijflisa.nl</link>");}
-    
-        @foreach(var podcast in Model)
+        @foreach (var podcast in Model)
         {
-            Response.Write("<item>");
-                Response.Write("<title>" + podcast.Title + "</title>"); 
-                Response.Write("<description>" + podcast.Content + "</description>");  
-                Response.Write("<link>Hier komt een link test</link>");  
-            Response.Write("</item>");
-        }       
             
-    @{Response.Write("</channel>");}         
-@{Response.Write("</rss>");}     
+                <item>
+                    <title>@podcast.Title</title>
+                    <description>@podcast.Content</description>
+                    @Html.Raw("<link>")
+                        Hier komt een link test
+                    @Html.Raw("</link>")
+
+                </item>
+           
+        }
+
+    </channel>
+</rss>
