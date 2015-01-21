@@ -2,8 +2,9 @@
 
 namespace Lisa.Website
 {
-    public class PodcastContext : DbContext
+    public class WebsiteContext : DbContext
     {
         public DbSet<Podcast> Podcasts { get; set; }
+        public DbSet<Article> Articles { get; set; }
     }
 }
