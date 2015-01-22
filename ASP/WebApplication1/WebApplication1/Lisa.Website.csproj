@@ -99,6 +99,7 @@
     <Content Include="Content\CSS\style.css" />
     <Content Include="Content\CSS\styleResponsive.css" />
     <Content Include="Global.asax" />
+    <Compile Include="Controllers\ManagementController.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\WebsiteContext.cs" />
     <Content Include="Scripts\Articles.js" />
@@ -128,6 +129,9 @@
     <Content Include="Views\Articles\Details.cshtml" />
     <Content Include="Views\Podcasts\Index.cshtml" />
     <Content Include="Views\Podcasts\Details.cshtml" />
+    <Content Include="Views\Management\index.cshtml" />
+    <Content Include="Views\Shared\_ManagementLayout.cshtml" />
+    <Content Include="Views\Management\AddArticle.cshtml" />
     <None Include="Views\Podcasts\RSS.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
