@@ -22,6 +22,7 @@ namespace Lisa.Website
             ViewBag.css = "Articles/articleDetail.css";
             ViewBag.cssResponsive = "Articles/articleDetailResponsive.css";
 
+            var db = new WebsiteContext();
             var article = (from a in GetArticles()
                            where a.Id == id
                            select a).SingleOrDefault();
@@ -31,10 +32,8 @@ namespace Lisa.Website
         
         private IEnumerable<Article> GetArticles()
         {
-            //var db = new WebsiteContext();
-            //return db.Article.AsEnumerable();
-           
-            //BUGFIX MUST RETURN SOMETHING
+            var db = new WebsiteContext();
+            return db.Articles.AsEnumerable();   
         }
          
     }

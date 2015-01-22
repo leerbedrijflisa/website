@@ -98,16 +98,7 @@
     <Content Include="Content\CSS\Podcasts\podcastIndexResponsive.css" />
     <Content Include="Content\CSS\style.css" />
     <Content Include="Content\CSS\styleResponsive.css" />
-    <Content Include="Content\RSS\rssFeed.xml" />
     <Content Include="Global.asax" />
-    <Compile Include="Migrations\201501211154087_initial.cs" />
-    <Compile Include="Migrations\201501211154087_initial.Designer.cs">
-      <DependentUpon>201501211154087_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201501211203489_stringToDateTime.cs" />
-    <Compile Include="Migrations\201501211203489_stringToDateTime.Designer.cs">
-      <DependentUpon>201501211203489_stringToDateTime.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\WebsiteContext.cs" />
     <Content Include="Scripts\Articles.js" />
@@ -149,14 +140,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\Audio\" />
     <Folder Include="Content\Images\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201501211154087_initial.resx">
-      <DependentUpon>201501211154087_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501211203489_stringToDateTime.resx">
-      <DependentUpon>201501211203489_stringToDateTime.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
