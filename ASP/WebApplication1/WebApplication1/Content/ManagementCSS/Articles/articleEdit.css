@@ -1,17 +1,17 @@
-﻿.addArticle ul
+﻿.editArticle ul
 {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
 }
 
-.addArticle textarea
+.editArticle textarea
 {
     width: 500px;
     height: 500px;
 }
 
-.addArticle span
+.editArticle span
 {
     width: 100px;
     display: inline-block;

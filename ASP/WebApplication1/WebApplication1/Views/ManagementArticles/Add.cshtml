@@ -1,11 +1,6 @@
 ﻿@model IEnumerable<Article>
 @{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
 
-@if(ViewBag.Saved == true)
-{
-    <p id="importnantMessage">Het artikel is succesvol opgeslagen!</p>
-}
-
 <h1>Artikel Toevoegen:</h1>
 
 <form method="post" class="addArticle">

@@ -1,0 +1,14 @@
+﻿@model Article
+@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+
+<h1>Artikel Bewerken:</h1>
+
+<form method="post" class="editArticle">
+    <ul>
+        <li><span>Titel: </span><input type="text" name="Title" value="@Model.Title" /></li>
+        <li><span>Afbeelding: </span><input type="text" name="Image" value="@Model.Image"/></li>
+        <li id="contentField">Inhoud:</li>
+        <li><textarea name="Content">@Model.Content</textarea></li>
+        <li><input type="submit" value="Opslaan" /></li>
+    </ul>
+</form>
