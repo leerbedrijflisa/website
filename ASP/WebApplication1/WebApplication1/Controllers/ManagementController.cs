@@ -12,13 +12,13 @@ namespace Lisa.Website.Controllers
         public ActionResult Index()
         {
             SetCSS("Index");
-            return View();
+            return View(GetArticles());
         }
 
         public ActionResult Add()
         {
             SetCSS("Add");
-            return View(GetArticles());
+            return View();
         }
 
         [HttpPost]
@@ -38,7 +38,7 @@ namespace Lisa.Website.Controllers
 
             ViewBag.Saved = true;
 
-            return View(GetArticles());
+            return View();
         }
 
         private IEnumerable<Article> GetArticles()
