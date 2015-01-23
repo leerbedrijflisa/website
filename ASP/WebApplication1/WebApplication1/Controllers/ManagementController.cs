@@ -24,9 +24,21 @@ namespace Lisa.Website.Controllers
         }
 
         [HttpPost]
-        public FileStreamResult AddArticle(Article)
+        public ActionResult AddArticle(Article articles)
         {
-            //NOG AFMAKEN!
+            var db = new WebsiteContext();
+            db.Articles.Add(new Article
+            {
+                Title = articles.Title,
+                Image = articles.Image,
+                Content = articles.Content,
+                Date = DateTime.Now
+            });
+            db.SaveChanges();
+
+            ViewBag.Saved = true;
+
+            return View();
         }
     }
 }
