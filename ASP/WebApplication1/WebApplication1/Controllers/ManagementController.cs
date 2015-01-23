@@ -11,21 +11,21 @@ namespace Lisa.Website.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.css = "";
-            ViewBag.cssResponsive = "";
+            SetCSS("Index");
             return View();
         }
 
-        public ActionResult AddArticle()
+        public ActionResult Add()
         {
-            ViewBag.css = "";
-            ViewBag.cssResponsive = "";
-            return View();
+            SetCSS("Add");
+            return View(GetArticles());
         }
 
         [HttpPost]
-        public ActionResult AddArticle(Article articles)
+        public ActionResult Add(Article articles)
         {
+            SetCSS("Add");
+
             var db = new WebsiteContext();
             db.Articles.Add(new Article
             {
@@ -38,7 +38,19 @@ namespace Lisa.Website.Controllers
 
             ViewBag.Saved = true;
 
-            return View();
+            return View(GetArticles());
+        }
+
+        private IEnumerable<Article> GetArticles()
+        {
+            var db = new WebsiteContext();
+            return db.Articles.AsEnumerable();
+        }
+
+        private void SetCSS(string pageName)
+        {
+            ViewBag.css = "Articles/article" + pageName + ".css";
+            ViewBag.cssResponsive = "Articles/article" + pageName + "Responsive.css";
         }
     }
 }

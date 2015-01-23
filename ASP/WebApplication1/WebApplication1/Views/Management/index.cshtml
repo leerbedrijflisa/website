@@ -1,3 +1,33 @@
 ﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
 
-<a href="@Url.Action("AddArticle", "Management")">Artikel Toevoegen</a>
+<a href="@Url.Action("Add", "Management")">Artikel Toevoegen</a>
+
+<h1>Artikelen Beheren:</h1>
+
+<table>
+    <tr>
+        <th>Artikelnummer:</th>
+        <th>Titel:</th>
+        <th>Datum van publiceren:</th>
+        <th>Inhoud:</th>
+        <th>Opties:</th>
+    </tr>
+
+    @foreach (var article in Model)
+    {
+        string articleContent = article.Content;
+        if (articleContent.Length > 200)
+        {
+            articleContent = articleContent.Substring(0, 200);
+            articleContent = articleContent + "...";
+        }
+
+        <tr>
+            <td>@article.Id</td>
+            <td>@article.Title</td>
+            <td>@article.Date</td>
+            <td>@articleContent</td>
+            <td><span class="fa fa-pencil-square-o"></span><span class="fa fa-times"></span></td>
+        </tr>
+    }
+</table>
