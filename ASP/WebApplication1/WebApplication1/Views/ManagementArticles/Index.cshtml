@@ -1,6 +1,11 @@
 ﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
 
-<a href="@Url.Action("Add", "Management")">Artikel Toevoegen</a>
+<a href="@Url.Action("Add", "ManagementArticle")">Artikel Toevoegen</a>
+
+@if (ViewBag.Saved == true)
+{
+    <p id="importnantMessage">Het artikel is succesvol opgeslagen!</p>
+}
 
 <h1>Artikelen Beheren:</h1>
 
@@ -27,7 +32,7 @@
             <td>@article.Title</td>
             <td>@article.Date</td>
             <td>@articleContent</td>
-            <td><span class="fa fa-pencil-square-o"></span><span class="fa fa-times"></span></td>
+            <td><a id="iconButton" href="@Url.Action("Edit", "ManagementArticles", new { id = article.Id })" class="fa fa-pencil-square-o"></a><a id="iconButton" class="fa fa-times" href="@Url.Action("Index", "ManagementArticles", new { id = article.Id })"></a></td>
         </tr>
     }
 </table>
