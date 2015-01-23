@@ -1,8 +1,15 @@
 ﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
 
+@if(ViewBag.Saved == true)
+{
+    <p>Het artikel is succesvol opgeslagen!</p>
+}
+
 <form method="post">
-    <p>Titel:</p><input type="text" name="Title" />
-    <p>Afbeelding:</p><input type="text" name="Image" />
-    <p>Inhoud:</p><input type="text" name="Content"/>
-    <input type="submit" name="Opslaan" />
+    <ul>
+        <li>Titel: <input type="text" name="Title" /></li>
+        <li>Afbeelding: <input type="text" name="Image"/></li>
+        <li>Inhoud: <input type="text" name="Content"/></li>
+        <li><input type="submit" name="Opslaan" /></li>
+    </ul>
 </form>
