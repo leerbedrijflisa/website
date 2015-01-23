@@ -50,16 +50,15 @@
                 i++;
 
                 string articleContent = article.Content;
-                if(articleContent.Length > 690)
+                if (articleContent.Length > 690)
                 {
                     articleContent = articleContent.Substring(0, 690);
                     articleContent = articleContent + "...";
                 }
                 
-                string idName = string.Format("articleButton{0}", i);
-                
                 string url = string.Format("~/Content/Images/{0}", article.Image);
-                <li id="@idName">
+                
+                <li id="@article.Id">
                     <a href="@Url.Action("Details", new { id = article.Id })">
                         <img src="@Url.Content(url)">
                         <div class="articleInside">

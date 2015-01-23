@@ -1,0 +1,23 @@
+﻿.addArticle ul
+{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.addArticle textarea
+{
+    width: 500px;
+    height: 500px;
+}
+
+.addArticle span
+{
+    width: 100px;
+    display: inline-block;
+}
+
+#importnantMessage
+{
+    color: red;
+}
