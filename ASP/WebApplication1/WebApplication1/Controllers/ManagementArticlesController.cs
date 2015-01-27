@@ -19,12 +19,18 @@ namespace Lisa.Website.Controllers
         [HttpPost]
         public ActionResult Index(int Id)
         {
+            SetCSS("Index");
             var db = new WebsiteContext();
-            var article = (from a in GetArticles()
+            var deletedItem = (from a in GetArticles()
                            where a.Id == Id
                            select a).SingleOrDefault();
-            db.Articles.Remove(article);
+
+            Article deleteArticle = (Article)db.Articles.Where(selectedArticle => selectedArticle.Id == Id).First();
+            db.Articles.Remove(deleteArticle);
             db.SaveChanges();
+
+            ViewBag.Saved = "Delete";
+            ViewBag.Changed = deletedItem.Title;
             return View(GetArticles());
         }
 
@@ -47,7 +53,7 @@ namespace Lisa.Website.Controllers
                 Date = DateTime.Now
             });
             db.SaveChanges();
-            ViewBag.Saved = true;
+            ViewBag.Saved = "Add";
 
             return View("Index", GetArticles());
         }
@@ -67,13 +73,12 @@ namespace Lisa.Website.Controllers
         {
             SetCSS("Edit");
 
-            var db = new WebsiteContext();
-            db.Articles.Attach(articles);
-            var entry = db.Entry(articles);
-            entry.State = EntityState.Modified;
-            db.SaveChanges(); 
+            var db = new WebsiteContext(); //Nieuwe Database Connectie
+            db.Articles.Attach(articles); //?
+            db.Entry(articles).State = EntityState.Modified; //?
+            db.SaveChanges(); //Sla wijzigenen op.
   
-            ViewBag.Saved = true;
+            ViewBag.Saved = "Edit";
             return View("Index");
         }
 
