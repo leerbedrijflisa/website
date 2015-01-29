@@ -24,9 +24,9 @@ namespace Lisa.Website.Controllers
             var deletedItem = (from a in GetArticles()
                            where a.Id == Id
                            select a).SingleOrDefault();
+            var article = db.Articles.Find(Id);
 
-            Article deleteArticle = (Article)db.Articles.Where(selectedArticle => selectedArticle.Id == Id).First();
-            db.Articles.Remove(deleteArticle);
+            db.Articles.Remove(article);
             db.SaveChanges();
 
             ViewBag.Saved = "Delete";
@@ -43,7 +43,7 @@ namespace Lisa.Website.Controllers
         [HttpPost]
         public ActionResult Add(Article articles)
         {
-            SetCSS("Add");
+            SetCSS("Index");
             var db = new WebsiteContext();
             db.Articles.Add(new Article
             {
@@ -69,13 +69,13 @@ namespace Lisa.Website.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Article articles)
+        public ActionResult Edit(Article NewArticle)
         {
-            SetCSS("Edit");
-
+            SetCSS("Index");
             var db = new WebsiteContext(); //Nieuwe Database Connectie
-            db.Articles.Attach(articles); //?
-            db.Entry(articles).State = EntityState.Modified; //?
+            var article = db.Articles.Find(NewArticle.Id);
+            db.Articles.Attach(NewArticle); 
+            db.Entry(NewArticle).State = EntityState.Modified; 
             db.SaveChanges(); //Sla wijzigenen op.
   
             ViewBag.Saved = "Edit";
