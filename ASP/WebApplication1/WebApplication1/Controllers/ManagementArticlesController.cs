@@ -55,7 +55,7 @@ namespace Lisa.Website.Controllers
             db.SaveChanges();
             ViewBag.Saved = "Add";
 
-            return View("Index", GetArticles());
+            return RedirectToAction("Index");
         }
 
         public ActionResult Edit(int id)
@@ -69,17 +69,17 @@ namespace Lisa.Website.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Article NewArticle)
+        public ActionResult Edit(int id, Article NewArticle)
         {
             SetCSS("Index");
+            
             var db = new WebsiteContext(); //Nieuwe Database Connectie
-            var article = db.Articles.Find(NewArticle.Id);
-            db.Articles.Attach(NewArticle); 
+            NewArticle.Id = id;
             db.Entry(NewArticle).State = EntityState.Modified; 
             db.SaveChanges(); //Sla wijzigenen op.
   
             ViewBag.Saved = "Edit";
-            return View("Index");
+            return RedirectToAction("Index");
         }
 
         private IEnumerable<Article> GetArticles()
