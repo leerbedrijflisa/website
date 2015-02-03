@@ -19,7 +19,6 @@ namespace Lisa.Website.Controllers
         [HttpPost]
         public ActionResult Index(int Id)
         {
-            SetCSS("Index");
             var db = new WebsiteContext();
             var article = db.Articles.Find(Id);
 
@@ -40,7 +39,6 @@ namespace Lisa.Website.Controllers
         [HttpPost]
         public ActionResult Add(Article articles)
         {
-            SetCSS("Index");
             var db = new WebsiteContext();
             db.Articles.Add(new Article
             {
@@ -66,8 +64,6 @@ namespace Lisa.Website.Controllers
         [HttpPost]
         public ActionResult Edit(int id, Article NewArticle)
         {
-            SetCSS("Index");
-            
             var db = new WebsiteContext(); //Nieuwe Database Connectie
             NewArticle.Id = id;
             db.Entry(NewArticle).State = EntityState.Modified; 
