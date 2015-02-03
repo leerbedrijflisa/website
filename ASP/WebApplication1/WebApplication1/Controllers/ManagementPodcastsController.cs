@@ -38,14 +38,17 @@ namespace Lisa.Website.Controllers
         }
 
         [HttpPost]
-        public ActionResult Add(Article articles)
+        public ActionResult Add(Podcast podcast)
         {
             var db = new WebsiteContext();
-            db.Articles.Add(new Article
+            db.Podcasts.Add(new Podcast
             {
-                Title = articles.Title,
-                Image = articles.Image,
-                Content = articles.Content,
+                Title = podcast.Title,
+                Image = podcast.Image,
+                Content = podcast.Content,
+                Author = podcast.Author,
+                References = podcast.References,
+                File = podcast.File,
                 Date = DateTime.Now
             });
             db.SaveChanges();
