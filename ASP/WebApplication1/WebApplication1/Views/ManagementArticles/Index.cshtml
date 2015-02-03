@@ -1,6 +1,8 @@
 ﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
 
 <a href="@Url.Action("Add", "ManagementArticles")">Artikel Toevoegen</a>
+<br/>
+<a href="@Url.Action("Index", "ManagementIndex")">Terug naar hoofdpagina</a>
 
 @if (ViewBag.Saved == "Add")
 {
