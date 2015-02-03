@@ -51,7 +51,7 @@ else if (ViewBag.Saved == "False")
             <td><audio controls><source src="@Url.Content("~/Content/Audio/" + podcast.File)" type="audio/mp3" />Dit bestand kan niet afgespeeld worden!</audio></td>
             <td>@podcastContent</td>
             <td>@podcast.Author</td>
-            <td><a tar="_blank" href="@podcast.References">@podcast.References</a></td>
+            <td><a target="_blank" href="http://@podcast.References">@podcast.References</a></td>
             <td>
                 <a id="iconButton" href="@Url.Action("Edit", "ManagementPodcasts", new { id = podcast.Id })" class="fa fa-pencil-square-o"></a>
                 <form method="post">
