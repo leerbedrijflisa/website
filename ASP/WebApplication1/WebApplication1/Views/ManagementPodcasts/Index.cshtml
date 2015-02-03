@@ -1,0 +1,59 @@
+﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+
+<a href="@Url.Action("Add", "ManagementPodcasts")">Podcast Toevoegen</a>
+<br />
+<a href="@Url.Action("Index", "ManagementIndex")">Terug naar hoofdpagina</a>
+
+@if (ViewBag.Saved == "Add")
+{
+    <p id="importnantMessage">De podcast is succesvol opgeslagen!</p>
+}
+else if (ViewBag.Saved == "Edit")
+{
+    <p id="importnantMessage">De podcast is succesvol aangepast!</p>
+}
+else if (ViewBag.Saved == "Delete")
+{
+    <p id="importnantMessage">De podcast "@ViewBag.Changed" is succesvol verwijderd!</p>
+}
+else if (ViewBag.Saved == "False")
+{
+    <p id="importnantMessage">LET OP! Uw wijzigingen zijn niet doorgevoerd!</p>
+}
+
+<h1>Podcasts Beheren:</h1>
+
+<table>
+    <tr>
+        <th>Artikelnummer:</th>
+        <th>Titel:</th>
+        <th>Datum van publiceren:</th>
+        <th>Inhoud:</th>
+        <th>Opties:</th>
+    </tr>
+
+    @foreach (var podcast in Model)
+    {
+        string podcastContent = podcast.Content;
+        if (podcastContent.Length > 200)
+        {
+            podcastContent = podcastContent.Substring(0, 200);
+            podcastContent = podcastContent + "...";
+        }
+
+        <tr>
+            <td>@podcast.Id</td>
+            <td>@podcast.Title</td>
+            <td>@podcast.Date</td>
+            <td>@podcastContent</td>
+            <td>
+                <a id="iconButton" href="@Url.Action("Edit", "ManagementArticles", new { id = podcast.Id })" class="fa fa-pencil-square-o"></a>
+                <form method="post">
+                    <input type="hidden" value="@podcast.Id" name="Id" />
+                    <button type="submit" value="" id="defaultButton"><span id="iconButton" class="fa fa-times"></span></button>
+                </form>
+                <a id="iconButton" href="@Url.Action("Index", "ManagementPodcasts", new { id = podcast.Id })"></a>
+            </td>
+        </tr>
+    }
+</table>

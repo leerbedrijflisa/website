@@ -52,7 +52,6 @@ else if (ViewBag.Saved == "False")
                     <input type="hidden" value="@article.Id" name="Id"/>
                     <button type="submit" value="" id="defaultButton"><span id="iconButton" class="fa fa-times"></span></button>
                 </form>
-                <a id="iconButton"  href="@Url.Action("Index", "ManagementArticles", new { id = article.Id })"></a>
             </td>
         </tr>
     }

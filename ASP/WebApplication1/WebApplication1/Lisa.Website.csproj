@@ -111,11 +111,14 @@
     <Content Include="Content\ManagementCSS\Articles\articleAddResponsive.css" />
     <Content Include="Content\ManagementCSS\Index\Index.css" />
     <Content Include="Content\ManagementCSS\Index\IndexResponsive.css" />
+    <Content Include="Content\ManagementCSS\Podcasts\podcastIndex.css" />
+    <Content Include="Content\ManagementCSS\Podcasts\podcastIndexResponsive.css" />
     <Content Include="Content\ManagementCSS\style.css" />
     <Content Include="Content\ManagementCSS\styleResponsive.css" />
     <Content Include="Global.asax" />
     <Compile Include="Controllers\ManagementArticlesController.cs" />
     <Compile Include="Controllers\ManagementIndexController.cs" />
+    <Compile Include="Controllers\ManagementPodcastsController.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\WebsiteContext.cs" />
     <Content Include="Scripts\Articles.js" />
@@ -181,6 +184,7 @@
     <Content Include="Content\FontAwesome\scss\_variables.scss" />
     <Content Include="Views\ManagementArticles\Edit.cshtml" />
     <Content Include="Views\ManagementIndex\Index.cshtml" />
+    <Content Include="Views\ManagementPodcasts\Index.cshtml" />
     <None Include="Views\Podcasts\RSS.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

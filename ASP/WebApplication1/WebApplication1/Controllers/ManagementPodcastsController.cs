@@ -8,12 +8,12 @@ using System.Web.Mvc;
 
 namespace Lisa.Website.Controllers
 {
-    public class ManagementArticlesController : Controller
+    public class ManagementPodcastsController : Controller
     {
         public ActionResult Index()
         {
             SetCSS("Index");
-            return View(GetArticles());
+            return View(GetPodcasts());
         }
 
         [HttpPost]
@@ -21,16 +21,16 @@ namespace Lisa.Website.Controllers
         {
             SetCSS("Index");
             var db = new WebsiteContext();
-            var article = db.Articles.Find(Id);
+            var podcast = db.Podcasts.Find(Id);
 
-            db.Articles.Remove(article);
+            db.Podcasts.Remove(podcast);
             db.SaveChanges();
 
             ViewBag.Saved = "Delete";
-            ViewBag.Changed = article.Title;
+            ViewBag.Changed = podcast.Title;
             return RedirectToAction("Index");
         }
-
+        
         public ActionResult Add()
         {
             SetCSS("Add");
@@ -40,7 +40,6 @@ namespace Lisa.Website.Controllers
         [HttpPost]
         public ActionResult Add(Article articles)
         {
-            SetCSS("Index");
             var db = new WebsiteContext();
             db.Articles.Add(new Article
             {
@@ -54,12 +53,14 @@ namespace Lisa.Website.Controllers
 
             return RedirectToAction("Index");
         }
-
-        public ActionResult Edit(int Id)
+        /*
+        public ActionResult Edit(int id)
         {
             SetCSS("Edit");
             var db = new WebsiteContext();
-            var article = db.Articles.Find(Id);
+            var article = (from a in GetPodcasts()
+                           where a.Id == id
+                           select a).SingleOrDefault();
             return View(article);
         }
 
@@ -67,26 +68,27 @@ namespace Lisa.Website.Controllers
         public ActionResult Edit(int id, Article NewArticle)
         {
             SetCSS("Index");
-            
+
             var db = new WebsiteContext(); //Nieuwe Database Connectie
             NewArticle.Id = id;
-            db.Entry(NewArticle).State = EntityState.Modified; 
+            db.Entry(NewArticle).State = EntityState.Modified;
             db.SaveChanges(); //Sla wijzigenen op.
-  
+
             ViewBag.Saved = "Edit";
             return RedirectToAction("Index");
         }
+        */
 
-        private IEnumerable<Article> GetArticles()
+        private IEnumerable<Podcast> GetPodcasts()
         {
             var db = new WebsiteContext();
-            return db.Articles.AsEnumerable();
+            return db.Podcasts.AsEnumerable();
         }
 
         private void SetCSS(string pageName)
         {
-            ViewBag.css = "Articles/article" + pageName + ".css";
-            ViewBag.cssResponsive = "Articles/article" + pageName + "Responsive.css";
+            ViewBag.css = "Podcasts/podcast" + pageName + ".css";
+            ViewBag.cssResponsive = "Podcasts/podcast" + pageName + "Responsive.css";
         }
     }
 }
