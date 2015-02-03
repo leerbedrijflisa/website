@@ -56,31 +56,28 @@ namespace Lisa.Website.Controllers
 
             return RedirectToAction("Index");
         }
-        /*
-        public ActionResult Edit(int id)
+        
+        public ActionResult Edit(int Id)
         {
             SetCSS("Edit");
             var db = new WebsiteContext();
-            var article = (from a in GetPodcasts()
-                           where a.Id == id
-                           select a).SingleOrDefault();
-            return View(article);
+            var podcast = db.Podcasts.Find(Id);
+            return View(podcast);
         }
 
         [HttpPost]
-        public ActionResult Edit(int id, Article NewArticle)
+        public ActionResult Edit(int id, Podcast NewPodcast)
         {
             SetCSS("Index");
 
-            var db = new WebsiteContext(); //Nieuwe Database Connectie
-            NewArticle.Id = id;
-            db.Entry(NewArticle).State = EntityState.Modified;
-            db.SaveChanges(); //Sla wijzigenen op.
+            var db = new WebsiteContext(); 
+            NewPodcast.Id = id;
+            db.Entry(NewPodcast).State = EntityState.Modified;
+            db.SaveChanges(); 
 
             ViewBag.Saved = "Edit";
             return RedirectToAction("Index");
         }
-        */
 
         private IEnumerable<Podcast> GetPodcasts()
         {

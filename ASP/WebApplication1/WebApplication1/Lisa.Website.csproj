@@ -113,6 +113,8 @@
     <Content Include="Content\ManagementCSS\Index\IndexResponsive.css" />
     <Content Include="Content\ManagementCSS\Podcasts\podcastAdd.css" />
     <Content Include="Content\ManagementCSS\Podcasts\podcastAddResponsive.css" />
+    <Content Include="Content\ManagementCSS\Podcasts\podcastEdit.css" />
+    <Content Include="Content\ManagementCSS\Podcasts\podcastEditResponsive.css" />
     <Content Include="Content\ManagementCSS\Podcasts\podcastIndex.css" />
     <Content Include="Content\ManagementCSS\Podcasts\podcastIndexResponsive.css" />
     <Content Include="Content\ManagementCSS\style.css" />
@@ -188,6 +190,7 @@
     <Content Include="Views\ManagementIndex\Index.cshtml" />
     <Content Include="Views\ManagementPodcasts\Index.cshtml" />
     <Content Include="Views\ManagementPodcasts\Add.cshtml" />
+    <Content Include="Views\ManagementPodcasts\Edit.cshtml" />
     <None Include="Views\Podcasts\RSS.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
