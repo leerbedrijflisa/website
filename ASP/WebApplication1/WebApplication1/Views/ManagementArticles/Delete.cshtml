@@ -1,0 +1,10 @@
+﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+@model Article
+
+<p>Weet u ZEKER dat u "@Model.Title" wilt verwijderen?</p>
+
+<form method="post">
+    <input type="hidden" value="@Model.Id" name="Id" />
+    <input type="submit" name="Confirmed" value="Annuleren" default/>
+    <input type="submit" name="Confirmed" value="Verwijderen"/>
+</form>

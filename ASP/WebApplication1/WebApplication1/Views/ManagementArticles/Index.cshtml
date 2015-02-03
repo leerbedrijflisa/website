@@ -48,10 +48,7 @@ else if (ViewBag.Saved == "False")
             <td>@articleContent</td>
             <td>
                 <a id="iconButton" href="@Url.Action("Edit", "ManagementArticles", new { id = article.Id })" class="fa fa-pencil-square-o"></a>
-                <form method="post">
-                    <input type="hidden" value="@article.Id" name="Id"/>
-                    <button type="submit" value="" id="defaultButton"><span id="iconButton" class="fa fa-times"></span></button>
-                </form>
+                <a id="iconButton" href="@Url.Action("Delete", "ManagementArticles", new { id = article.Id })" class="fa fa-times"></a>
             </td>
         </tr>
     }

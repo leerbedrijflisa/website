@@ -16,17 +16,34 @@ namespace Lisa.Website.Controllers
             return View(GetArticles());
         }
 
-        [HttpPost]
-        public ActionResult Index(int Id)
+        public ActionResult Delete(int? id)
         {
-            var db = new WebsiteContext();
-            var article = db.Articles.Find(Id);
+            var article = _db.Articles.Find(id);
 
-            db.Articles.Remove(article);
-            db.SaveChanges();
+            if (article == null)
+            {
+                return HttpNotFound();
+            }
 
-            ViewBag.Saved = "Delete";
-            ViewBag.Changed = article.Title;
+            return View(article);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int? id, string confirmed)
+        {
+            var article = _db.Articles.Find(id);
+
+            if (article == null)
+            {
+                return HttpNotFound();
+            }
+
+            if(confirmed == "Verwijderen")
+            {
+                _db.Articles.Remove(article);
+                _db.SaveChanges();
+            }
+
             return RedirectToAction("Index");
         }
 
@@ -39,44 +56,36 @@ namespace Lisa.Website.Controllers
         [HttpPost]
         public ActionResult Add(Article articles)
         {
-            var db = new WebsiteContext();
-            db.Articles.Add(new Article
+            _db.Articles.Add(new Article
             {
                 Title = articles.Title,
                 Image = articles.Image,
                 Content = articles.Content,
                 Date = DateTime.Now
             });
-            db.SaveChanges();
-            ViewBag.Saved = "Add";
-
+            _db.SaveChanges();
             return RedirectToAction("Index");
         }
 
         public ActionResult Edit(int Id)
         {
             SetCSS("Edit");
-            var db = new WebsiteContext();
-            var article = db.Articles.Find(Id);
+            var article = _db.Articles.Find(Id);
             return View(article);
         }
 
         [HttpPost]
         public ActionResult Edit(int id, Article NewArticle)
         {
-            var db = new WebsiteContext(); //Nieuwe Database Connectie
             NewArticle.Id = id;
-            db.Entry(NewArticle).State = EntityState.Modified; 
-            db.SaveChanges(); //Sla wijzigenen op.
-  
-            ViewBag.Saved = "Edit";
+            _db.Entry(NewArticle).State = EntityState.Modified; 
+            _db.SaveChanges();
             return RedirectToAction("Index");
         }
 
         private IEnumerable<Article> GetArticles()
         {
-            var db = new WebsiteContext();
-            return db.Articles.AsEnumerable();
+            return _db.Articles.AsEnumerable();
         }
 
         private void SetCSS(string pageName)
@@ -84,5 +93,7 @@ namespace Lisa.Website.Controllers
             ViewBag.css = "Articles/article" + pageName + ".css";
             ViewBag.cssResponsive = "Articles/article" + pageName + "Responsive.css";
         }
+
+        private WebsiteContext _db = new WebsiteContext();
     }
 }

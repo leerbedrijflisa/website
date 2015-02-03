@@ -13,28 +13,26 @@ namespace Lisa.Website
             ViewBag.css = "Articles/articleIndex.css";
             ViewBag.cssResponsive = "Articles/articleIndexResponsive.css";
             ViewBag.localScript = "~/Scripts/article.js";
-            var articles = GetArticles();
+
+            var articles = _db.Articles;
             return View(articles);
         }
 
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
             ViewBag.css = "Articles/articleDetail.css";
             ViewBag.cssResponsive = "Articles/articleDetailResponsive.css";
 
-            var db = new WebsiteContext();
-            var article = (from a in GetArticles()
-                           where a.Id == id
-                           select a).SingleOrDefault();
+            var article = _db.Articles.Find(id);
+            if (article == null)
+            {
+                return HttpNotFound();
+            }
 
             return View(article);
         }
-        
-        private IEnumerable<Article> GetArticles()
-        {
-            var db = new WebsiteContext();
-            return db.Articles.AsEnumerable();   
-        }
+
+        private WebsiteContext _db = new WebsiteContext();
          
     }
 }
