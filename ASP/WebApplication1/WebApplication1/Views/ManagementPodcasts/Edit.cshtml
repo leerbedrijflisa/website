@@ -1,5 +1,9 @@
 ﻿@model Podcast
 @{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+@section css{
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/ManagementCSS/Podcasts/podcastEdit.css")">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/ManagementCSS/Podcasts/podcastEditResponsive.css")">
+}
 
 <h1>Artikel Bewerken:</h1>
 

@@ -67,10 +67,10 @@ namespace Lisa.Website.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult Edit(int Id)
+        public ActionResult Edit(int id)
         {
             SetCSS("Edit");
-            var article = _db.Articles.Find(Id);
+            var article = _db.Articles.Find(id);
             return View(article);
         }
 

@@ -1,5 +1,9 @@
 ﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
 @model Article
+@section css{
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/ManagementCSS/Articles/articleDelete.css")">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/ManagementCSS/Articles/articleDeleteResponsive.css")">
+}
 
 <p>Weet u ZEKER dat u "@Model.Title" wilt verwijderen?</p>
 

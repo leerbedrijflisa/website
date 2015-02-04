@@ -12,14 +12,7 @@ namespace Lisa.Website.Controllers
     {
         public ActionResult Index()
         {
-            SetCSS("Index");
             return View();
-        }
-
-        private void SetCSS(string pageName)
-        {
-            ViewBag.css = "Index/" + pageName + ".css";
-            ViewBag.cssResponsive = "Index/" + pageName + "Responsive.css";
         }
     }
 }

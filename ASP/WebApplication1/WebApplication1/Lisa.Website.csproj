@@ -123,7 +123,7 @@
     <Compile Include="Controllers\ManagementArticlesController.cs" />
     <Compile Include="Controllers\ManagementIndexController.cs" />
     <Compile Include="Controllers\ManagementPodcastsController.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Controllers\Migrations\Configuration.cs" />
     <Compile Include="Models\WebsiteContext.cs" />
     <Content Include="Scripts\Articles.js" />
     <Content Include="Scripts\jquery1.11.1-min.js" />
