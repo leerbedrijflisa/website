@@ -1,27 +1,13 @@
 ﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
-
-<a href="@Url.Action("Add", "ManagementPodcasts")">Podcast Toevoegen</a>
-<br />
-<a href="@Url.Action("Index", "ManagementIndex")">Terug naar hoofdpagina</a>
-
-@if (ViewBag.Saved == "Add")
-{
-    <p id="importnantMessage">De podcast is succesvol opgeslagen!</p>
-}
-else if (ViewBag.Saved == "Edit")
-{
-    <p id="importnantMessage">De podcast is succesvol aangepast!</p>
-}
-else if (ViewBag.Saved == "Delete")
-{
-    <p id="importnantMessage">De podcast "@ViewBag.Changed" is succesvol verwijderd!</p>
-}
-else if (ViewBag.Saved == "False")
-{
-    <p id="importnantMessage">LET OP! Uw wijzigingen zijn niet doorgevoerd!</p>
+@section css{
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/ManagementCSS/Podcasts/podcastIndex.css")">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/ManagementCSS/Podcasts/podcastIndexResponsive.css")">
 }
 
 <h1>Podcasts Beheren:</h1>
+
+<a href="@Url.Action("Add", "ManagementPodcasts")">Podcast Toevoegen</a>
+<a href="@Url.Action("Index", "ManagementIndex")">Terug naar hoofdpagina</a>
 
 <table>
     <tr>
