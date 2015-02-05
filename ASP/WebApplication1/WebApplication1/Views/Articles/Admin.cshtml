@@ -6,8 +6,8 @@
 
 <h1>Artikelen Beheren:</h1>
 
-<a href="@Url.Action("Add", "ManagementArticles")">Artikel Toevoegen</a>
-<a href="@Url.Action("Index", "ManagementIndex")">Terug naar hoofdpagina</a>
+<a href="@Url.Action("Add", "Articles")">Artikel Toevoegen</a>
+<a href="@Url.Action("Admin", "Index")">Terug naar hoofdpagina</a>
 
 <table>
     <tr>
@@ -33,8 +33,8 @@
             <td>@article.Date</td>
             <td>@articleContent</td>
             <td>
-                <a id="iconButton" href="@Url.Action("Edit", "ManagementArticles", new { id = article.Id })" class="fa fa-pencil-square-o"></a>
-                <a id="iconButton" href="@Url.Action("Delete", "ManagementArticles", new { id = article.Id })" class="fa fa-times"></a>
+                <a id="iconButton" href="@Url.Action("Edit", "Articles", new { id = article.Id })" class="fa fa-pencil-square-o"></a>
+                <a id="iconButton" href="@Url.Action("Delete", "Articles", new { id = article.Id })" class="fa fa-times"></a>
             </td>
         </tr>
     }

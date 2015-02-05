@@ -120,8 +120,6 @@
     <Content Include="Content\ManagementCSS\style.css" />
     <Content Include="Content\ManagementCSS\styleResponsive.css" />
     <Content Include="Global.asax" />
-    <Compile Include="Controllers\ManagementArticlesController.cs" />
-    <Compile Include="Controllers\ManagementIndexController.cs" />
     <Compile Include="Controllers\ManagementPodcastsController.cs" />
     <Compile Include="Controllers\Migrations\Configuration.cs" />
     <Compile Include="Models\WebsiteContext.cs" />
@@ -152,9 +150,9 @@
     <Content Include="Views\Articles\Details.cshtml" />
     <Content Include="Views\Podcasts\Index.cshtml" />
     <Content Include="Views\Podcasts\Details.cshtml" />
-    <Content Include="Views\ManagementArticles\Index.cshtml" />
+    <Content Include="Views\Articles\Admin.cshtml" />
     <Content Include="Views\Shared\_ManagementLayout.cshtml" />
-    <Content Include="Views\ManagementArticles\Add.cshtml" />
+    <Content Include="Views\Articles\Add.cshtml" />
     <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.woff" />
@@ -186,12 +184,12 @@
     <Content Include="Content\FontAwesome\scss\_rotated-flipped.scss" />
     <Content Include="Content\FontAwesome\scss\_stacked.scss" />
     <Content Include="Content\FontAwesome\scss\_variables.scss" />
-    <Content Include="Views\ManagementArticles\Edit.cshtml" />
+    <Content Include="Views\Articles\Edit.cshtml" />
     <Content Include="Views\ManagementIndex\Index.cshtml" />
     <Content Include="Views\ManagementPodcasts\Index.cshtml" />
     <Content Include="Views\ManagementPodcasts\Add.cshtml" />
     <Content Include="Views\ManagementPodcasts\Edit.cshtml" />
-    <Content Include="Views\ManagementArticles\Delete.cshtml" />
+    <Content Include="Views\Articles\Delete.cshtml" />
     <None Include="Views\Podcasts\RSS.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
