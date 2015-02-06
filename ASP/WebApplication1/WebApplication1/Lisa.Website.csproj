@@ -185,7 +185,7 @@
     <Content Include="Content\FontAwesome\scss\_stacked.scss" />
     <Content Include="Content\FontAwesome\scss\_variables.scss" />
     <Content Include="Views\Articles\Edit.cshtml" />
-    <Content Include="Views\ManagementIndex\Index.cshtml" />
+    <Content Include="Views\Index\Admin.cshtml" />
     <Content Include="Views\ManagementPodcasts\Index.cshtml" />
     <Content Include="Views\ManagementPodcasts\Add.cshtml" />
     <Content Include="Views\ManagementPodcasts\Edit.cshtml" />
