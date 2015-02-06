@@ -90,6 +90,7 @@
     <Content Include="Content\CSS\Articles\articleDetailResponsive.css" />
     <Content Include="Content\CSS\Articles\articleIndex.css" />
     <Content Include="Content\CSS\Articles\articleIndexResponsive.css" />
+    <Content Include="Content\CSS\Index\Contact.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.min.css" />
     <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.svg" />
@@ -122,6 +123,7 @@
     <Content Include="Global.asax" />
     <Compile Include="Controllers\ManagementPodcastsController.cs" />
     <Compile Include="Controllers\Migrations\Configuration.cs" />
+    <Compile Include="Models\Contacts.cs" />
     <Compile Include="Models\WebsiteContext.cs" />
     <Content Include="Scripts\Articles.js" />
     <Content Include="Scripts\jquery1.11.1-min.js" />
@@ -191,6 +193,7 @@
     <Content Include="Views\ManagementPodcasts\Edit.cshtml" />
     <Content Include="Views\Articles\Delete.cshtml" />
     <Content Include="Views\ManagementPodcasts\Delete.cshtml" />
+    <Content Include="Views\Index\Contact.cshtml" />
     <None Include="Views\Podcasts\RSS.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
