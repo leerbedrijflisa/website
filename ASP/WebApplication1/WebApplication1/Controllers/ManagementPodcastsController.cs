@@ -15,13 +15,29 @@ namespace Lisa.Website.Controllers
             return View(GetPodcasts());
         }
 
-        [HttpPost]
-        public ActionResult Index(int id)
+        public ActionResult Delete(int? id)
         {
-            var db = new WebsiteContext();
-            var podcast = db.Podcasts.Find(id);
-            db.Podcasts.Remove(podcast);
-            db.SaveChanges();
+            var podcasts = _db.Podcasts.Find(id);
+
+            if (podcasts == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(podcasts);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id, string confirmed)
+        {
+            var podcast = _db.Podcasts.Find(id);
+
+            if (confirmed == "Verwijderen")
+            {   
+                _db.Podcasts.Remove(podcast);
+                _db.SaveChanges();
+            }
+
             return RedirectToAction("Index");
         }
         
@@ -33,8 +49,7 @@ namespace Lisa.Website.Controllers
         [HttpPost]
         public ActionResult Add(Podcast podcast)
         {
-            var db = new WebsiteContext();
-            db.Podcasts.Add(new Podcast
+            _db.Podcasts.Add(new Podcast
             {
                 Title = podcast.Title,
                 Image = podcast.Image,
@@ -44,31 +59,30 @@ namespace Lisa.Website.Controllers
                 File = podcast.File,
                 Date = DateTime.Now
             });
-            db.SaveChanges();
+            _db.SaveChanges();
             return RedirectToAction("Index");
         }
         
         public ActionResult Edit(int id)
         {
-            var db = new WebsiteContext();
-            var podcast = db.Podcasts.Find(id);
+            var podcast = _db.Podcasts.Find(id);
             return View(podcast);
         }
 
         [HttpPost]
         public ActionResult Edit(int id, Podcast NewPodcast)
         {
-            var db = new WebsiteContext(); 
             NewPodcast.Id = id;
-            db.Entry(NewPodcast).State = EntityState.Modified;
-            db.SaveChanges(); 
+            _db.Entry(NewPodcast).State = EntityState.Modified;
+            _db.SaveChanges(); 
             return RedirectToAction("Index");
         }
 
         private IEnumerable<Podcast> GetPodcasts()
         {
-            var db = new WebsiteContext();
-            return db.Podcasts.AsEnumerable();
+            return _db.Podcasts.AsEnumerable();
         }
+
+        private WebsiteContext _db = new WebsiteContext();
     }
 }

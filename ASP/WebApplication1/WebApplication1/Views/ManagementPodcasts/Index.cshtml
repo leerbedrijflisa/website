@@ -40,11 +40,7 @@
             <td><a target="_blank" href="http://@podcast.References">@podcast.References</a></td>
             <td>
                 <a id="iconButton" href="@Url.Action("Edit", "ManagementPodcasts", new { id = podcast.Id })" class="fa fa-pencil-square-o"></a>
-                <form method="post">
-                    <input type="hidden" value="@podcast.Id" name="Id" />
-                    <button type="submit" value="" id="defaultButton"><span id="iconButton" class="fa fa-times"></span></button>
-                </form>
-                <a id="iconButton" href="@Url.Action("Index", "ManagementPodcasts", new { id = podcast.Id })"></a>
+                <a id="iconButton" href="@Url.Action("Delete", "ManagementPodcasts", new { id = podcast.Id })" class="fa fa-times"></a>
             </td>
         </tr>
     }

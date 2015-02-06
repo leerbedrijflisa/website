@@ -190,6 +190,7 @@
     <Content Include="Views\ManagementPodcasts\Add.cshtml" />
     <Content Include="Views\ManagementPodcasts\Edit.cshtml" />
     <Content Include="Views\Articles\Delete.cshtml" />
+    <Content Include="Views\ManagementPodcasts\Delete.cshtml" />
     <None Include="Views\Podcasts\RSS.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
