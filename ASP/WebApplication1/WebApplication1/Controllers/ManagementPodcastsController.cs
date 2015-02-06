@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace Lisa.Website.Controllers
 {
-    public class ManagementPodcastsController : Controller
+    public class ManagementPodcastsController : BaseController
     {
         public ActionResult Index()
         {

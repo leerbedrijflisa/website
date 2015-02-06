@@ -121,6 +121,7 @@
     <Content Include="Content\ManagementCSS\style.css" />
     <Content Include="Content\ManagementCSS\styleResponsive.css" />
     <Content Include="Global.asax" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ManagementPodcastsController.cs" />
     <Compile Include="Controllers\Migrations\Configuration.cs" />
     <Compile Include="Models\Contacts.cs" />
