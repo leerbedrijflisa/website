@@ -12,28 +12,21 @@ namespace Lisa.Website.Controllers
     {
         public ActionResult Index()
         {
-            SetCSS("Index");
             return View(GetPodcasts());
         }
 
         [HttpPost]
-        public ActionResult Index(int Id)
+        public ActionResult Index(int id)
         {
-            SetCSS("Index");
             var db = new WebsiteContext();
-            var podcast = db.Podcasts.Find(Id);
-
+            var podcast = db.Podcasts.Find(id);
             db.Podcasts.Remove(podcast);
             db.SaveChanges();
-
-            ViewBag.Saved = "Delete";
-            ViewBag.Changed = podcast.Title;
             return RedirectToAction("Index");
         }
         
         public ActionResult Add()
         {
-            SetCSS("Add");
             return View();
         }
 
@@ -52,30 +45,23 @@ namespace Lisa.Website.Controllers
                 Date = DateTime.Now
             });
             db.SaveChanges();
-            ViewBag.Saved = "Add";
-
             return RedirectToAction("Index");
         }
         
-        public ActionResult Edit(int Id)
+        public ActionResult Edit(int id)
         {
-            SetCSS("Edit");
             var db = new WebsiteContext();
-            var podcast = db.Podcasts.Find(Id);
+            var podcast = db.Podcasts.Find(id);
             return View(podcast);
         }
 
         [HttpPost]
         public ActionResult Edit(int id, Podcast NewPodcast)
         {
-            SetCSS("Index");
-
             var db = new WebsiteContext(); 
             NewPodcast.Id = id;
             db.Entry(NewPodcast).State = EntityState.Modified;
             db.SaveChanges(); 
-
-            ViewBag.Saved = "Edit";
             return RedirectToAction("Index");
         }
 
@@ -83,12 +69,6 @@ namespace Lisa.Website.Controllers
         {
             var db = new WebsiteContext();
             return db.Podcasts.AsEnumerable();
-        }
-
-        private void SetCSS(string pageName)
-        {
-            ViewBag.css = "Podcasts/podcast" + pageName + ".css";
-            ViewBag.cssResponsive = "Podcasts/podcast" + pageName + "Responsive.css";
         }
     }
 }

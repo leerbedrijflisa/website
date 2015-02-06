@@ -1,0 +1,41 @@
+﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+@section css{
+<link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/ManagementCSS/Articles/articleIndex.css")">
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/ManagementCSS/Articles/articleIndexResponsive.css")">
+}
+
+<h1>Artikelen Beheren:</h1>
+
+<a href="@Url.Action("Add", "Articles")">Artikel Toevoegen</a>
+<a href="@Url.Action("Admin", "Index")">Terug naar hoofdpagina</a>
+
+<table>
+    <tr>
+        <th>Artikelnummer:</th>
+        <th>Titel:</th>
+        <th>Datum van publiceren:</th>
+        <th>Inhoud:</th>
+        <th>Opties:</th>
+    </tr>
+
+    @foreach (var article in Model)
+    {
+        string articleContent = article.Content;
+        if (articleContent.Length > 200)
+        {
+            articleContent = articleContent.Substring(0, 200);
+            articleContent = articleContent + "...";
+        }
+
+        <tr>
+            <td>@article.Id</td>
+            <td>@article.Title</td>
+            <td>@article.Date</td>
+            <td>@articleContent</td>
+            <td>
+                <a id="iconButton" href="@Url.Action("Edit", "Articles", new { id = article.Id })" class="fa fa-pencil-square-o"></a>
+                <a id="iconButton" href="@Url.Action("Delete", "Articles", new { id = article.Id })" class="fa fa-times"></a>
+            </td>
+        </tr>
+    }
+</table>
