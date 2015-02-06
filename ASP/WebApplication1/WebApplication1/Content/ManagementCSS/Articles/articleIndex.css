@@ -1,0 +1,26 @@
+﻿#iconButton
+{
+    text-decoration: none;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+#iconButton:hover
+{
+    cursor: pointer;
+}
+
+form
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+#defaultButton
+{
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    border: 0;
+}

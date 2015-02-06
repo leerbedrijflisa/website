@@ -1,4 +1,8 @@
 ﻿@model IEnumerable<Article>
+@section css{
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/CSS/Articles/articleIndex.css")">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/CSS/Articles/articleIndexResponsive.css")">
+}
 
 <div class="banner">
     <h1>Artikelen</h1>
@@ -50,16 +54,15 @@
                 i++;
 
                 string articleContent = article.Content;
-                if(articleContent.Length > 690)
+                if (articleContent.Length > 690)
                 {
                     articleContent = articleContent.Substring(0, 690);
                     articleContent = articleContent + "...";
                 }
                 
-                string idName = string.Format("articleButton{0}", i);
-                
                 string url = string.Format("~/Content/Images/{0}", article.Image);
-                <li id="@idName">
+                
+                <li id="@article.Id">
                     <a href="@Url.Action("Details", new { id = article.Id })">
                         <img src="@Url.Content(url)">
                         <div class="articleInside">
