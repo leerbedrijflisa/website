@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Podcast>
+@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+@section css{
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/ManagementCSS/Podcasts/podcastAdd.css")">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/ManagementCSS/Podcasts/podcastAddResponsive.css")">
+}
+
+<h1>Podcast Toevoegen:</h1>
+
+<form method="post" class="addPodcast">
+    <ul>
+        <li><span>Titel: </span><input type="text" name="Title" /></li>
+        <li><span>Afbeelding: </span><input type="text" name="Image" /></li>
+        <li><span>Bestand: </span><input type="text" name="File" /></li>
+        <li><span>Auteur(s): </span><input type="text" name="Author" /></li>
+        <li><span>Referenties: </span><input type="text" name="References" /></li>
+        <li id="contentField">Inhoud:</li>
+        <li><textarea name="Content"></textarea></li>
+        <li><input type="submit" value="Opslaan" /></li>
+    </ul>
+</form>

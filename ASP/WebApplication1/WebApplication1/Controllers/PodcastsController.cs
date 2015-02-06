@@ -11,16 +11,11 @@ namespace Lisa.Website.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.css = "Podcasts/podcastIndex.css";
-            ViewBag.cssResponsive = "Podcasts/CSS/podcastIndexResponsive.css";
             return View(GetPodcast());
         }
 
         public ActionResult Details(int id)
         {
-            ViewBag.css = "Podcasts/podcastDetail.css";
-            ViewBag.cssResponsive = "Podcasts/podcastDetailResponsive.css";
-
             var podcast = (from a in GetPodcast()
                            where a.Id == id
                            select a).SingleOrDefault();

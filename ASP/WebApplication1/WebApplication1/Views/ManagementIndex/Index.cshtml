@@ -1,0 +1,21 @@
+﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+@section css{
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/ManagementCSS/Index/Index.css")">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/ManagementCSS/Index/IndexResponsive.css")">
+}
+
+<h1>CMS Lisa website.</h1>
+
+<a target="_blank" href="@Url.Action("Index", "Index")">Open website in nieuwe venster</a>
+
+<h2>Artikelen</h2>
+<a href="@Url.Action("Index", "ManagementArticles")">Artikelen beheren</a>
+<a href="@Url.Action("Add", "ManagementArticles")">Artikel toevoegen</a>
+
+<h2>Podcasts</h2>
+<a href="@Url.Action("Index", "ManagementPodcasts")">Podcasts beheren</a>
+<a href="@Url.Action("Add", "ManagementPodcasts")">Podcast toevoegen</a>
+
+<h2>Projecten</h2>
+<a href="@Url.Action("Index", "ManagementProjects")">Projecten beheren</a>
+<a href="@Url.Action("Add", "ManagementProject")">Project toevoegen</a>

@@ -1,4 +1,8 @@
 ﻿@model IEnumerable<Podcast>
+@section css{
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/CSS/Podcasts/podcastIndex.css")">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/CSS/Podcasts/podcastIndexResponsive.css")">
+}
 
 <div class="banner">
     <h1>Podcasts</h1>
