@@ -9,7 +9,10 @@ namespace Lisa.Website
 {
     public class BaseController : Controller
     {
-        
-
+        public abstract class ViewModelBase
+        {
+            
+        }
+         
     }
 }
