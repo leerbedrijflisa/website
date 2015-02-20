@@ -1,11 +1,11 @@
-﻿.banner h1
+﻿/*The css is ordered in the way the html is nested in the index page of articles. */
+
+.banner h1
 {
 	color: white;
 	text-align: center;
-	font-size: 50px;
 	position: absolute;
 	width: 100%;
-	margin-top: 10%;
 	font-weight: normal;
 }
 
@@ -21,29 +21,69 @@
 .podcast div
 {
 	max-width: 1130px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0px;
-	margin-top: 0px;
-	padding-bottom: 60px;
-	padding-top: 40px;
-	padding-right: 0px;
-	padding-left: 0px;
+    margin: 0 auto 0 auto;
+    padding: 40px 0 60px 0;
 }
 
 .podcast h2
 {
 	margin: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-top: 10px;
-	padding-bottom: 0px;
-	margin-left: 5px;
+    padding: 10px 0 0 0;
 	margin-right: 0px;
 	margin-bottom: 40px;
 	margin-top: 0px;
 	display: block;
 	width: 100%;
+}
+
+/* NOTE: HIER VERDER MET REFACTOREN.*/
+
+#leftcontainer
+{
+	width: 58%;
+	display: block;
+	margin: 0px;
+	padding-bottom: 15px;
+	padding-right: 35px;
+	padding-left: 0px;
+	padding-top: 0px;
+	float: left;
+}
+
+.podcast span
+{
+	max-width: 100%;
+	background-color: #FAC8D0;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 2px solid black;
+	margin-left: 5px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	display: block;
+}
+
+.podcast audio
+{
+    width: 630px;
+    height: 35px;
+}
+
+.podcast p
+{
+	width: 100%;
+	display: block;
+	margin-left: 5px;
+	margin-right: 4px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .podcastLink
@@ -84,53 +124,6 @@
     cursor: pointer;
 }
 
-#RSS
-{
-    margin-left: 130px;
-    color: black;
-}
-
-.podcast img
-{
-	height: 12px;
-	width: 15px;
-	padding: 0px;
-	margin-right: 5px;
-	margin-left: 0px;
-	margin-bottom: 0px;
-	margin-top: 0px;
-}
-
-.podcast span
-{
-	max-width: 100%;
-	background-color: #FAC8D0;
-	padding-left: 5px;
-	padding-right: 5px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	border: 2px solid black;
-	margin-left: 5px;
-	margin-right: 0px;
-	margin-top: 0px;
-	margin-bottom: 15px;
-	display: block;
-}
-
-.podcast p
-{
-	width: 100%;
-	display: block;
-	margin-left: 5px;
-	margin-right: 4px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-left: 5px;
-	padding-right: 5px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
 .podcast ul
 {
 	width: 35%;
@@ -166,18 +159,6 @@
 	margin-right: 0px;
 }
 
-#leftcontainer
-{
-	width: 58%;
-	display: block;
-	margin: 0px;
-	padding-bottom: 15px;
-	padding-right: 35px;
-	padding-left: 0px;
-	padding-top: 0px;
-	float: left;
-}
-
 #button_container
 {
 	width: 100%;
@@ -188,6 +169,17 @@
 	margin: 0px;
 	display: block;
 	overflow: hidden;
+}
+
+.podcast img
+{
+	height: 12px;
+	width: 15px;
+	padding: 0px;
+	margin-right: 5px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
 }
 
 .reply
@@ -253,8 +245,40 @@
 	margin-top: 0px;
 }
 
-.podcast audio
+#RSS
 {
-    width: 630px;
-    height: 35px;
+    margin-left: 130px;
+    color: black;
+}
+
+/*The code below is style that only applies to that element when it is wider than 801px*/
+
+@media all and (min-width: 801px) 
+{
+    .banner h1 
+    {
+        font-size: 50px;
+        margin-top: 10%;
+    }
+
+    .podcast h2
+    {
+        margin-left: 5px;
+    }
+}
+
+/*The code below is style that only applies to that element when it is smaller than 800px. This style is used for mobile devices and small tablets.*/
+
+@media all and (max-width: 800px) 
+{
+    .banner h1
+    {
+        font-size: 30px;
+        margin-top: 9%;
+    }
+
+    .podcast h2
+    {
+        margin-left: 10px;
+    }
 }

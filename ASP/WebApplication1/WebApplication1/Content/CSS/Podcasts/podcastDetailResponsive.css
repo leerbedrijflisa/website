@@ -1,36 +1,4 @@
-﻿.banner h1
-{
-	color: white;
-	text-align: center;
-	font-size: 30px;
-	position: absolute;
-	width: 100%;
-	margin-top: 9%;
-	font-weight: normal;
-}
-
-.podcast
-{
-	background-color: #DEDEDE;
-	width: 100%;
-	min-height: 50px;
-	margin: 0px;
-	padding: 0px;
-}
-
-.podcast div
-{
-	max-width: 1130px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0px;
-	margin-top: 0px;
-	padding-bottom: 60px;
-	padding-top: 40px;
-	padding-right: 0px;
-	padding-left: 0px;
-}
-
+﻿
 .podcast h2
 {
 	margin: 0px;

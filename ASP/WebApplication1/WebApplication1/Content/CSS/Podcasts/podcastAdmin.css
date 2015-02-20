@@ -1,0 +1,25 @@
+﻿/*The css is ordered in the way the html is nested in the index page of articles. */
+
+a
+{
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+#iconButton
+{
+    text-decoration: none;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+#iconButton:hover
+{
+    cursor: pointer;
+}

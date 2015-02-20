@@ -1,20 +1,21 @@
-﻿.editPodcast ul
+﻿/*The css is ordered in the way the html is nested in the index page of articles. */
+
+.editPodcast ul
 {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
 }
 
-.editPodcast textarea
-{
-    width: 500px;
-    height: 500px;
-}
-
 .editPodcast span
 {
     width: 100px;
     display: inline-block;
+}
+
+#Reference
+{
+    width: 140px;
 }
 
 .editPodcast a
@@ -28,7 +29,8 @@
     text-decoration: underline;
 }
 
-#Reference
+.editPodcast textarea
 {
-    width: 140px;
+    width: 500px;
+    height: 500px;
 }
