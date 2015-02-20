@@ -6,8 +6,8 @@
 
 <h1>Podcasts Beheren:</h1>
 
-<a href="@Url.Action("Add", "ManagementPodcasts")">Podcast Toevoegen</a>
-<a href="@Url.Action("Index", "ManagementIndex")">Terug naar hoofdpagina</a>
+<a href="@Url.Action("Add", "Podcasts")">Podcast Toevoegen</a>
+<a href="@Url.Action("Admin", "Index")">Terug naar hoofdpagina</a>
 
 <table>
     <tr>
@@ -39,8 +39,8 @@
             <td>@podcast.Author</td>
             <td><a target="_blank" href="http://@podcast.References">@podcast.References</a></td>
             <td>
-                <a id="iconButton" href="@Url.Action("Edit", "ManagementPodcasts", new { id = podcast.Id })" class="fa fa-pencil-square-o"></a>
-                <a id="iconButton" href="@Url.Action("Delete", "ManagementPodcasts", new { id = podcast.Id })" class="fa fa-times"></a>
+                <a id="iconButton" href="@Url.Action("Edit", "Podcasts", new { id = podcast.Id })" class="fa fa-pencil-square-o"></a>
+                <a id="iconButton" href="@Url.Action("Delete", "Podcasts", new { id = podcast.Id })" class="fa fa-times"></a>
             </td>
         </tr>
     }
