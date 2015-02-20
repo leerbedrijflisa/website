@@ -60,7 +60,6 @@
 
 .content img
 {
-	height: auto;
 	padding: 0px;
 	margin: 0px;
 }
@@ -156,6 +155,7 @@
     .content img
     {
         width: 350px;
+        height: auto;
     }
 
     .content h2
@@ -282,7 +282,8 @@
     .content img
     {
         float: left;
-        width: 100px;
+        max-width: 40%;
+        height: 50px;
     }
 
     .content h2
@@ -297,19 +298,6 @@
         font-size: 10px;
 	    float: left;
     }
-
-    /* Can this be removed?
-    .content h1
-    {
-	    padding-top: 10px;
-	    margin-left: 2%;
-	    margin-right: 0px;
-	    margin-bottom: 0px;
-	    margin-top: 0px;
-	    font-weight: normal;
-	    font-size: 20px;
-    }
-    */
 
     .articlesContent
     {
@@ -343,10 +331,11 @@
 
     .articlesContent img
     {
-	    width: 100px;
-	    height: auto;
+	    max-width: 40%;
+	    height: 50px;
         padding: 0 5px 0 0;
 	    float: left;
+        overflow: right;
     }
 
     .articlesContent h2
@@ -359,8 +348,7 @@
 	    padding-top: 0px;
 	    padding-bottom: 0px;
 	    width: auto;
-	    min-height: 20px;
-	    float: left;
+	    min-height: 50px;
     }
 
     .articlesContent p
