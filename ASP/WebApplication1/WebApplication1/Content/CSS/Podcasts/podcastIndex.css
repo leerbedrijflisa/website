@@ -79,8 +79,6 @@
     margin: 0 auto 0 auto;
 }
 
-/* Note: Hier verdergaan met refactoren.*/
-
 .podcast li
 {
 	padding: 0px;
@@ -104,44 +102,26 @@
 
 .podcast img
 {
-	width: 175px;
 	height: auto;
-	padding-left: 0px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-right: 10px;
+    padding: 10px 10px 10px 0;
 	margin: 0px;
 	float: left;
 }
 
 .podcast h1
 {
-	font-size: 20px;
-	padding-top: 5px;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-bottom: 5px;
 	font-weight: normal;
 }
 
 .podcast h2
 {
-	font-size: 15px;
-	padding-top: 5px;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-bottom: 5px;
 	font-weight: normal;
 }
 
 .podcast p
 {
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-bottom: 20px;
-	padding-top: 0px;
+    padding: 0 0 20px 0;
 	margin: 0px;
-	font-size: 15px;
 }
 
 /*The code below is style that only applies to that element when it is wider than 801px*/
@@ -209,6 +189,28 @@
     {
         max-width: 1130px;
     }
+
+    .podcast img
+    {
+        width: 175px;
+    }
+
+    .podcast h1
+    {
+        font-size: 20px;
+        padding: 5px 0 5px 0;
+    }
+
+    .podcast h2
+    {
+        font-size: 15px;
+        padding: 5px 0 5px 0;
+    }
+
+    .podcast p
+    {
+        font-size: 15px;
+    }
 }
 
 /*The code below is style that only applies to that element when it is smaller than 800px. This style is used for mobile devices and small tablets.*/
@@ -268,5 +270,27 @@
     .podcast ul
     {
         padding: 0 2% 0 2%;
+    }
+
+    .podcast img
+    {
+        width: 100px;
+    }
+
+    .podcast h1
+    {
+        font-size: 15px;
+        padding: 5px 0 0 0;
+    }
+
+    .podcast h2
+    {
+        font-size: 10px;
+        padding: 0 0 5px 0;
+    }
+
+    .podcast p
+    {
+        font-size: 10px;
     }
 }

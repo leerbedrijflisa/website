@@ -97,7 +97,6 @@
     <Content Include="Content\CSS\Index\Index.css" />
     <Content Include="Content\CSS\Podcasts\podcastDetail.css" />
     <Content Include="Content\CSS\Podcasts\podcastIndex.css" />
-    <Content Include="Content\CSS\Podcasts\podcastIndexResponsive.css" />
     <Content Include="Content\CSS\style.css" />
     <Content Include="Content\CSS\styleResponsive.css" />
     <Content Include="Content\CSS\Articles\articleEdit.css" />
