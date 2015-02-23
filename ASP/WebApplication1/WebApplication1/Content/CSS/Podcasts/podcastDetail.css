@@ -54,6 +54,11 @@
 	display: block;
 }
 
+.podcast audio
+{
+    height: 35px;
+}
+
 .podcast p
 {
     display: block;
@@ -80,6 +85,31 @@
 	margin: 0px;
 	display: block;
 	overflow: hidden;
+}
+
+.podcastLink
+{
+	background-color: #FAC8D0;
+    padding: 5px 10px 5px 10px;
+    margin: 6px 5px 0 10px;
+	border: 1px solid black;
+	font-size: 15px;
+    text-decoration: none;
+    position: absolute;
+    color: black;
+}
+
+.podcastLink:hover 
+{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+#RSS
+{
+    margin-left: 135px;
+    color: black;
 }
 
 .podcast img
@@ -152,7 +182,6 @@
 
     .podcast audio
     {
-        width: 630px;
         height: 35px;
     }
 
@@ -161,25 +190,6 @@
         width: 100%;
         margin: 0 4px 0 5px;
         padding: 5px;
-    }
-
-    .podcastLink
-    {
-	    background-color: #FAC8D0;
-        padding: 5px 10px 5px 10px;
-        margin: 6px 5px 0 10px;
-	    border: 1px solid black;
-	    font-size: 15px;
-        text-decoration: none;
-        position: absolute;
-        color: black;
-    }
-
-    .podcastLink:hover 
-    {
-        text-decoration: none;
-        color: black;
-        cursor: pointer;
     }
 
     #references
@@ -225,12 +235,6 @@
         margin: 10px;
 	    max-width: 58%;
     }
-
-    #RSS
-    {
-        margin-left: 130px;
-        color: black;
-    }
 }
 
 /*The code below is style that only applies to that element when it is smaller than 800px. This style is used for mobile devices and small tablets.*/
@@ -258,6 +262,11 @@
     .podcast span
     {
         margin: 0 10px 15px 10px;
+    }
+
+    .podcast audio
+    {
+        width: 100%;
     }
 
     .podcast p
