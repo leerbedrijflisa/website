@@ -5,8 +5,7 @@
     <head>
         <title>Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/CSS/style.css")">
-        <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/CSS/styleResponsive.css")">
+        <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/style.css")">
         @RenderSection("css", false)
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <link rel="icon" type="image/icon" href="@Url.Content("~/Content/Images/lisalogo_ico.png")" />
@@ -16,7 +15,6 @@
         <script src="@Url.Content("~/Scripts/jquery1.11.1-min.js")"></script>
     </head>
     <body>
-
         <span class="jump-button" id="topPosition">Contact</span>
 
         @if (controllerName.Equals("Index") || controllerName.Equals("index"))

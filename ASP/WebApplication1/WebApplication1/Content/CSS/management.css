@@ -1,4 +1,6 @@
-﻿#importnantMessage
+﻿/*The css is ordered in the way the html is nested in the managementlayout.cshtml. */
+
+#importnantMessage
 {
     color: red;
 }

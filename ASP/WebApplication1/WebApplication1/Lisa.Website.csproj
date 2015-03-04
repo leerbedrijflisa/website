@@ -98,7 +98,6 @@
     <Content Include="Content\CSS\Podcasts\podcastDetail.css" />
     <Content Include="Content\CSS\Podcasts\podcastIndex.css" />
     <Content Include="Content\CSS\style.css" />
-    <Content Include="Content\CSS\styleResponsive.css" />
     <Content Include="Content\CSS\Articles\articleEdit.css" />
     <Content Include="Content\CSS\Articles\articleAdmin.css" />
     <Content Include="Content\CSS\Articles\articleAdd.css" />

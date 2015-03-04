@@ -1,4 +1,6 @@
-﻿.editArticle ul
+﻿/*The css is ordered in the way the html is nested in the edit page of articles. */
+
+.editArticle ul
 {
     list-style-type: none;
     margin: 0px;

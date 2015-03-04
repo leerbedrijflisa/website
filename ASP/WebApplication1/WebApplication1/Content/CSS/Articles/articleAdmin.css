@@ -1,4 +1,6 @@
-﻿#iconButton
+﻿/*The css is ordered in the way the html is nested in the admin page of articles. */
+
+#iconButton
 {
     text-decoration: none;
     color: black;

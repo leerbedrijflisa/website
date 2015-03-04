@@ -1,20 +1,30 @@
-﻿body
+﻿/*The css is ordered in the way the html is nested in the layout.cshtml. */
+
+body
 {
 	background-color: white;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	font-family: 'Open Sans', sans-serif;
+}
+
+.jump-button
+{
+	position: relative;
+	color: black;
+	bottom: 65px;
+	visibility: hidden;
+	float: left;
+	width: 0px;
 }
 
 .menu
 {
-	position: fixed;
+	
 	background-color: #DC0000;
 	width: 100%;
-	padding: 0px;
-	margin: 0px;
-	height: 65px;
-	z-index: 50;
+	padding: 0;
+	margin: 0;
 	top: 0px;
 	display: inline;
 }
@@ -22,11 +32,7 @@
 .menu ul
 {
 	padding: 0px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	max-width: 1130px;
-	margin-left: auto;
-	margin-right: auto;
+    margin: 0 auto 0 auto;
 }
 
 .menu li
@@ -36,7 +42,7 @@
 	text-decoration: none;
 	display: inline;
 	text-align: center;
-	margin: 0px;
+	margin: 0;
 }
 
 .menu a
@@ -44,10 +50,7 @@
 	float: left;
 	color: white;
 	text-decoration: none;
-	height: 65px;
-	padding: 0px;
-	margin: 0px;
-	width: 16.5%;
+    margin: 0;
 }
 
 .menu a:hover
@@ -73,30 +76,10 @@
 .menu span
 {
 	position: relative;
-	top: 20px;
-}
-
-.menu img
-{
-	padding-top: 9px;
-}
-
-.responsive-menu
-{
-	display: none;
-}	
-
-#responsiveButton
-{
-	display: none;
 }
 
 .banner
 {
-	margin-top: 65px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
 	width: 100%;
 	color: white;
 	position: relative;
@@ -118,38 +101,18 @@
 {
 	float: left;
 	width: 100%;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	background-image: url("/Content/Images/bottom.png");
 	background-size: 100%;
 	background-repeat: no-repeat;
-	padding-bottom: 80px;
-}
-
-.footer p
-{
-
-	padding-left: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 2px;
-	margin-bottom: 2px;
-	padding: 0px;
-	float: left;
-	width: 50%;
 }
 
 .footer h2
 {
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 10px;
-	padding-top: 10px;
+    padding: 10px 20px 10px 20px;
 	max-width: 1090px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 2%;
-	margin-bottom: 0px;
+    margin: 2% auto 0 auto;
 	font-weight: normal;
 }
 
@@ -157,22 +120,260 @@
 {
 	position: static;
 	max-width: 1090px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 0px;
-	padding-top: 0px;
+    margin: 0 auto 0 auto;
+    padding: 0 20px 0 20px;
 }
 
-.jump-button
+.footer p
 {
-	position: relative;
-	color: black;
-	bottom: 65px;
-	visibility: hidden;
+    margin: 2px 0 2px 0;
+	padding: 0;
 	float: left;
-	width: 0px;
+	width: 50%;
+}
+
+/*The code below is style that only applies to that element when it is wider than 801px*/
+
+@media all and (min-width: 801px) 
+{
+    .menu 
+    {
+        position: fixed;
+        z-index: 50;
+        height: 65px;
+    }
+
+    .menu ul 
+    {
+        max-width: 1130px;
+    }
+
+    .menu a 
+    {
+        height: 65px;
+        padding: 0px;
+        width: 16.5%;
+    }
+
+    .menu img 
+    {
+        padding-top: 9px;
+    }
+
+    .menu span 
+    {
+        top: 20px;
+    }
+
+    .responsive-menu 
+    {
+        display: none;
+    }
+
+    #responsiveButton 
+    {
+        display: none;
+    }
+
+    .banner
+    {
+        margin: 65px 0 0 0;
+    }
+
+    #footerdiv
+    {
+        padding-bottom: 80px;
+    }
+}
+
+/*The code below is style that only applies to that element when it is smaller than 800px*/
+
+@media all and (max-width: 800px) 
+{
+    .menu
+    {
+        position: relative;
+        z-index: 19;
+        min-height: 50px;
+    }
+
+    .menu ul
+    {
+        width: 100%;
+        overflow: hidden;
+        min-height: 50px;
+    }
+
+    .menu a
+    {
+        height: 50px;
+        padding: 0 20px 0 20px;
+	    width: auto;
+    }
+
+    .menu img
+    {
+	    padding-top: 10px;
+	    width: 60px;
+    }
+
+    .menu span
+    {
+        top: 14px;
+    }
+
+    .responsive-menu
+    {
+	    position: fixed;
+	    width: 40%;
+	    padding: 0;
+	    margin: 0;
+	    height: auto;
+	    z-index: 50;
+	    top: 0px;
+	    display: none;
+    }
+
+    .responsive-menu ul
+    {
+	    padding: 0;
+	    max-width: 1130px;
+        margin: 0 auto 0 auto;
+    }
+
+    .responsive-menu li
+    {
+	    padding: 0;
+	    text-decoration: none;
+	    margin: 0;
+	    width: 100%;
+	    height: 40px;
+	    text-align: center;
+	    display: inline;
+    }
+
+    .responsive-menu a
+    {
+	    color: white;
+	    text-decoration: none;
+        background-color: #DC0000;
+	    height: 40px;
+	    padding: 0;
+	    margin: 0;
+	    width: 100%;
+	    float: left;
+    }
+
+    .responsive-menu a:hover
+    {
+	    background-color: #FF0000;
+    }
+
+    .responsive-menu a:active
+    {
+	    background-color: #BE0000;
+    }
+
+    .responsive-menu span
+    {
+	    position: relative;
+	    top: 10px;
+    }
+
+    .responsive-menu img
+    {
+	    padding-top: 5px;
+	    padding-bottom: 5px;
+	    height: 35px;
+    }
+
+    #responsiveButton
+    {
+	    display: none;
+	    margin: 0;
+	    padding: 0;
+	    width: 30px;
+	    height: 30px;
+	    position: fixed;
+	    float: left;
+	    z-index: 20;
+	    background-color: #DC0000;
+	    border-bottom-right-radius: 6px;
+    }
+
+    #responsiveButton:hover
+    {
+	    cursor: pointer;
+    }
+
+    #responsiveButton ul
+    {
+	    margin: 0;
+	    padding: 0;
+    }
+
+    #responsiveButton li
+    {
+	    padding: 0;
+	    margin: 0;
+	    display: inline;
+    }
+
+    #responsiveButton a
+    {
+	    padding: 0;
+	    margin: 0;
+	    width: 30px;
+	    height: 30px;
+    }
+
+    #responsiveButton span
+    {
+	    content: '';
+        width: 20px;
+        height: 4px;
+        background-color: white;
+	    float: left;
+        margin: 1px 5px 1px 5px;
+        border-radius: 5px;
+    }
+
+    #responsiveButton span:first-child
+    {
+	    margin-top: 7px;
+    }
+
+    #responsiveClose
+    {
+	    background-color: #ADADAD;
+	    color: black;
+        margin: 0;
+    }
+
+    #responsiveClose:hover
+    {
+	    background-color: #999999;
+    }
+
+    /*
+    .banner
+    {
+        margin-top: 0px;
+    }
+    */
+
+    #footerdiv
+    {
+        padding-bottom: 20px;
+    }
+
+    .footer h2
+    {
+        font-size: 15px;
+    }
+
+    .footer p
+    {
+        font-size: 10px;
+    }
 }
