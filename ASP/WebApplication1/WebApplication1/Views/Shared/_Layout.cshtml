@@ -19,6 +19,7 @@
 
         @if (controllerName.Equals("Index") || controllerName.Equals("index"))
         {
+            /*standard menu*/
             <nav>
                 <ul>
                     <li><a id="logobutton" href="#topPosition"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
@@ -44,6 +45,7 @@
         }
         else
         {
+            /*menu for CMS*/
             <nav>
                 <ul>
                     <li><a id ="logobutton" href="@Url.Action("Index", "Index")"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
@@ -89,7 +91,7 @@
             </div>
         </footer>
 
-        <%-- Add any scripts with or without exeptions here --%>
+        <!-- Add any scripts with or without exeptions here -->
 
         <script src="@Url.Content("~/Scripts/script.js")"></script>
 

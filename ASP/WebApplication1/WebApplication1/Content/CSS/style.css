@@ -78,7 +78,7 @@ nav span
 	position: relative;
 }
 
-.banner
+header
 {
 	width: 100%;
 	color: white;
@@ -175,7 +175,7 @@ footer p
         display: none;
     }
 
-    .banner
+    header
     {
         margin: 65px 0 0 0;
     }
@@ -355,7 +355,7 @@ footer p
 	    background-color: #999999;
     }
 
-    .banner
+    header
     {
         margin-top: 0px;
     }
