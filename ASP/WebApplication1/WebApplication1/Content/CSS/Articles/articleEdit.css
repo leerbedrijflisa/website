@@ -1,19 +1,19 @@
 ﻿/*The css is ordered in the way the html is nested in the edit page of articles. */
 
-.editArticle ul
+section ul
 {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
 }
 
-.editArticle textarea
+section textarea
 {
     width: 500px;
     height: 500px;
 }
 
-.editArticle span
+section span
 {
     width: 100px;
     display: inline-block;
