@@ -18,7 +18,7 @@ body
 	width: 0px;
 }
 
-.menu
+nav
 {
 	
 	background-color: #DC0000;
@@ -29,13 +29,13 @@ body
 	display: inline;
 }
 
-.menu ul
+nav ul
 {
 	padding: 0px;
     margin: 0 auto 0 auto;
 }
 
-.menu li
+nav li
 {
 	
 	padding: 0px;
@@ -45,7 +45,7 @@ body
 	margin: 0;
 }
 
-.menu a
+nav a
 {
 	float: left;
 	color: white;
@@ -53,27 +53,27 @@ body
     margin: 0;
 }
 
-.menu a:hover
+nav a:hover
 {
 	background-color: #FF0000;
 }
 
-.menu a:active
+nav a:active
 {
 	background-color: #BE0000;
 }
 
-#logobutton a:hover
+#logobutton:hover
 {
 	background-color: #DC0000;
 }
 
-#logobutton a:active
+#logobutton:active
 {
 	background-color: #DC0000;
 }
 
-.menu span
+nav span
 {
 	position: relative;
 }
@@ -89,7 +89,7 @@ body
 	background-repeat: no-repeat;
 }
 
-.footer
+footer
 {
 	width: 100%;
 	color: white;
@@ -97,7 +97,7 @@ body
 	padding: 0px;
 }
 
-#footerdiv
+footer > div
 {
 	float: left;
 	width: 100%;
@@ -108,7 +108,7 @@ body
 	background-repeat: no-repeat;
 }
 
-.footer h2
+footer h2
 {
     padding: 10px 20px 10px 20px;
 	max-width: 1090px;
@@ -116,7 +116,7 @@ body
 	font-weight: normal;
 }
 
-#content-footer
+footer div div
 {
 	position: static;
 	max-width: 1090px;
@@ -124,7 +124,7 @@ body
     padding: 0 20px 0 20px;
 }
 
-.footer p
+footer p
 {
     margin: 2px 0 2px 0;
 	padding: 0;
@@ -136,31 +136,31 @@ body
 
 @media all and (min-width: 801px) 
 {
-    .menu 
+    nav 
     {
         position: fixed;
         z-index: 50;
         height: 65px;
     }
 
-    .menu ul 
+    nav ul 
     {
         max-width: 1130px;
     }
 
-    .menu a 
+    nav a 
     {
         height: 65px;
         padding: 0px;
         width: 16.5%;
     }
 
-    .menu img 
+    nav img 
     {
         padding-top: 9px;
     }
 
-    .menu span 
+    nav span 
     {
         top: 20px;
     }
@@ -180,7 +180,7 @@ body
         margin: 65px 0 0 0;
     }
 
-    #footerdiv
+    footer div div
     {
         padding-bottom: 80px;
     }
@@ -190,34 +190,34 @@ body
 
 @media all and (max-width: 800px) 
 {
-    .menu
+    nav
     {
         position: relative;
         z-index: 19;
         min-height: 50px;
     }
 
-    .menu ul
+    nav ul
     {
         width: 100%;
         overflow: hidden;
         min-height: 50px;
     }
 
-    .menu a
+    nav a
     {
         height: 50px;
         padding: 0 20px 0 20px;
 	    width: auto;
     }
 
-    .menu img
+    nav img
     {
 	    padding-top: 10px;
 	    width: 60px;
     }
 
-    .menu span
+    nav span
     {
         top: 14px;
     }
@@ -355,24 +355,22 @@ body
 	    background-color: #999999;
     }
 
-    /*
     .banner
     {
         margin-top: 0px;
     }
-    */
 
-    #footerdiv
+    footer > div
     {
         padding-bottom: 20px;
     }
 
-    .footer h2
+    footer h2
     {
         font-size: 15px;
     }
 
-    .footer p
+    footer p
     {
         font-size: 10px;
     }

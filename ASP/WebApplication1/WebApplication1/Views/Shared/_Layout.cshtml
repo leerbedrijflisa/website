@@ -1,6 +1,6 @@
 ﻿@{var controllerName = ViewContext.RouteData.Values["controller"];}
 
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
     <head>
         <title>Home</title>
@@ -19,51 +19,51 @@
 
         @if (controllerName.Equals("Index") || controllerName.Equals("index"))
         {
-            <div class="menu">
+            <nav>
                 <ul>
-                    <li id="logobutton"><a href="#topPosition"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
-                    <li id="menubutton"><a href="#topPosition"><span>Home</span></a></li>
-                    <li id="menubutton"><a href="#artikelenButton"><span>Artikelen</span></a></li>
-                    <li id="menubutton"><a href="#podcastsButton"><span>Podcasts</span></a></li>
-                    <li id="menubutton"><a href="#projectenButton"><span>Projecten</span></a></li>
-                    <li id="menubutton"><a href="#footerButton"><span>Contact</span></a></li>
+                    <li><a id="logobutton" href="#topPosition"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
+                    <li><a href="#topPosition"><span>Home</span></a></li>
+                    <li><a href="#artikelenButton"><span>Artikelen</span></a></li>
+                    <li><a href="#podcastsButton"><span>Podcasts</span></a></li>
+                    <li><a href="#projectenButton"><span>Projecten</span></a></li>
+                    <li><a href="#footerButton"><span>Contact</span></a></li>
                 </ul>
-            </div>
+            </nav>
 
             <div class="responsive-menu">
                 <ul>
-                    <li id="logobutton"><a href="index.html"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
-                    <li id="menubutton"><a href="#topPosition"><span>Home</span></a></li>
-                    <li id="menubutton"><a href="#artikelenButton"><span>Artikelen</span></a></li>
-                    <li id="menubutton"><a href="#podcastsButton"><span>Podcasts</span></a></li>
-                    <li id="menubutton"><a href="#projectenButton"><span>Projecten</span></a></li>
-                    <li id="menubutton"><a href="#footerButton"><span>Contact</span></a></li>
-                    <li id="menubutton"><a id="responsiveClose"><span>Sluiten</span></a></li>
+                    <li><a id="logobutton" href="index.html"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
+                    <li><a href="#topPosition"><span>Home</span></a></li>
+                    <li><a href="#artikelenButton"><span>Artikelen</span></a></li>
+                    <li><a href="#podcastsButton"><span>Podcasts</span></a></li>
+                    <li><a href="#projectenButton"><span>Projecten</span></a></li>
+                    <li><a href="#footerButton"><span>Contact</span></a></li>
+                    <li><a id="responsiveClose"><span>Sluiten</span></a></li>
                 </ul>
             </div>
         }
         else
         {
-            <div class="menu">
+            <nav>
                 <ul>
-                    <li id="logobutton"><a href="@Url.Action("Index", "Index")"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Index")"><span>Home</span></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Articles")"><span>Artikelen</span></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Podcasts")"><span>Podcasts</span></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Projects")"><span>Projecten</span></a></li>
-                    <li id="menubutton"><a href="#footerButton"><span>Contact</span></a></li>
+                    <li><a id ="logobutton" href="@Url.Action("Index", "Index")"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
+                    <li><a href="@Url.Action("Index", "Index")"><span>Home</span></a></li>
+                    <li><a href="@Url.Action("Index", "Articles")"><span>Artikelen</span></a></li>
+                    <li><a href="@Url.Action("Index", "Podcasts")"><span>Podcasts</span></a></li>
+                    <li><a href="@Url.Action("Index", "Projects")"><span>Projecten</span></a></li>
+                    <li><a href="#footerButton"><span>Contact</span></a></li>
                 </ul>
-            </div>
+            </nav>
 
             <div class="responsive-menu">
                 <ul>
-                    <li id="logobutton"><a href="@Url.Action("Index", "Index")"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Index")"><span>Home</span></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Articles")"><span>Artikelen</span></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Podcasts")"><span>Podcasts</span></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Projects")"><span>Projecten</span></a></li>
-                    <li id="menubutton"><a href="#footerButton"><span>Contact</span></a></li>
-                    <li id="menubutton"><a id="responsiveClose"><span>Sluiten</span></a></li>
+                    <li><a id="logobutton" href="@Url.Action("Index", "Index")"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
+                    <li><a href="@Url.Action("Index", "Index")"><span>Home</span></a></li>
+                    <li><a href="@Url.Action("Index", "Articles")"><span>Artikelen</span></a></li>
+                    <li><a href="@Url.Action("Index", "Podcasts")"><span>Podcasts</span></a></li>
+                    <li><a href="@Url.Action("Index", "Projects")"><span>Projecten</span></a></li>
+                    <li><a href="#footerButton"><span>Contact</span></a></li>
+                    <li><a id="responsiveClose"><span>Sluiten</span></a></li>
                 </ul>
             </div>
         }
@@ -76,18 +76,20 @@
 
         @RenderBody()
 
-        <div class="footer">
+        <footer>
             <span class="jump-button" id="footerButton">Contact</span>
-            <div id="footerdiv">
+            <div>
                 <h2>Contact</h2>
-                <div id="content-footer">
+                <div>
                     <p>E-mail: lisa@davinci.nl</p>
                     <p>Telefoon:</p>
                     <p>Adres:</p>
                     <p>Blablabla:</p>
                 </div>
             </div>
-        </div>
+        </footer>
+
+        <%-- Add any scripts with or without exeptions here --%>
 
         <script src="@Url.Content("~/Scripts/script.js")"></script>
 
