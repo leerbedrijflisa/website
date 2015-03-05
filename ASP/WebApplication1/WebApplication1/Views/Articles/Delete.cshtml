@@ -4,10 +4,12 @@
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/Articles/articleDelete.css")">
 }
 
-<p>Weet u ZEKER dat u "@Model.Title" wilt verwijderen?</p>
+<section>
+    <p>Weet u ZEKER dat u "@Model.Title" wilt verwijderen?</p>
 
-<form method="post">
-    <input type="hidden" value="@Model.Id" name="Id" />
-    <input type="submit" name="Confirmed" value="Annuleren" default/>
-    <input type="submit" name="Confirmed" value="Verwijderen"/>
-</form>
+    <form method="post">
+        <input type="hidden" value="@Model.Id" name="Id" />
+        <input type="submit" name="Confirmed" value="Annuleren" default/>
+        <input type="submit" name="Confirmed" value="Verwijderen"/>
+    </form>
+</section>
