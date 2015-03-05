@@ -4,21 +4,33 @@
     <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/ManagementCSS/Index/IndexResponsive.css")">
 }
 
-<h1>CMS Lisa website.</h1>
+<header>
+    <h1>CMS Lisa website.</h1>
+</header>
 
-<a target="_blank" href="@Url.Action("Index", "Index")">Open website in nieuwe venster</a>
+<nav>
+    <a target="_blank" href="@Url.Action("Index", "Index")">Open website in nieuwe venster</a>
+</nav>
 
-<h2>Artikelen</h2>
-<a href="@Url.Action("Admin", "Articles")">Artikelen beheren</a>
-<a href="@Url.Action("Add", "Articles")">Artikel toevoegen</a>
+<section>
+    <h2>Artikelen</h2>
+    <a href="@Url.Action("Admin", "Articles")">Artikelen beheren</a>
+    <a href="@Url.Action("Add", "Articles")">Artikel toevoegen</a>
+</section>
 
-<h2>Podcasts</h2>
-<a href="@Url.Action("Admin", "Podcasts")">Podcasts beheren</a>
-<a href="@Url.Action("Add", "Podcasts")">Podcast toevoegen</a>
+<section>
+    <h2>Podcasts</h2>
+    <a href="@Url.Action("Admin", "Podcasts")">Podcasts beheren</a>
+    <a href="@Url.Action("Add", "Podcasts")">Podcast toevoegen</a>
+</section>
 
-<h2>Projecten</h2>
-<a href="@Url.Action("Admin", "Projects")">Projecten beheren</a>
-<a href="@Url.Action("Add", "Project")">Project toevoegen</a>
+<section>
+    <h2>Projecten</h2>
+    <a href="@Url.Action("Admin", "Projects")">Projecten beheren</a>
+    <a href="@Url.Action("Add", "Project")">Project toevoegen</a>
+</section>
 
-<h2>Contact</h2>
-<a href="@Url.Action("Contact", "Index")">Contact beheren</a>
+<section>
+    <h2>Contact</h2>
+    <a href="@Url.Action("Contact", "Index")">Contact beheren</a>
+</section>
