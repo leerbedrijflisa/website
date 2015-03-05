@@ -4,14 +4,18 @@
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/Articles/articleAdd.css")">
 }
 
-<h1>Artikel Toevoegen:</h1>
+<header>
+    <h1>Artikel Toevoegen:</h1>
+</header>
 
-<form method="post" class="addArticle">
-    <ul>
-        <li><span>Titel: </span><input type="text" name="Title" /></li>
-        <li><span>Afbeelding: </span><input type="text" name="Image"/></li>
-        <li id="contentField">Inhoud:</li>
-        <li><textarea name="Content"></textarea></li>
-        <li><input type="submit" value="Opslaan" /></li>
-    </ul>
-</form>
+<section>
+    <form method="post" class="addArticle">
+        <ul>
+            <li><span>Titel: </span><input type="text" name="Title" /></li>
+            <li><span>Afbeelding: </span><input type="text" name="Image"/></li>
+            <li id="contentField">Inhoud:</li>
+            <li><textarea name="Content"></textarea></li>
+            <li><input type="submit" value="Opslaan" /></li>
+        </ul>
+    </form>
+</section>
