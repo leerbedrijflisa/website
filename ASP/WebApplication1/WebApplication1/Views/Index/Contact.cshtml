@@ -1,15 +1,18 @@
 ﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
 @model Contact
 @section css{
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/ManagementCSS/Index/Contact.css")">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/ManagementCSS/Index/ContactResponsive.css")">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/ManagementCSS/Index/Contact.css")">
 }
 
-<a href="@Url.Action("Admin", "Index")">Terug</a>
+<nav>
+    <a href="@Url.Action("Admin", "Index")">Terug</a>
+</nav>
 
-<form method="post">
-    <span>Telefoonnummer:</span><input type="text" value="@Model.PhoneNumber" name="PhoneNumber" />
-    <span>E-mail:</span><input type="text" value="@Model.Email" name="Email"/>
-    <span>Adres:</span><input type="text" value="@Model.Adress" name="Adress"/>
-    <span><input type="submit" value="Wijzigingen Opslaan"/></span>
-</form>
+<section>
+    <form method="post">
+        <span>Telefoonnummer:</span><input type="text" value="@Model.PhoneNumber" name="PhoneNumber" />
+        <span>E-mail:</span><input type="text" value="@Model.Email" name="Email"/>
+        <span>Adres:</span><input type="text" value="@Model.Adress" name="Adress"/>
+        <span><input type="submit" value="Wijzigingen Opslaan"/></span>
+    </form>
+</section>
