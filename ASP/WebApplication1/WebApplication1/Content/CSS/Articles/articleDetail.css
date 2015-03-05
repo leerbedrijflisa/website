@@ -1,6 +1,6 @@
 ﻿/*The css is ordered in the way the html is nested in the detail page of articles. */
 
-.banner h1
+header h1
 {
 	color: white;
 	text-align: center;
@@ -9,7 +9,7 @@
 	font-weight: normal;
 }
 
-.artikel
+section
 {
 	min-height: 50px;
 	max-width: 1130px;
@@ -17,17 +17,17 @@
 	padding: 0px;
 }
 
-.artikel h2
+section h2
 {
     padding: 20px 20px 10px 20px;
 }
 
-.artikel p
+section p
 {
     padding: 10px 20px 10px 20px;
 }
 
-.artikel img
+section img
 {
 	width: 300px;
 	height: auto;
@@ -40,7 +40,7 @@
 
 @media all and (min-width: 801px) 
 {
-    .banner h1
+    header h1
     {
         margin-top: 10%;
         font-size: 50px;
@@ -51,7 +51,7 @@
 
 @media all and (max-width: 800px) 
 {
-    .banner h1 
+    header h1 
     {
         font-size: 30px;
         margin-top: 9%;
