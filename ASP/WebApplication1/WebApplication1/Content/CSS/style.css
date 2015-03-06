@@ -8,19 +8,20 @@ body
 	font-family: 'Open Sans', sans-serif;
 }
 
-a[name]
+a[name]   /* jump target for menu items on the home page */
 {
 	position: relative;
-	color: black;
-	bottom: 65px;
+	bottom: 65px; /* push content down, otherwise the target is obscured by the menu */
 	visibility: hidden;
 	float: left;
-	width: 0px;
 }
+
+/*
+  Menu bar.
+*/
 
 nav
 {
-	
 	background-color: #DC0000;
 	width: 100%;
 	padding: 0;
@@ -165,9 +166,9 @@ footer p
         top: 20px;
     }
 
-    .responsive-menu 
+    nav ul li:last-child
     {
-        display: none;
+        display: none; 
     }
 
     #responsiveButton 
@@ -192,38 +193,6 @@ footer p
 {
     nav
     {
-        position: relative;
-        z-index: 19;
-        min-height: 50px;
-    }
-
-    nav ul
-    {
-        width: 100%;
-        overflow: hidden;
-        min-height: 50px;
-    }
-
-    nav a
-    {
-        height: 50px;
-        padding: 0 20px 0 20px;
-	    width: auto;
-    }
-
-    nav img
-    {
-	    padding-top: 10px;
-	    width: 60px;
-    }
-
-    nav span
-    {
-        top: 14px;
-    }
-
-    .responsive-menu
-    {
 	    position: fixed;
 	    width: 40%;
 	    padding: 0;
@@ -234,14 +203,18 @@ footer p
 	    display: none;
     }
 
-    .responsive-menu ul
+    nav:target {
+      display: inline;
+    }
+
+    nav ul
     {
 	    padding: 0;
 	    max-width: 1130px;
         margin: 0 auto 0 auto;
     }
 
-    .responsive-menu li
+    nav li
     {
 	    padding: 0;
 	    text-decoration: none;
@@ -252,7 +225,7 @@ footer p
 	    display: inline;
     }
 
-    .responsive-menu a
+    nav a
     {
 	    color: white;
 	    text-decoration: none;
@@ -264,23 +237,23 @@ footer p
 	    float: left;
     }
 
-    .responsive-menu a:hover
+    nav a:hover
     {
 	    background-color: #FF0000;
     }
 
-    .responsive-menu a:active
+    nav a:active
     {
 	    background-color: #BE0000;
     }
 
-    .responsive-menu span
+    nav span
     {
 	    position: relative;
 	    top: 10px;
     }
 
-    .responsive-menu img
+    nav img
     {
 	    padding-top: 5px;
 	    padding-bottom: 5px;
@@ -289,7 +262,6 @@ footer p
 
     #responsiveButton
     {
-	    display: none;
 	    margin: 0;
 	    padding: 0;
 	    width: 30px;
@@ -343,16 +315,17 @@ footer p
 	    margin-top: 7px;
     }
 
-    #responsiveClose
-    {
-	    background-color: #ADADAD;
-	    color: black;
-        margin: 0;
-    }
-
-    #responsiveClose:hover
+    nav ul li:last-child a
     {
 	    background-color: #999999;
+	    color: black;
+      cursor: pointer;
+      margin: 0;
+    }
+
+    nav ul li:last-child a:hover
+    {
+	    background-color: #ADADAD;
     }
 
     header

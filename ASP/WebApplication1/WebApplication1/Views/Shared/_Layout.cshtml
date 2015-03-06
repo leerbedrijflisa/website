@@ -20,7 +20,7 @@
         @if (controllerName.Equals("Index") || controllerName.Equals("index"))
         {
             /*standard menu*/
-            <nav>
+            <nav id="menu">
                 <ul>
                     <li><a id="logobutton" href="#top"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
                     <li><a href="#top"><span>Home</span></a></li>
@@ -28,24 +28,12 @@
                     <li><a href="#podcasts"><span>Podcasts</span></a></li>
                     <li><a href="#projects"><span>Projecten</span></a></li>
                     <li><a href="#footer"><span>Contact</span></a></li>
+										<li><a href="#"><span>Sluiten</span></a></li>
                 </ul>
             </nav>
-
-            <div class="responsive-menu">
-                <ul>
-                    <li><a id="logobutton" href="#top"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
-                    <li><a href="#top"><span>Home</span></a></li>
-                    <li><a href="#articles"><span>Artikelen</span></a></li>
-                    <li><a href="#podcasts"><span>Podcasts</span></a></li>
-                    <li><a href="#projects"><span>Projecten</span></a></li>
-                    <li><a href="#footer"><span>Contact</span></a></li>
-                    <li><a id="responsiveClose"><span>Sluiten</span></a></li>
-                </ul>
-            </div>
         }
         else
         {
-            /*menu for CMS*/
             <nav>
                 <ul>
                     <li><a id ="logobutton" href="@Url.Action("Index", "Index")"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
@@ -54,25 +42,14 @@
                     <li><a href="@Url.Action("Index", "Podcasts")"><span>Podcasts</span></a></li>
                     <li><a href="@Url.Action("Index", "Projects")"><span>Projecten</span></a></li>
                     <li><a href="#footerButton"><span>Contact</span></a></li>
+										<li><a href="#"><span>Sluiten</span></a></li>
                 </ul>
             </nav>
-
-            <div class="responsive-menu">
-                <ul>
-                    <li><a id="logobutton" href="@Url.Action("Index", "Index")"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
-                    <li><a href="@Url.Action("Index", "Index")"><span>Home</span></a></li>
-                    <li><a href="@Url.Action("Index", "Articles")"><span>Artikelen</span></a></li>
-                    <li><a href="@Url.Action("Index", "Podcasts")"><span>Podcasts</span></a></li>
-                    <li><a href="@Url.Action("Index", "Projects")"><span>Projecten</span></a></li>
-                    <li><a href="#footerButton"><span>Contact</span></a></li>
-                    <li><a id="responsiveClose"><span>Sluiten</span></a></li>
-                </ul>
-            </div>
         }
 
         <div id="responsiveButton">
             <ul>
-                <li><a><span></span><span></span><span></span></a></li>
+                <li><a href="#menu"><span></span><span></span><span></span></a></li>
             </ul>
         </div>
 
@@ -92,8 +69,6 @@
         </footer>
 
         <!-- Add any scripts with or without exeptions here -->
-
-        <script src="@Url.Content("~/Scripts/script.js")"></script>
 
         @if (controllerName.Equals("Articles") || controllerName.Equals("articles"))
         { 
