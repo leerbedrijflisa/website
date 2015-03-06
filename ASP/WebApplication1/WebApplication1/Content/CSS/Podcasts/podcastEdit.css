@@ -1,13 +1,13 @@
 ﻿/*The css is ordered in the way the html is nested in the edit page of podcasts. */
 
-.editPodcast ul
+section ul
 {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
 }
 
-.editPodcast span
+section span
 {
     width: 100px;
     display: inline-block;
@@ -18,18 +18,18 @@
     width: 140px;
 }
 
-.editPodcast a
+section a
 {
     text-decoration: none;
     color: blue;
 }
 
-.editPodcast a:hover
+section a:hover
 {
     text-decoration: underline;
 }
 
-.editPodcast textarea
+section textarea
 {
     width: 500px;
     height: 500px;
