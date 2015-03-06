@@ -1,6 +1,6 @@
 ﻿/*The css is ordered in the way the html is nested in the index page of podcasts. */
 
-.banner h1
+header h1
 {
 	color: white;
 	text-align: center;
@@ -128,7 +128,7 @@
 
 @media all and (min-width: 801px) 
 {
-    .banner h1
+    header h1
     {
         font-size: 90px;
     }
@@ -217,7 +217,7 @@
 
 @media all and (max-width: 800px) 
 {
-    .banner h1
+    header h1
     {
         font-size: 40px;
     }
