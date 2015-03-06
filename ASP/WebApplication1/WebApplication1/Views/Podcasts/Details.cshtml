@@ -3,11 +3,11 @@
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/Podcasts/podcastDetail.css")">
 }
 
-<div class="banner">
+<header>
     <h1>@Model.Title</h1>
-</div>
+</header>
 
-<div class="podcast">
+<section class="podcast">
     <div>
         <h2>@Model.Title</h2>
 
@@ -33,13 +33,13 @@
             <a class="podcastLink" id="RSS" rel="alternate" type="application/rss+xml" href="@Url.Action("RSS", "Podcasts")"><img src="@Url.Content("~/Content/Images/icon_rss.png")" />RSS</a>
         </span>
     </div>
-</div>
+</section>
 
-<div class="reply">
+<section class="reply">
     <h2>Reacties</h2>
     <div>
         <h3></h3>
         <h3>Datum</h3>
         <p>hier komt de inhoud van een reactie</p>
     </div>
-</div>
+</section>
