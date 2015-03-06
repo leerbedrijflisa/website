@@ -1,19 +1,19 @@
 ﻿/*The css is ordered in the way the html is nested in the add page of podcasts. */
 
-.addPodcast ul
+header ul
 {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
 }
 
-.addPodcast span
+header span
 {
     width: 100px;
     display: inline-block;
 }
 
-.addPodcast textarea
+header textarea
 {
     width: 500px;
     height: 500px;

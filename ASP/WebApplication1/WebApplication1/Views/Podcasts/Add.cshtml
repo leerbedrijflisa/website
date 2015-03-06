@@ -4,17 +4,21 @@
     <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/CSS/Podcasts/podcastAdd.css")">
 }
 
-<h1>Podcast Toevoegen:</h1>
+<header>
+    <h1>Podcast Toevoegen:</h1>
+</header>
 
-<form method="post" class="addPodcast">
-    <ul>
-        <li><span>Titel: </span><input type="text" name="Title" /></li>
-        <li><span>Afbeelding: </span><input type="text" name="Image" /></li>
-        <li><span>Bestand: </span><input type="text" name="File" /></li>
-        <li><span>Auteur(s): </span><input type="text" name="Author" /></li>
-        <li><span>Referenties: </span><input type="text" name="References" /></li>
-        <li id="contentField">Inhoud:</li>
-        <li><textarea name="Content"></textarea></li>
-        <li><input type="submit" value="Opslaan" /></li>
-    </ul>
-</form>
+<section>
+    <form method="post">
+        <ul>
+            <li><span>Titel: </span><input type="text" name="Title" /></li>
+            <li><span>Afbeelding: </span><input type="text" name="Image" /></li>
+            <li><span>Bestand: </span><input type="text" name="File" /></li>
+            <li><span>Auteur(s): </span><input type="text" name="Author" /></li>
+            <li><span>Referenties: </span><input type="text" name="References" /></li>
+            <li id="contentField">Inhoud:</li>
+            <li><textarea name="Content"></textarea></li>
+            <li><input type="submit" value="Opslaan" /></li>
+        </ul>
+    </form>
+</section>
