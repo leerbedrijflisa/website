@@ -47,6 +47,14 @@ nav li
 	margin: 0;
 }
 
+nav li:first-child a
+{
+  background-color: transparent;    /* make sure background color doesn't change on hover */
+  background-image: url(../Images/Lisa-logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 nav a
 {
 	float: left;
@@ -158,14 +166,6 @@ footer p
         height: 100%;
     }
 
-    nav li:first-child a
-    {
-      background-color: transparent;    /* make sure background color doesn't change on hover */
-      background-image: url(../Images/Lisa-logo.png);
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
-
     nav a 
     {
         display: block;
@@ -206,7 +206,6 @@ footer p
 {
     nav
     {
-	    -position: fixed;
 	    width: 40%;
 	    padding: 0;
 	    margin: 0;
@@ -214,6 +213,11 @@ footer p
 	    z-index: 50;
 	    top: 0px;
 	    display: none;
+    }
+
+    nav li:first-child a
+    {
+      background-size: auto 35px;
     }
 
     nav:target {
@@ -243,8 +247,8 @@ footer p
 	    color: white;
 	    text-decoration: none;
         background-color: #DC0000;
-	    height: 40px;
-	    padding: 0;
+	    height: 30px;
+      padding: 10px 0 0 0;
 	    margin: 0;
 	    width: 100%;
 	    float: left;
