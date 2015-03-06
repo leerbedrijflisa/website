@@ -15,30 +15,30 @@
         <script src="@Url.Content("~/Scripts/jquery1.11.1-min.js")"></script>
     </head>
     <body>
-        <span class="jump-button" id="topPosition">Contact</span>
+        <a name="top"></a>
 
         @if (controllerName.Equals("Index") || controllerName.Equals("index"))
         {
             /*standard menu*/
             <nav>
                 <ul>
-                    <li><a id="logobutton" href="#topPosition"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
-                    <li><a href="#topPosition"><span>Home</span></a></li>
-                    <li><a href="#artikelenButton"><span>Artikelen</span></a></li>
-                    <li><a href="#podcastsButton"><span>Podcasts</span></a></li>
-                    <li><a href="#projectenButton"><span>Projecten</span></a></li>
-                    <li><a href="#footerButton"><span>Contact</span></a></li>
+                    <li><a id="logobutton" href="#top"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
+                    <li><a href="#top"><span>Home</span></a></li>
+                    <li><a href="#articles"><span>Artikelen</span></a></li>
+                    <li><a href="#podcasts"><span>Podcasts</span></a></li>
+                    <li><a href="#projects"><span>Projecten</span></a></li>
+                    <li><a href="#footer"><span>Contact</span></a></li>
                 </ul>
             </nav>
 
             <div class="responsive-menu">
                 <ul>
-                    <li><a id="logobutton" href="index.html"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
-                    <li><a href="#topPosition"><span>Home</span></a></li>
-                    <li><a href="#artikelenButton"><span>Artikelen</span></a></li>
-                    <li><a href="#podcastsButton"><span>Podcasts</span></a></li>
-                    <li><a href="#projectenButton"><span>Projecten</span></a></li>
-                    <li><a href="#footerButton"><span>Contact</span></a></li>
+                    <li><a id="logobutton" href="#top"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
+                    <li><a href="#top"><span>Home</span></a></li>
+                    <li><a href="#articles"><span>Artikelen</span></a></li>
+                    <li><a href="#podcasts"><span>Podcasts</span></a></li>
+                    <li><a href="#projects"><span>Projecten</span></a></li>
+                    <li><a href="#footer"><span>Contact</span></a></li>
                     <li><a id="responsiveClose"><span>Sluiten</span></a></li>
                 </ul>
             </div>
@@ -79,7 +79,7 @@
         @RenderBody()
 
         <footer>
-            <span class="jump-button" id="footerButton">Contact</span>
+            <a name="footer"></a>
             <div>
                 <h2>Contact</h2>
                 <div>
