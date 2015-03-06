@@ -8,6 +8,7 @@ body
 	font-family: 'Open Sans', sans-serif;
 }
 
+
 a[name]   /* jump target for menu items on the home page */
 {
 	position: relative;
@@ -26,19 +27,19 @@ nav
 	width: 100%;
 	padding: 0;
 	margin: 0;
-	top: 0px;
-	display: inline;
+	
+  position: fixed;    /* keep the menu bar at the top */
+  top: 0px;
 }
 
 nav ul
 {
 	padding: 0px;
-    margin: 0 auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 nav li
 {
-	
 	padding: 0px;
 	text-decoration: none;
 	display: inline;
@@ -63,7 +64,7 @@ nav a:active
 {
 	background-color: #BE0000;
 }
-
+  
 #logobutton:hover
 {
 	background-color: #DC0000;
@@ -72,11 +73,6 @@ nav a:active
 #logobutton:active
 {
 	background-color: #DC0000;
-}
-
-nav span
-{
-	position: relative;
 }
 
 header
@@ -139,31 +135,48 @@ footer p
 {
     nav 
     {
-        position: fixed;
         z-index: 50;
         height: 65px;
+        width: 100%;
     }
 
     nav ul 
     {
+        text-align: center;
+        display: block;
+        padding: 0;
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
         max-width: 1130px;
+    }
+
+    nav li
+    {
+        display: inline-block;
+        width: 16.6%;  /* make all cells the same width */
+        height: 100%;
+    }
+
+    nav li:first-child a
+    {
+      background-color: transparent;    /* make sure background color doesn't change on hover */
+      background-image: url(../Images/Lisa-logo.png);
+      background-repeat: no-repeat;
+      background-position: center center;
     }
 
     nav a 
     {
-        height: 65px;
-        padding: 0px;
-        width: 16.5%;
+        display: block;
+        height: 45px;
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
     }
 
     nav img 
     {
-        padding-top: 9px;
-    }
-
-    nav span 
-    {
-        top: 20px;
     }
 
     nav ul li:last-child
@@ -193,7 +206,7 @@ footer p
 {
     nav
     {
-	    position: fixed;
+	    -position: fixed;
 	    width: 40%;
 	    padding: 0;
 	    margin: 0;

@@ -116,7 +116,6 @@
     <Compile Include="Models\WebsiteContext.cs" />
     <Content Include="Scripts\Articles.js" />
     <Content Include="Scripts\jquery1.11.1-min.js" />
-    <Content Include="Scripts\script.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
