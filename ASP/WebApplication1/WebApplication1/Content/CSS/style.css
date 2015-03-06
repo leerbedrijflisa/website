@@ -290,11 +290,6 @@ footer p
 	    border-bottom-right-radius: 6px;
     }
 
-    #responsiveButton:hover
-    {
-	    cursor: pointer;
-    }
-
     #responsiveButton ul
     {
 	    margin: 0;
@@ -310,6 +305,7 @@ footer p
 
     #responsiveButton a
     {
+      display: inline-block;
 	    padding: 0;
 	    margin: 0;
 	    width: 30px;
@@ -318,11 +314,10 @@ footer p
 
     #responsiveButton span
     {
-	    content: '';
         width: 20px;
         height: 4px;
         background-color: white;
-	    float: left;
+  	    float: left;
         margin: 1px 5px 1px 5px;
         border-radius: 5px;
     }
