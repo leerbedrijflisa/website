@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace Lisa.Website
 {
-    public class ArticlesController : BaseController
+    public class ArticlesController : Controller
     {
         public ActionResult Index()
         {

@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace Lisa.Website.Controllers
 {
-    public class PodcastsController : BaseController
+    public class PodcastsController : Controller
     {
         public ActionResult Index()
         {

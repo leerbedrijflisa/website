@@ -39,10 +39,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="RazorEngine">
@@ -110,7 +110,6 @@
     <Content Include="Content\CSS\Podcasts\podcastAdmin.css" />
     <Content Include="Content\CSS\management.css" />
     <Content Include="Global.asax" />
-    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\Migrations\Configuration.cs" />
     <Compile Include="Models\Contacts.cs" />
     <Compile Include="Models\WebsiteContext.cs" />
@@ -181,7 +180,6 @@
     <Content Include="Views\Podcasts\Edit.cshtml" />
     <Content Include="Views\Articles\Delete.cshtml" />
     <Content Include="Views\Podcasts\Delete.cshtml" />
-    <Content Include="Views\Index\Contact.cshtml" />
     <None Include="Views\Podcasts\RSS.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
