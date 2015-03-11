@@ -30,13 +30,15 @@ header div
 header h2
 {
 	padding: 0.5%;
-	margin: 0px;
+	margin: 0 auto;
 	font-weight: normal;
+	max-width: 1080px;
 }
 
 header p
 {
-	margin: 0px;
+	margin: 0 auto;
+	max-width: 1080px;
 	padding: 0.5%;
 }
 
