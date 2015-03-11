@@ -19,30 +19,33 @@
 
         @if (controllerName.Equals("Index") || controllerName.Equals("index"))
         {
-            /*standard menu*/
+            @*Menu for index page only.
+            Html comment tags are there to remove any spacing between the buttons. If these comments are not there the buttons wont fit in the menu.*@
             <nav id="menu">
                 <ul>
-                    <li><a href="#top">@*<img src="@Url.Content("~/Content/Images/Lisa-logo.png")">*@&nbsp;</a></li><!--
+                    <li><a href="#top">&nbsp;</a></li><!--
                  --><li><a href="#top">Home</a></li><!--
                  --><li><a href="#articles">Artikelen</a></li><!--
                  --><li><a href="#podcasts">Podcasts</a></li><!--
                  --><li><a href="#projects">Projecten</a></li><!--
                  --><li><a href="#footer">Contact</a></li><!--
-								 --><li><a href="#">Sluiten</a></li>
+				 --><li><a href="#">Sluiten</a></li>
                 </ul>
             </nav>
         }
         else
         {
+            @*Menu for other pages*@
+            
             <nav>
                 <ul>
-                    <li><a id ="logobutton" href="@Url.Action("Index", "Index")"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
-                    <li><a href="@Url.Action("Index", "Index")"><span>Home</span></a></li>
-                    <li><a href="@Url.Action("Index", "Articles")"><span>Artikelen</span></a></li>
-                    <li><a href="@Url.Action("Index", "Podcasts")"><span>Podcasts</span></a></li>
-                    <li><a href="@Url.Action("Index", "Projects")"><span>Projecten</span></a></li>
-                    <li><a href="#footerButton"><span>Contact</span></a></li>
-										<li><a href="#"><span>Sluiten</span></a></li>
+                    <li><a id ="logobutton" href="@Url.Action("Index", "Index")">&nbsp;</a></li><!--
+                 --><li><a href="@Url.Action("Index", "Index")"><span>Home</span></a></li><!--
+                 --><li><a href="@Url.Action("Index", "Articles")"><span>Artikelen</span></a></li><!--
+                 --><li><a href="@Url.Action("Index", "Podcasts")"><span>Podcasts</span></a></li><!--
+                 --><li><a href="@Url.Action("Index", "Projects")"><span>Projecten</span></a></li><!--
+                 --><li><a href="#footerButton"><span>Contact</span></a></li><!--
+			     --><li><a href="#"><span>Sluiten</span></a></li>
                 </ul>
             </nav>
         }
