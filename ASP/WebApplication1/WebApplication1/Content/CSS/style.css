@@ -121,7 +121,7 @@ footer h2
 	font-weight: normal;
 }
 
-footer div div
+address
 {
 	position: static;
 	max-width: 1090px;
@@ -194,7 +194,7 @@ footer p
 		margin: 65px 0 0 0;
 	}
 
-	footer div div
+	address
 	{
 		padding-bottom: 80px;
 	}
