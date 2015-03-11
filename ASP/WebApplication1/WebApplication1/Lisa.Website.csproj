@@ -110,7 +110,7 @@
     <Content Include="Content\CSS\Podcasts\podcastAdmin.css" />
     <Content Include="Content\CSS\management.css" />
     <Content Include="Global.asax" />
-    <Compile Include="Controllers\Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Contacts.cs" />
     <Compile Include="Models\WebsiteContext.cs" />
     <Content Include="Scripts\Articles.js" />

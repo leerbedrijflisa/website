@@ -1,12 +1,17 @@
 ﻿/*The css is ordered in the way the html is nested in the index page of home. */
 
+header {
+	text-align: center;
+}
+
 header h1
 {
-	color: white;
-	text-align: center;
+	margin-top: 0;
 	position: absolute;
+	top: 10%;
+	color: white;
 	width: 100%;
-    font-weight: normal;
+	font-weight: normal;
 }
 
 header div
@@ -16,7 +21,10 @@ header div
 	color: white;
 	text-align: center;
 	position: absolute;
-	bottom: 0px;
+	bottom: 0;
+	min-height: 35%;
+	max-height: 60%;
+	overflow: auto;
 }
 
 header h2
@@ -25,8 +33,6 @@ header h2
 	margin: 0px;
 	font-weight: normal;
 }
-
-
 
 header p
 {
@@ -124,126 +130,120 @@ section p
 
 @media all and (min-width: 801px) 
 {
-    header h1
-    {
-        top: 10%;
-        font-size: 60px;
-    }
+	header h1
+	{
+		font-size: 60px;
+	}
 
-    header div
-    {
-        height: 35%;
-    }
+	header h2
+	{
+		font-size: 30px;
+	}
 
-    header h2
-    {
-        font-size: 30px;
-    }
+	header p
+	{
+		font-size: 100%;
+	}
 
-    header p
-    {
-        font-size: 100%;
-    }
+	section
+	{
+		min-height: 450px;
+	}
 
-    section
-    {
-        min-height: 450px;
-    }
+	section h1
+	{
+		margin: 0 0 0 20px;
+	}
 
-    section h1
-    {
-        margin: 0 0 0 20px;
-    }
+	section li
+	{
+		margin: 10px 0 20px 20px;
+		width: 350px;
+		height: 320px;
+	}
 
-    section li
-    {
-        margin: 10px 0 20px 20px;
-        width: 350px;
-	    height: 320px;
-    }
+	section img
+	{
+		width: 350px;
+	}
 
-    section img
-    {
-        width: 350px;
-    }
+	section h2
+	{
+		font-size: 15px;
+		padding: 20px 20px 10px 20px;
+	}
 
-    section h2
-    {
-        font-size: 15px;
-        padding: 20px 20px 10px 20px;
-    }
-
-    section p
-    {
-        padding: 10px 20px 20px 20px;
-        font-size: 15px;
-    }
+	section p
+	{
+		padding: 10px 20px 20px 20px;
+		font-size: 15px;
+	}
 }
 
 /*The code below is style that only applies to that element when it is smaller than 800px. This style is used for mobile devices and small tablets.*/
 
 @media all and (max-width: 800px) 
 {
-    header h1
-    {
-        top: 0px;
-        font-size: 30px;
-    }
+	header h1
+	{
+		top: 0px;
+		font-size: 30px;
+	}
 
-    header div
-    {
-        height: 40%;
-    }
+	header div
+	{
+		height: 40%;
+	}
 
-    header h2
-    {
-        font-size: 15px;
-    }
+	header h2
+	{
+		font-size: 15px;
+	}
 
-    header p
-    {
-        font-size: 10px;
-    }
+	header p
+	{
+		font-size: 10px;
+	}
 
-    section
-    {
-        min-height: 200px;
-    }
+	section
+	{
+		min-height: 200px;
+	}
 
-    section h1
-    {
-        font-size: 20px;
-        margin: 0 0 0 2%;
-    }
+	section h1
+	{
+		font-size: 20px;
+		margin: 0 0 0 2%;
+	}
 
-    section li
-    {
-        width: 96%;
-	    height: auto;
-        margin: 5px 0 5px 2%;
-    }
+	section li
+	{
+		width: 96%;
+		height: auto;
+		margin: 5px 0 5px 2%;
+	}
 
-    #link a
-    {
-        font-size: 10px;
-    }
+	#link a
+	{
+		font-size: 10px;
+	}
 
-    section img
-    {
-        width: 100px;
-        float: left;
-    }
+	section img
+	{
+		width: 100px;
+		float: left;
+	}
 
-    section h2
-    {
-        font-size: 13px;
-        padding: 5px 5px 0 5px;
-        float: left;
-    }
+	section h2
+	{
+		font-size: 13px;
+		padding: 5px 5px 0 5px;
+		float: left;
+	}
 
-    section p
-    {
-        padding: 5px;
-        font-size: 10px;
-    }
+	section p
+	{
+		padding: 5px;
+		font-size: 10px;
+	}
 }
