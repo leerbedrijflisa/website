@@ -9,7 +9,7 @@ body
 }
 
 
-a[name]   /* jump target for menu items on the home page */
+a[name]	/* jump target for menu items on the home page */
 {
 	position: relative;
 	bottom: 65px; /* push content down, otherwise the target is obscured by the menu */
@@ -18,7 +18,7 @@ a[name]   /* jump target for menu items on the home page */
 }
 
 /*
-  Menu bar.
+	Menu bar.
 */
 
 nav
@@ -28,14 +28,14 @@ nav
 	padding: 0;
 	margin: 0;
 	
-  position: fixed;    /* keep the menu bar at the top */
-  top: 0px;
+	position: fixed;	/* keep the menu bar at the top */
+	top: 0px;
 }
 
 nav ul
 {
 	padding: 0px;
-  margin: 0 auto 0 auto;
+	margin: 0 auto 0 auto;
 }
 
 nav li
@@ -49,10 +49,10 @@ nav li
 
 nav li:first-child a
 {
-  background-color: transparent;    /* make sure background color doesn't change on hover */
-  background-image: url(../Images/Lisa-logo.png);
-  background-repeat: no-repeat;
-  background-position: center center;
+	background-color: transparent;	/* make sure background color doesn't change on hover */
+	background-image: url(../Images/Lisa-logo.png);
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 nav a
@@ -60,7 +60,7 @@ nav a
 	float: left;
 	color: white;
 	text-decoration: none;
-    margin: 0;
+	margin: 0;
 }
 
 nav a:hover
@@ -72,7 +72,7 @@ nav a:active
 {
 	background-color: #BE0000;
 }
-  
+	
 #logobutton:hover
 {
 	background-color: #DC0000;
@@ -115,9 +115,9 @@ footer > div
 
 footer h2
 {
-    padding: 10px 20px 10px 20px;
+	padding: 10px 20px 10px 20px;
 	max-width: 1090px;
-    margin: 2% auto 0 auto;
+	margin: 2% auto 0 auto;
 	font-weight: normal;
 }
 
@@ -125,238 +125,238 @@ footer div div
 {
 	position: static;
 	max-width: 1090px;
-    margin: 0 auto 0 auto;
-    padding: 0 20px 0 20px;
+	margin: 0 auto 0 auto;
+	padding: 0 20px 0 20px;
 }
 
 footer p
 {
-    margin: 2px 0 2px 0;
+	margin: 2px 0 2px 0;
 	padding: 0;
 	float: left;
 	width: 50%;
 }
 
-/*The code below is style that only applies to that element when it is wider than 801px*/
+/* The code below is style that only applies to that element when it is wider than 801px. */
 
 @media all and (min-width: 801px) 
 {
-    nav 
-    {
-        z-index: 50;
-        height: 65px;
-        width: 100%;
-    }
+	nav
+	{
+		z-index: 50;
+		height: 65px;
+		width: 100%;
+	}
 
-    nav ul 
-    {
-        text-align: center;
-        display: block;
-        padding: 0;
-        margin: 0 auto;
-        height: 100%;
-        width: 100%;
-        max-width: 1130px;
-    }
+	nav ul
+	{
+		text-align: center;
+		display: block;
+		padding: 0;
+		margin: 0 auto;
+		height: 100%;
+		width: 100%;
+		max-width: 1130px;
+	}
 
-    nav li
-    {
-        display: inline-block;
-        width: 16.6%;  /* make all cells the same width */
-        height: 100%;
-    }
+	nav li
+	{
+		display: inline-block;
+		width: 16.6%;	/* make all cells the same width */
+		height: 100%;
+	}
 
-    nav a 
-    {
-        display: block;
-        height: 45px;
-        width: 100%;
-        text-align: center;
-        padding-top: 20px;
-    }
+	nav a
+	{
+		display: block;
+		height: 45px;
+		width: 100%;
+		text-align: center;
+		padding-top: 20px;
+	}
 
-    nav img 
-    {
-    }
+	nav img
+	{
+	}
 
-    nav ul li:last-child
-    {
-        display: none; 
-    }
+	nav ul li:last-child
+	{
+		display: none; 
+	}
 
-    #responsiveButton 
-    {
-        display: none;
-    }
+	#responsiveButton 
+	{
+		display: none;
+	}
 
-    header
-    {
-        margin: 65px 0 0 0;
-    }
+	header
+	{
+		margin: 65px 0 0 0;
+	}
 
-    footer div div
-    {
-        padding-bottom: 80px;
-    }
+	footer div div
+	{
+		padding-bottom: 80px;
+	}
 }
 
-/*The code below is style that only applies to that element when it is smaller than 800px*/
+/* The code below is style that only applies to that element when it is smaller than 800px. */
 
 @media all and (max-width: 800px) 
 {
-    nav
-    {
-	    width: 40%;
-	    padding: 0;
-	    margin: 0;
-	    height: auto;
-	    z-index: 50;
-	    top: 0px;
-	    display: none;
-    }
+	nav
+	{
+		width: 40%;
+		padding: 0;
+		margin: 0;
+		height: auto;
+		z-index: 50;
+		top: 0px;
+		display: none;
+	}
 
-    nav li:first-child a
-    {
-      background-size: auto 35px;
-    }
+	nav li:first-child a
+	{
+		background-size: auto 35px;
+	}
 
-    nav:target {
-      display: inline;
-    }
+	nav:target {
+		display: inline;
+	}
 
-    nav ul
-    {
-	    padding: 0;
-	    max-width: 1130px;
-        margin: 0 auto 0 auto;
-    }
+	nav ul
+	{
+		padding: 0;
+		max-width: 1130px;
+		margin: 0 auto 0 auto;
+	}
 
-    nav li
-    {
-	    padding: 0;
-	    text-decoration: none;
-	    margin: 0;
-	    width: 100%;
-	    height: 40px;
-	    text-align: center;
-	    display: inline;
-    }
+	nav li
+	{
+		padding: 0;
+		text-decoration: none;
+		margin: 0;
+		width: 100%;
+		height: 40px;
+		text-align: center;
+		display: inline;
+	}
 
-    nav a
-    {
-	    color: white;
-	    text-decoration: none;
-        background-color: #DC0000;
-	    height: 30px;
-      padding: 10px 0 0 0;
-	    margin: 0;
-	    width: 100%;
-	    float: left;
-    }
+	nav a
+	{
+		color: white;
+		text-decoration: none;
+		background-color: #DC0000;
+		height: 30px;
+		padding: 10px 0 0 0;
+		margin: 0;
+		width: 100%;
+		float: left;
+	}
 
-    nav a:hover
-    {
-	    background-color: #FF0000;
-    }
+	nav a:hover
+	{
+		background-color: #FF0000;
+	}
 
-    nav a:active
-    {
-	    background-color: #BE0000;
-    }
+	nav a:active
+	{
+		background-color: #BE0000;
+	}
 
-    nav span
-    {
-	    position: relative;
-	    top: 10px;
-    }
+	nav span
+	{
+		position: relative;
+		top: 10px;
+	}
 
-    nav img
-    {
-	    padding-top: 5px;
-	    padding-bottom: 5px;
-	    height: 35px;
-    }
+	nav img
+	{
+		padding-top: 5px;
+		padding-bottom: 5px;
+		height: 35px;
+	}
 
-    #responsiveButton
-    {
-	    margin: 0;
-	    padding: 0;
-	    width: 30px;
-	    height: 30px;
-	    position: fixed;
-	    float: left;
-	    z-index: 20;
-	    background-color: #DC0000;
-	    border-bottom-right-radius: 6px;
-    }
+	#responsiveButton
+	{
+		margin: 0;
+		padding: 0;
+		width: 30px;
+		height: 30px;
+		position: fixed;
+		float: left;
+		z-index: 20;
+		background-color: #DC0000;
+		border-bottom-right-radius: 6px;
+	}
 
-    #responsiveButton ul
-    {
-	    margin: 0;
-	    padding: 0;
-    }
+	#responsiveButton ul
+	{
+		margin: 0;
+		padding: 0;
+	}
 
-    #responsiveButton li
-    {
-	    padding: 0;
-	    margin: 0;
-	    display: inline;
-    }
+	#responsiveButton li
+	{
+		padding: 0;
+		margin: 0;
+		display: inline;
+	}
 
-    #responsiveButton a
-    {
-      display: inline-block;
-	    padding: 0;
-	    margin: 0;
-	    width: 30px;
-	    height: 30px;
-    }
+	#responsiveButton a
+	{
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+		width: 30px;
+		height: 30px;
+	}
 
-    #responsiveButton span
-    {
-        width: 20px;
-        height: 4px;
-        background-color: white;
-  	    float: left;
-        margin: 1px 5px 1px 5px;
-        border-radius: 5px;
-    }
+	#responsiveButton span
+	{
+		width: 20px;
+		height: 4px;
+		background-color: white;
+			float: left;
+		margin: 1px 5px 1px 5px;
+		border-radius: 5px;
+	}
 
-    #responsiveButton span:first-child
-    {
-	    margin-top: 7px;
-    }
+	#responsiveButton span:first-child
+	{
+		margin-top: 7px;
+	}
 
-    nav ul li:last-child a
-    {
-	    background-color: #999999;
-	    color: black;
-      cursor: pointer;
-      margin: 0;
-    }
+	nav ul li:last-child a
+	{
+		background-color: #999999;
+		color: black;
+		cursor: pointer;
+		margin: 0;
+	}
 
-    nav ul li:last-child a:hover
-    {
-	    background-color: #ADADAD;
-    }
+	nav ul li:last-child a:hover
+	{
+		background-color: #ADADAD;
+	}
 
-    header
-    {
-        margin-top: 0px;
-    }
+	header
+	{
+		margin-top: 0px;
+	}
 
-    footer > div
-    {
-        padding-bottom: 20px;
-    }
+	footer > div
+	{
+		padding-bottom: 20px;
+	}
 
-    footer h2
-    {
-        font-size: 15px;
-    }
+	footer h2
+	{
+		font-size: 15px;
+	}
 
-    footer p
-    {
-        font-size: 10px;
-    }
+	footer p
+	{
+		font-size: 10px;
+	}
 }

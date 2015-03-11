@@ -2,78 +2,78 @@
 
 <!doctype html>
 <html>
-    <head>
-        <title>Home</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/style.css")">
-        @RenderSection("css", false)
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/icon" href="@Url.Content("~/Content/Images/lisalogo_ico.png")" />
-        
-        <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="@Url.Content("~/Podcasts/RSS.cshtml")" />
+	<head>
+		<title>Home</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/style.css")">
+		@RenderSection("css", false)
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="icon" type="image/icon" href="@Url.Content("~/Content/Images/lisalogo_ico.png")" />
 
-        <script src="@Url.Content("~/Scripts/jquery1.11.1-min.js")"></script>
-    </head>
-    <body>
-        <a name="top"></a>
+		<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="@Url.Content("~/Podcasts/RSS.cshtml")" />
 
-        @if (controllerName.Equals("Index") || controllerName.Equals("index"))
-        {
-            @*Menu for index page only.
-            Html comment tags are there to remove any spacing between the buttons. If these comments are not there the buttons wont fit in the menu.*@
-            <nav id="menu">
-                <ul>
-                    <li><a href="#top">&nbsp;</a></li><!--
-                 --><li><a href="#top">Home</a></li><!--
-                 --><li><a href="#articles">Artikelen</a></li><!--
-                 --><li><a href="#podcasts">Podcasts</a></li><!--
-                 --><li><a href="#projects">Projecten</a></li><!--
-                 --><li><a href="#footer">Contact</a></li><!--
-				 --><li><a href="#">Sluiten</a></li>
-                </ul>
-            </nav>
-        }
-        else
-        {
-            @*Menu for other pages*@
-            
-            <nav>
-                <ul>
-                    <li><a id ="logobutton" href="@Url.Action("Index", "Index")">&nbsp;</a></li><!--
-                 --><li><a href="@Url.Action("Index", "Index")"><span>Home</span></a></li><!--
-                 --><li><a href="@Url.Action("Index", "Articles")"><span>Artikelen</span></a></li><!--
-                 --><li><a href="@Url.Action("Index", "Podcasts")"><span>Podcasts</span></a></li><!--
-                 --><li><a href="@Url.Action("Index", "Projects")"><span>Projecten</span></a></li><!--
-                 --><li><a href="#footerButton"><span>Contact</span></a></li><!--
-			     --><li><a href="#"><span>Sluiten</span></a></li>
-                </ul>
-            </nav>
-        }
+		<script src="@Url.Content("~/Scripts/jquery1.11.1-min.js")"></script>
+	</head>
+	<body>
+		<a name="top"></a>
 
-        <div id="responsiveButton">
-					<a href="#menu"><span></span><span></span><span></span></a>
-        </div>
+		@if (controllerName.Equals("Index") || controllerName.Equals("index"))
+		{
+			@*Menu for index page only.
+			Html comment tags are there to remove any spacing between the buttons. If these comments are not there the buttons wont fit in the menu.*@
+			<nav id="menu">
+				<ul>
+					<li><a href="#top">&nbsp;</a></li><!--
+					--><li><a href="#top">Home</a></li><!--
+					--><li><a href="#articles">Artikelen</a></li><!--
+					--><li><a href="#podcasts">Podcasts</a></li><!--
+					--><li><a href="#projects">Projecten</a></li><!--
+					--><li><a href="#footer">Contact</a></li><!--
+					--><li><a href="#">Sluiten</a></li>
+				</ul>
+			</nav>
+		}
+		else
+		{
+			@*Menu for other pages*@
+			
+			<nav>
+				<ul>
+					<li><a id ="logobutton" href="@Url.Action("Index", "Index")">&nbsp;</a></li><!--
+					--><li><a href="@Url.Action("Index", "Index")"><span>Home</span></a></li><!--
+					--><li><a href="@Url.Action("Index", "Articles")"><span>Artikelen</span></a></li><!--
+					--><li><a href="@Url.Action("Index", "Podcasts")"><span>Podcasts</span></a></li><!--
+					--><li><a href="@Url.Action("Index", "Projects")"><span>Projecten</span></a></li><!--
+					--><li><a href="#footerButton"><span>Contact</span></a></li><!--
+					--><li><a href="#"><span>Sluiten</span></a></li>
+				</ul>
+			</nav>
+		}
 
-        @RenderBody()
+		<div id="responsiveButton">
+			<a href="#menu"><span></span><span></span><span></span></a>
+		</div>
 
-        <footer>
-            <a name="footer"></a>
-            <div>
-                <h2>Contact</h2>
-                <div>
-                    <p>E-mail: lisa@davinci.nl</p>
-                    <p>Telefoon:</p>
-                    <p>Adres:</p>
-                    <p>Blablabla:</p>
-                </div>
-            </div>
-        </footer>
+		@RenderBody()
 
-        <!-- Add any scripts with or without exeptions here -->
+		<footer>
+			<a name="footer"></a>
+			<div>
+				<h2>Contact</h2>
+				<div>
+					<p>E-mail: lisa@davinci.nl</p>
+					<p>Telefoon:</p>
+					<p>Adres:</p>
+					<p>Blablabla:</p>
+				</div>
+			</div>
+		</footer>
 
-        @if (controllerName.Equals("Articles") || controllerName.Equals("articles"))
-        { 
-            <script src="@Url.Content("~/Scripts/Articles.js")"></script>
-        }
-    </body>
+		<!-- Add any scripts with or without exeptions here -->
+
+		@if (controllerName.Equals("Articles") || controllerName.Equals("articles"))
+		{ 
+			<script src="@Url.Content("~/Scripts/Articles.js")"></script>
+		}
+	</body>
 </html>
