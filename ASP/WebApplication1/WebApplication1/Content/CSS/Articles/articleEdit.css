@@ -2,19 +2,19 @@
 
 section ul
 {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
 }
 
 section textarea
 {
-    width: 500px;
-    height: 500px;
+	width: 500px;
+	height: 500px;
 }
 
 section span
 {
-    width: 100px;
-    display: inline-block;
+	width: 100px;
+	display: inline-block;
 }

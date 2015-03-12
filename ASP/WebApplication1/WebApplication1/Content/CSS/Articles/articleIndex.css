@@ -38,7 +38,7 @@ header h1
 	
 	
 	background-color: #DEDEDE;
-    
+	
 	margin-left: 20px;
 	margin-right: 0px;
 	margin-bottom: 20px;
@@ -96,7 +96,7 @@ header h1
 
 .articlesContent a
 {
-    color: black;
+	color: black;
 	text-decoration: none;
 }
 
@@ -107,7 +107,7 @@ header h1
 
 .articlesContent img
 {
-    margin: 0px;
+	margin: 0px;
 }
 
 .articlesContent h2
@@ -119,245 +119,245 @@ header h1
 
 .articlesContent p
 {
-    font-size: 12px;
+	font-size: 12px;
 }
 
 /*The code below is style that only applies to that element when it is wider than 801px*/
 
 @media all and (min-width: 801px) 
 {
-    header h1
-    {
-        font-size: 90px;
-    }
+	header h1
+	{
+		font-size: 90px;
+	}
 
-    .content
-    {
-        min-height: 350px;
-        background-color: #DEDEDE;
-        padding: 70px 0 20px 0;
-    }
+	.content
+	{
+		min-height: 350px;
+		background-color: #DEDEDE;
+		padding: 70px 0 20px 0;
+	}
 
-    .content li
-    {
-        width: 350px;
-        height: 320px;
-        margin: 5px 0 5px 20px;
-    }
+	.content li
+	{
+		width: 350px;
+		height: 320px;
+		margin: 5px 0 5px 20px;
+	}
 
-    .content a
-    {
-        padding: 0px;
-	    margin: 0px;
-	    cursor: pointer;
-    }
+	.content a
+	{
+		padding: 0px;
+		margin: 0px;
+		cursor: pointer;
+	}
 
-    .content img
-    {
-        width: 350px;
-        height: auto;
-    }
+	.content img
+	{
+		width: 350px;
+		height: auto;
+	}
 
-    .content h2
-    {
-        font-size: 15px;
-        padding: 20px 20px 10px 20px;
-    }
+	.content h2
+	{
+		font-size: 15px;
+		padding: 20px 20px 10px 20px;
+	}
 
-    .content p
-    {
-        padding: 10px 20px 20px 20px;
-        font-size: 15px;
-    }
+	.content p
+	{
+		padding: 10px 20px 20px 20px;
+		font-size: 15px;
+	}
 
-    .articlesContent
-    {
-        min-height: 350px;
-        padding: 70px 0 40px 0;
-        height: auto;
-        margin: 0;
-	    padding-left: 0px;
-	    top: 0px;
-	    position: inherit;
-    }
+	.articlesContent
+	{
+		min-height: 350px;
+		padding: 70px 0 40px 0;
+		height: auto;
+		margin: 0;
+		padding-left: 0px;
+		top: 0px;
+		position: inherit;
+	}
 
-    .articlesContent div
-    {
-        max-width: 1130px;
-    }
+	.articlesContent div
+	{
+		max-width: 1130px;
+	}
 
-    .articlesContent ul
-    {
-	    margin: 0px;
-	    padding: 0px;
-	    overflow: hidden;
-    }
+	.articlesContent ul
+	{
+		margin: 0px;
+		padding: 0px;
+		overflow: hidden;
+	}
 
-    .articlesContent li
-    {
-        display: inline;
-	    width: 350px;
-	    height: 230px;
-        margin: 0 0 20px 20px;
-    }
+	.articlesContent li
+	{
+		display: inline;
+		width: 350px;
+		height: 230px;
+		margin: 0 0 20px 20px;
+	}
 
-    .articlesContent a
-    {
-        padding: 0px;
-	    margin: 0px;
-	    cursor: pointer;
-	    position: relative;
-	    width: 350px;
-	    height: 230px;
-    }
+	.articlesContent a
+	{
+		padding: 0px;
+		margin: 0px;
+		cursor: pointer;
+		position: relative;
+		width: 350px;
+		height: 230px;
+	}
 
-    .articlesContent img 
-    {
-        width: 350px;
-        height: 230px;
-        padding: 0px;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-    }
+	.articlesContent img 
+	{
+		width: 350px;
+		height: 230px;
+		padding: 0px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+	}
 
-    .articlesInside
-    {
-	    height: 20px;
-	    margin-top: 210px;
-    }
+	.articlesInside
+	{
+		height: 20px;
+		margin-top: 210px;
+	}
 
-    .articlesContent h2
-    {
-        z-index: 3;
-	    color: white;
-	    background-color: rgba(0,0,0,0.5);
-	    padding-left: 5px;
-	    padding-right: 5px;
-	    width: 340px;
-	    height: 20px;
-        margin-top: 210px;
-    }
+	.articlesContent h2
+	{
+		z-index: 3;
+		color: white;
+		background-color: rgba(0,0,0,0.5);
+		padding-left: 5px;
+		padding-right: 5px;
+		width: 340px;
+		height: 20px;
+		margin-top: 210px;
+	}
 
-    .articlesContent p
-    {
-        color: white;
-	    width: 340px;
-	    height: 0px;
-	    background-color: rgba(0,0,0,0.5);
-	    margin-top: 0px ;
-        padding: 0 5px 0 0;
-    }
+	.articlesContent p
+	{
+		color: white;
+		width: 340px;
+		height: 0px;
+		background-color: rgba(0,0,0,0.5);
+		margin-top: 0px ;
+		padding: 0 5px 0 0;
+	}
 }
 
 /*The code below is style that only applies to that element when it is smaller than 800px. This style is used for mobile devices and small tablets.*/
 
 @media all and (max-width: 800px) 
 {
-    header h1
-    {
-        font-size: 40px;
-    }
+	header h1
+	{
+		font-size: 40px;
+	}
 
-    .content
-    {
-        min-height: 0px;
-    }
+	.content
+	{
+		min-height: 0px;
+	}
 
-    .content li
-    {
-        width: 96%;
-        height: auto;
-        margin: 5px 0 5px 2%;
-    }
+	.content li
+	{
+		width: 96%;
+		height: auto;
+		margin: 5px 0 5px 2%;
+	}
 
-    .content a
-    {
-        width: 100%;
-	    height: auto;
-        padding: 0 0 10px 0;
-	    background-color: white;
-    }
+	.content a
+	{
+		width: 100%;
+		height: auto;
+		padding: 0 0 10px 0;
+		background-color: white;
+	}
 
-    .content img
-    {
-        float: left;
-        max-width: 40%;
-        height: 50px;
-    }
+	.content img
+	{
+		float: left;
+		max-width: 40%;
+		height: 50px;
+	}
 
-    .content h2
-    {
-        font-size: 13px;
-        padding: 5px 5px 0 5px;
-    }
+	.content h2
+	{
+		font-size: 13px;
+		padding: 5px 5px 0 5px;
+	}
 
-    .content p
-    {
-        padding: 5px;
-        font-size: 10px;
-	    float: left;
-    }
+	.content p
+	{
+		padding: 5px;
+		font-size: 10px;
+		float: left;
+	}
 
-    .articlesContent
-    {
-        min-height: 0px;
-        padding: 0;
-    }
+	.articlesContent
+	{
+		min-height: 0px;
+		padding: 0;
+	}
 
-    .articlesContent ul
-    {
-	    margin: 0px;
-	    padding: 0px;
-    }
+	.articlesContent ul
+	{
+		margin: 0px;
+		padding: 0px;
+	}
 
-    .articlesContent li
-    {
-	    display: block;
-	    width: 96%;
-	    min-height: 20px;
-        margin: 0 2% 10px 2%;
-	    background-color: #DEDEDE;
-    }
+	.articlesContent li
+	{
+		display: block;
+		width: 96%;
+		min-height: 20px;
+		margin: 0 2% 10px 2%;
+		background-color: #DEDEDE;
+	}
 
-    .articlesContent a
-    {
-	    color: black;
-	    text-decoration: none;
-	    position: static;
-	    width: 96%;
-	    min-height: 20px;
-    }
+	.articlesContent a
+	{
+		color: black;
+		text-decoration: none;
+		position: static;
+		width: 96%;
+		min-height: 20px;
+	}
 
-    .articlesContent img
-    {
-	    max-width: 40%;
-	    height: 50px;
-        padding: 0 5px 0 0;
-	    float: left;
-        overflow: right;
-    }
+	.articlesContent img
+	{
+		max-width: 40%;
+		height: 50px;
+		padding: 0 5px 0 0;
+		float: left;
+		overflow: right;
+	}
 
-    .articlesContent h2
-    {
-	    z-index: 1;
-	    color: black;
-	    background-color: rgba(0,0,0,0);
-	    padding-left: 0px;
-	    padding-right: 5px;
-	    padding-top: 0px;
-	    padding-bottom: 0px;
-	    width: auto;
-	    min-height: 50px;
-    }
+	.articlesContent h2
+	{
+		z-index: 1;
+		color: black;
+		background-color: rgba(0,0,0,0);
+		padding-left: 0px;
+		padding-right: 5px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		width: auto;
+		min-height: 50px;
+	}
 
-    .articlesContent p
-    {
-	    color: black;
-	    width: auto;
-	    min-height: 20px;
-	    background-color: rgba(0,0,0,0);
-	    margin: 0px ;
-        padding: 0 2% 0 2%;
-    }
+	.articlesContent p
+	{
+		color: black;
+		width: auto;
+		min-height: 20px;
+		background-color: rgba(0,0,0,0);
+		margin: 0px ;
+		padding: 0 2% 0 2%;
+	}
 }

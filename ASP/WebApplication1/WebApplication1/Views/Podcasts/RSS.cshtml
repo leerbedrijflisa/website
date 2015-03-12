@@ -1,24 +1,24 @@
 ﻿@model IEnumerable<Podcast>
 @{Layout = null; Response.ContentType = "text/xml";}<?xml version='1.0' encoding='UTF-8' ?>
 <rss version='2.0'>
-    <channel>
-        <title>RSS feed leerwerkbedrijf Lisa</title>
-        <description>Hier komt de beschrijving van de RSS feed van Lisa.</description>
-        <link>http://www.leerwerkbedrijflisa.nl</link>
+	<channel>
+		<title>RSS feed leerwerkbedrijf Lisa</title>
+		<description>Hier komt de beschrijving van de RSS feed van Lisa.</description>
+		<link>http://www.leerwerkbedrijflisa.nl</link>
 
-        @foreach (var podcast in Model)
-        {
-            
-                <item>
-                    <title>@podcast.Title</title>
-                    <description>@podcast.Content</description>
-                    @Html.Raw("<link>")
-                        Hier komt een link test
-                    @Html.Raw("</link>")
+		@foreach (var podcast in Model)
+		{
+			
+				<item>
+					<title>@podcast.Title</title>
+					<description>@podcast.Content</description>
+					@Html.Raw("<link>")
+						Hier komt een link test
+					@Html.Raw("</link>")
 
-                </item>
-           
-        }
+				</item>
+		   
+		}
 
-    </channel>
+	</channel>
 </rss>

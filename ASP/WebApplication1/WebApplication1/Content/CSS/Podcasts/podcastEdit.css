@@ -2,35 +2,35 @@
 
 section ul
 {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
 }
 
 section span
 {
-    width: 100px;
-    display: inline-block;
+	width: 100px;
+	display: inline-block;
 }
 
 #Reference
 {
-    width: 140px;
+	width: 140px;
 }
 
 section a
 {
-    text-decoration: none;
-    color: blue;
+	text-decoration: none;
+	color: blue;
 }
 
 section a:hover
 {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 section textarea
 {
-    width: 500px;
-    height: 500px;
+	width: 500px;
+	height: 500px;
 }

@@ -1,87 +1,87 @@
 ﻿@model IEnumerable<Podcast>
 @section css{
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/Podcasts/podcastIndex.css")">
+	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/Podcasts/podcastIndex.css")">
 }
 
 @Html.Partial("~/Views/Shared/_menu.cshtml")
 
 <header>
-    <h1>Podcasts</h1>
+	<h1>Podcasts</h1>
 </header>
 
 <section class="content">
-    <div>
-        <ul>
-            <li>
-                <a href="podcast.html">
-                    <img src="@Url.Content("~/Content/Images/Penguin.png")">
-                    <h2>titel</h2>
-                    <p>
-                        tekst
-                    </p>
-                </a>
-            </li>
+	<div>
+		<ul>
+			<li>
+				<a href="podcast.html">
+					<img src="@Url.Content("~/Content/Images/Penguin.png")">
+					<h2>titel</h2>
+					<p>
+						tekst
+					</p>
+				</a>
+			</li>
 
-            <li>
-                <a href="podcast.html">
-                    <img src="@Url.Content("~/Content/Images/Raven.png")">
-                    <h2>titel</h2>
-                    <p>
-                        tekst
-                    </p>
-                </a>
-            </li>
+			<li>
+				<a href="podcast.html">
+					<img src="@Url.Content("~/Content/Images/Raven.png")">
+					<h2>titel</h2>
+					<p>
+						tekst
+					</p>
+				</a>
+			</li>
 
-            <li>
-                <a href="podcast.html">
-                    <img src="@Url.Content("~/Content/Images/Kiwi.png")">
-                    <h2>titel</h2>
-                    <p>
-                        tekst
-                    </p>
-                </a>
-            </li>
-        </ul>
-    </div>
+			<li>
+				<a href="podcast.html">
+					<img src="@Url.Content("~/Content/Images/Kiwi.png")">
+					<h2>titel</h2>
+					<p>
+						tekst
+					</p>
+				</a>
+			</li>
+		</ul>
+	</div>
 </section>
 
 <section class="podcast">
 
-    @{int i = 0;}
+	@{int i = 0;}
 
-    @foreach (var podcast in Model)
-    {
-        string podcastContent = podcast.Content;
-        if (podcast.Content.Length > 690)
-        {
-            podcastContent = podcastContent.Substring(0, 690);
-            podcastContent = podcastContent + "...";
-        }
+	@foreach (var podcast in Model)
+	{
+		string podcastContent = podcast.Content;
+		if (podcast.Content.Length > 690)
+		{
+			podcastContent = podcastContent.Substring(0, 690);
+			podcastContent = podcastContent + "...";
+		}
 
-        string url = string.Format("~/Content/Images/{0}", podcast.Image);
-        string idStatus;
+		string url = string.Format("~/Content/Images/{0}", podcast.Image);
+		string idStatus;
 
-        if (i % 2 == 0)
-        {
-            idStatus = "";
-        }
-        else
-        {
-            idStatus = "grey-podcast";
-        }
+		if (i % 2 == 0)
+		{
+			idStatus = "";
+		}
+		else
+		{
+			idStatus = "grey-podcast";
+		}
 
-        <div class="podcast" id="@idStatus">
-            <ul>
-                <li>
-                    <a href="@Url.Action("Details", new { id = podcast.Id })">
-                        <img src="@Url.Content(url)">
-                        <h1>@podcast.Title</h1>
-                        <h2>@podcast.Date</h2>
-                        <p>@podcastContent</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    }
+		<div class="podcast" id="@idStatus">
+			<ul>
+				<li>
+					<a href="@Url.Action("Details", new { id = podcast.Id })">
+						<img src="@Url.Content(url)">
+						<h1>@podcast.Title</h1>
+						<h2>@podcast.Date</h2>
+						<p>@podcastContent</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	}
 
 </section>
