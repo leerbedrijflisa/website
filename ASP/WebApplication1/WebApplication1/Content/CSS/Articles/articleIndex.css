@@ -25,20 +25,10 @@ header h1
 	margin-top: 0px;
 }
 
-.content ul
-{
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-}
-
-.content li
+.content article
 {
 	display: inline;
-	
-	
 	background-color: #DEDEDE;
-	
 	margin-left: 20px;
 	margin-right: 0px;
 	margin-bottom: 20px;
@@ -88,7 +78,7 @@ header h1
 	margin-bottom: 0px;
 }
 
-.articlesContent li
+.articlesContent article
 {
 	padding: 0px;
 	float: left;
@@ -186,14 +176,7 @@ header h1
 		max-width: 1130px;
 	}
 
-	.articlesContent ul
-	{
-		margin: 0px;
-		padding: 0px;
-		overflow: hidden;
-	}
-
-	.articlesContent li
+	.articlesContent article
 	{
 		display: inline;
 		width: 350px;
@@ -311,7 +294,7 @@ header h1
 		padding: 0px;
 	}
 
-	.articlesContent li
+	.articlesContent article
 	{
 		display: block;
 		width: 96%;

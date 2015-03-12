@@ -2,7 +2,7 @@
 
 if ($(window).width() > 800 && $.isNumeric($(window).width()))
 {
-    var numberOfString = $('.articlesContent').find('li').last().attr('id');
+    var numberOfString = $('.articlesContent').find('article').last().attr('id');
     var numberOf = numberOfString.replace("articleButton", "");
     
     for (i = 1; i <= numberOf; i++)

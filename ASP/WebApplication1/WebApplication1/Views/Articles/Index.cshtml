@@ -11,68 +11,64 @@
 
 <section class="content">
 	<div>
-		<ul>
-			<li>
-				<a>
-					<img src="@Url.Content("~/Content/Images/Penguin.png")">
-					<h2>titel</h2>
-					<p>
-						tekst
-					</p>
-				</a>
-			</li>
+		<article>
+			<a>
+				<img src="@Url.Content("~/Content/Images/Penguin.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
 
-			<li>
-				<a>
-					<img src="@Url.Content("~/Content/Images/Raven.png")">
-					<h2>titel</h2>
-					<p>
-						tekst
-					</p>
-				</a>
-			</li>
+		<article>
+			<a>
+				<img src="@Url.Content("~/Content/Images/Raven.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
 
-			<li>
-				<a>
-					<img src="@Url.Content("~/Content/Images/Kiwi.png")">
-					<h2>titel</h2>
-					<p>
-						tekst
-					</p>
-				</a>
-			</li>
-		</ul>
+		<article>
+			<a>
+				<img src="@Url.Content("~/Content/Images/Kiwi.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
 	</div>
 </section>
 
 <section class="articlesContent">
 	<div>
-		<ul>
-			@{int i = 0;}
+		@{int i = 0;}
 
-			@foreach (var article in Model)
+		@foreach (var article in Model)
+		{
+			i++;
+
+			string articleContent = article.Content;
+			if (articleContent.Length > 690)
 			{
-				i++;
-
-				string articleContent = article.Content;
-				if (articleContent.Length > 690)
-				{
-					articleContent = articleContent.Substring(0, 690);
-					articleContent = articleContent + "...";
-				}
-				
-				string url = string.Format("~/Content/Images/{0}", article.Image);
-				
-				<li id="@article.Id">
-					<a href="@Url.Action("Details", new { id = article.Id })">
-						<img src="@Url.Content(url)">
-						<div class="articleInside">
-							<h2>@article.Title</h2>
-							<p>@articleContent</p>
-						</div>
-					</a>
-				</li>
+				articleContent = articleContent.Substring(0, 690);
+				articleContent = articleContent + "...";
 			}
-		</ul>
+				
+			string url = string.Format("~/Content/Images/{0}", article.Image);
+				
+			<article id="@article.Id">
+				<a href="@Url.Action("Details", new { id = article.Id })">
+					<img src="@Url.Content(url)">
+					<div class="articleInside">
+						<h2>@article.Title</h2>
+						<p>@articleContent</p>
+					</div>
+				</a>
+			</article>
+		}
 	</div>
 </section>
