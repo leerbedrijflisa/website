@@ -69,14 +69,7 @@ section h1
 	font-weight: normal;
 }
 
-section ul
-{
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-}
-
-section li
+section article
 {
 	display: inline;
 	background-color: #DEDEDE;
@@ -84,29 +77,18 @@ section li
 	float: left;
 }
 
-#link
+section div > a
 {
-	width: 100%;
-	height: 30px;
-	margin: 0px;
-	background-color: rgba(0,0,0,0);
-}
-
-#link a
-{
-	text-align: right;
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding: 0px; 
+    margin: 0 20px 0 20px;
+    padding: 0px;
 	color: #DC0000;
 	text-decoration: none;
-	width: 100%;
-	float: right;
+	width: calc(100% - 40px);
+	text-align: right;
+    display: block;
 }
 
-#link a:hover
+section div > a:hover
 {
 	text-decoration: underline;
 }
@@ -158,7 +140,7 @@ section p
 		margin: 0 0 0 20px;
 	}
 
-	section li
+	section article
 	{
 		margin: 10px 0 20px 20px;
 		width: 350px;
@@ -219,7 +201,7 @@ section p
 		margin: 0 0 0 2%;
 	}
 
-	section li
+	section article
 	{
 		width: 96%;
 		height: auto;
