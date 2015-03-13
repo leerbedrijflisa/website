@@ -2,23 +2,27 @@
 
 if ($(window).width() > 800 && $.isNumeric($(window).width()))
 {
-    var numberOfString = $('.articlesContent').find('article').last().attr('id');
-    var numberOf = numberOfString.replace("articleButton", "");
-    
-    for (i = 1; i <= numberOf; i++)
-    {
-        $('#articleButton' + i).hover(hover_in, hover_out);
-    }
-
     function hover_in()
     {
-        $(this).find('h2').stop().animate({ marginTop: "0px" }, 400);
+        $(this).find('h2').stop().animate({ marginTop: "0" }, 400);
         $(this).find('p').stop().animate({ height: "210px" }, 400);
     }
 
     function hover_out()
     {
-        $(this).find('h2').stop().animate({ marginTop: "210" }, 400);
-        $(this).find('p').stop().animate({ height: "0" }, 400);
+        $(this).find('h2').stop().animate({ marginTop: "210px" }, 400);
+        $(this).find('p').stop().animate({ height: "0px" }, 400);
     }
+
+    var numberOf = $('.articlesContent').find('a').last().attr('id');
+
+    $("a").hover(hover_in, hover_out);
+
+    /*
+    for (i = 1; i <= numberOf; i++)
+    {
+        $(i).mouseenter(hover_in());
+        $(i).mouseleave(hover_out());
+    }
+    */
 }

@@ -60,8 +60,8 @@
 				
 			string url = string.Format("~/Content/Images/{0}", article.Image);
 				
-			<article id="@article.Id">
-				<a href="@Url.Action("Details", new { id = article.Id })">
+			<article>
+				<a id="@i" href="@Url.Action("Details", new { id = article.Id })">
 					<img src="@Url.Content(url)">
 					<div class="articleInside">
 						<h2>@article.Title</h2>
