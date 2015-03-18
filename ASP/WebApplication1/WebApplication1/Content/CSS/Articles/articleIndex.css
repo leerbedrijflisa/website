@@ -207,7 +207,7 @@ header h1
 	.articleInside
 	{
 		height: 20px;
-		margin-top: 210px;
+        position: absolute;
 	}
 
 	.articlesContent h2
@@ -233,7 +233,6 @@ header h1
 		padding: 0 5px 0 5px;
         display: block;
         overflow: hidden;
-        bottom: 0px;
 	}
 }
 
