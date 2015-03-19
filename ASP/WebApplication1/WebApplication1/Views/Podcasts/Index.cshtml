@@ -11,37 +11,35 @@
 
 <section class="content">
 	<div>
-		<ul>
-			<li>
-				<a href="podcast.html">
-					<img src="@Url.Content("~/Content/Images/Penguin.png")">
-					<h2>titel</h2>
-					<p>
-						tekst
-					</p>
-				</a>
-			</li>
+		<article>
+			<a href="podcast.html">
+				<img src="@Url.Content("~/Content/Images/Penguin.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
 
-			<li>
-				<a href="podcast.html">
-					<img src="@Url.Content("~/Content/Images/Raven.png")">
-					<h2>titel</h2>
-					<p>
-						tekst
-					</p>
-				</a>
-			</li>
+		<article>
+			<a href="podcast.html">
+				<img src="@Url.Content("~/Content/Images/Raven.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
 
-			<li>
-				<a href="podcast.html">
-					<img src="@Url.Content("~/Content/Images/Kiwi.png")">
-					<h2>titel</h2>
-					<p>
-						tekst
-					</p>
-				</a>
-			</li>
-		</ul>
+		<article>
+			<a href="podcast.html">
+				<img src="@Url.Content("~/Content/Images/Kiwi.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
 	</div>
 </section>
 
@@ -70,17 +68,15 @@
 			idStatus = "grey-podcast";
 		}
 
-		<div class="podcast" id="@idStatus">
-			<ul>
-				<li>
-					<a href="@Url.Action("Details", new { id = podcast.Id })">
-						<img src="@Url.Content(url)">
-						<h1>@podcast.Title</h1>
-						<h2>@podcast.Date</h2>
-						<p>@podcastContent</p>
-					</a>
-				</li>
-			</ul>
+		<div id="@idStatus">
+			<article>
+				<a href="@Url.Action("Details", new { id = podcast.Id })">
+					<img src="@Url.Content(url)">
+					<h1>@podcast.Title</h1>
+					<h2>@podcast.Date</h2>
+					<p>@podcastContent</p>
+				</a>
+			</article>
 		</div>
 	}
 

@@ -21,14 +21,7 @@ header h1
 	margin: 0 auto 0 auto;
 }
 
-.content ul
-{
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-}
-
-.content li
+.content article
 {
 	display: inline;
 	padding: 0px;
@@ -74,12 +67,12 @@ header h1
 	background-color: #DEDEDE;
 }
 
-.podcast ul
+.podcast div
 {
-	margin: 0 auto 0 auto;
+    margin: 0 auto 0 auto;
 }
 
-.podcast li
+.podcast article
 {
 	padding: 0px;
 	margin: 0px;
@@ -145,7 +138,7 @@ header h1
 		max-width: 1130px;
 	}
 
-	.content li
+	.content article
 	{
 		width: 350px;
 		height: 320px;
@@ -185,10 +178,10 @@ header h1
 		min-height: 75px;
 	}
 
-	.podcast ul
-	{
-		max-width: 1130px;
-	}
+    .podcast div
+    {
+        max-width: 1090px;
+    }
 
 	.podcast img
 	{
@@ -229,7 +222,7 @@ header h1
 		background-color: white;
 	}
 
-	.content li
+	.content article
 	{
 		width: 96%;
 		height: auto;
@@ -267,10 +260,10 @@ header h1
 		min-height: 0px;
 	}
 
-	.podcast ul
-	{
-		padding: 0 2% 0 2%;
-	}
+    .podcast div
+    {
+        padding: 0 2% 0 2%;
+    }
 
 	.podcast img
 	{
