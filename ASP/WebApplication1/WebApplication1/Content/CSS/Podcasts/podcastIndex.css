@@ -220,13 +220,14 @@ header h1
 		min-height: 0px;
 		padding: 10px 0 0 0;
 		background-color: white;
+        overflow: hidden;
 	}
 
 	.content article
 	{
 		width: 96%;
 		height: auto;
-		margin: 5px 0 5px 5px;
+		margin: 5px 2% 0 2%;
 	}
 
 	.content a
