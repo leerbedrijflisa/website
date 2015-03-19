@@ -8,17 +8,14 @@
 
 		@foreach (var podcast in Model)
 		{
-			
-				<item>
-					<title>@podcast.Title</title>
-					<description>@podcast.Content</description>
-					@Html.Raw("<link>")
-						Hier komt een link test
-					@Html.Raw("</link>")
+			<item>
+				<title>@podcast.Title</title>
+				<description>@podcast.Content</description>
+				@Html.Raw("<link>")
+					Hier komt een link test
+				@Html.Raw("</link>")
 
-				</item>
-		   
+			</item>
 		}
-
 	</channel>
 </rss>
