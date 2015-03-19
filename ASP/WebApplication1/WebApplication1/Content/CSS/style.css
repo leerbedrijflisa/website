@@ -286,21 +286,7 @@ footer p
 		position: fixed;
 		float: left;
 		z-index: 20;
-		background-color: #DC0000;
-		border-bottom-right-radius: 6px;
-	}
-
-	#responsiveButton ul
-	{
-		margin: 0;
-		padding: 0;
-	}
-
-	#responsiveButton li
-	{
-		padding: 0;
-		margin: 0;
-		display: inline;
+		background-image: url("/Content/Images/Hamburger.png");
 	}
 
 	#responsiveButton a
@@ -310,21 +296,6 @@ footer p
 		margin: 0;
 		width: 30px;
 		height: 30px;
-	}
-
-	#responsiveButton span
-	{
-		width: 20px;
-		height: 4px;
-		background-color: white;
-		float: left;
-		margin: 1px 5px 1px 5px;
-		border-radius: 5px;
-	}
-
-	#responsiveButton span:first-child
-	{
-		margin-top: 7px;
 	}
 
 	nav ul li:last-child a
