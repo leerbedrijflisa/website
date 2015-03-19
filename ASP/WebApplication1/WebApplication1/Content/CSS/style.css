@@ -98,19 +98,10 @@ footer
 {
 	width: 100%;
 	color: white;
-	background-image: none;
-	padding: 0px;
-}
-
-footer > div
-{
-	float: left;
-	width: 100%;
-	margin: 0;
-	padding: 0;
 	background-image: url("/Content/Images/bottom.png");
 	background-size: 100%;
 	background-repeat: no-repeat;
+    padding: 5px 0 5px 0;
 }
 
 footer h2
@@ -316,14 +307,15 @@ footer p
 		margin-top: 0px;
 	}
 
-	footer > div
-	{
-		padding-bottom: 20px;
-	}
+    footer
+    {
+        padding-bottom: 40px;
+    }
 
 	footer h2
 	{
 		font-size: 15px;
+        margin-top: 0;
 	}
 
 	footer p
