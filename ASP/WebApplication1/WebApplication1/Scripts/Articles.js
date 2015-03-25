@@ -1,24 +1,38 @@
 ﻿//If checks also if value is a Number to prevent problems.
 
-if ($(window).width() > 800 && $.isNumeric($(window).width()))
+function hover_in()
 {
-    var numberOfString = $('.articlesContent').find('li').last().attr('id');
-    var numberOf = numberOfString.replace("articleButton", "");
-    
-    for (i = 1; i <= numberOf; i++)
-    {
-        $('#articleButton' + i).hover(hover_in, hover_out);
-    }
-
-    function hover_in()
+    if ($('body').width() > 800 && $.isNumeric($('body').width()))
     {
         $(this).find('h2').stop().animate({ marginTop: "0px" }, 400);
         $(this).find('p').stop().animate({ height: "210px" }, 400);
     }
+}
 
-    function hover_out()
+function hover_out()
+{
+    if ($('body').width() > 800 && $.isNumeric($('body').width()))
     {
-        $(this).find('h2').stop().animate({ marginTop: "210" }, 400);
-        $(this).find('p').stop().animate({ height: "0" }, 400);
+        $(this).find('h2').stop().animate({ marginTop: "210px" }, 400);
+        $(this).find('p').stop().animate({ height: "0px" }, 400);
     }
 }
+
+function article_hover()
+{
+    if ($('body').width() > 800 && $.isNumeric($('body').width()))
+    {
+        $(".articlesContent h2").css({ marginTop: "210px" });
+        $(".articlesContent p").css({ height: "0px" });
+        var numberOf = $('.articlesContent').find('a').last().attr('id');
+        $(".articlesContent a").hover(hover_in, hover_out).on;
+    }
+    else
+    {
+        $(".articlesContent h2").css({ marginTop: "0px"  }).stop();
+        $(".articlesContent p").css({ height: "auto" });
+    }
+}
+
+$(document).ready(article_hover);
+$( window ).resize(article_hover);

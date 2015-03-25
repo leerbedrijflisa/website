@@ -39,12 +39,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RazorEngine">
+      <HintPath>..\packages\RazorEngine.3.6.1\lib\net45\RazorEngine.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -87,45 +90,31 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\CSS\Articles\articleDetail.css" />
-    <Content Include="Content\CSS\Articles\articleDetailResponsive.css" />
     <Content Include="Content\CSS\Articles\articleIndex.css" />
-    <Content Include="Content\CSS\Articles\articleIndexResponsive.css" />
+    <Content Include="Content\CSS\Index\Contact.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.min.css" />
     <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\CSS\Icons\delete.png" />
     <Content Include="Content\CSS\Icons\edit.png" />
-    <Content Include="Content\CSS\Index\index.css" />
-    <Content Include="Content\CSS\Index\indexResponsive.css" />
+    <Content Include="Content\CSS\Index\Index.css" />
     <Content Include="Content\CSS\Podcasts\podcastDetail.css" />
-    <Content Include="Content\CSS\Podcasts\podcastDetailResponsive.css" />
     <Content Include="Content\CSS\Podcasts\podcastIndex.css" />
-    <Content Include="Content\CSS\Podcasts\podcastIndexResponsive.css" />
     <Content Include="Content\CSS\style.css" />
-    <Content Include="Content\CSS\styleResponsive.css" />
-    <Content Include="Content\ManagementCSS\Articles\articleEdit.css" />
-    <Content Include="Content\ManagementCSS\Articles\articleEditResponsive.css" />
-    <Content Include="Content\ManagementCSS\Articles\articleIndex.css" />
-    <Content Include="Content\ManagementCSS\Articles\articleIndexResponsive.css" />
-    <Content Include="Content\ManagementCSS\Articles\articleAdd.css" />
-    <Content Include="Content\ManagementCSS\Articles\articleAddResponsive.css" />
-    <Content Include="Content\ManagementCSS\Index\Index.css" />
-    <Content Include="Content\ManagementCSS\Index\IndexResponsive.css" />
-    <Content Include="Content\ManagementCSS\Podcasts\podcastAdd.css" />
-    <Content Include="Content\ManagementCSS\Podcasts\podcastAddResponsive.css" />
-    <Content Include="Content\ManagementCSS\Podcasts\podcastEdit.css" />
-    <Content Include="Content\ManagementCSS\Podcasts\podcastEditResponsive.css" />
-    <Content Include="Content\ManagementCSS\Podcasts\podcastIndex.css" />
-    <Content Include="Content\ManagementCSS\Podcasts\podcastIndexResponsive.css" />
-    <Content Include="Content\ManagementCSS\style.css" />
-    <Content Include="Content\ManagementCSS\styleResponsive.css" />
+    <Content Include="Content\CSS\Articles\articleEdit.css" />
+    <Content Include="Content\CSS\Articles\articleAdmin.css" />
+    <Content Include="Content\CSS\Articles\articleAdd.css" />
+    <Content Include="Content\CSS\Index\Admin.css" />
+    <Content Include="Content\CSS\Podcasts\podcastAdd.css" />
+    <Content Include="Content\CSS\Podcasts\podcastEdit.css" />
+    <Content Include="Content\CSS\Podcasts\podcastAdmin.css" />
+    <Content Include="Content\CSS\management.css" />
     <Content Include="Global.asax" />
-    <Compile Include="Controllers\ManagementPodcastsController.cs" />
-    <Compile Include="Controllers\Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Contacts.cs" />
     <Compile Include="Models\WebsiteContext.cs" />
     <Content Include="Scripts\Articles.js" />
     <Content Include="Scripts\jquery1.11.1-min.js" />
-    <Content Include="Scripts\script.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -185,11 +174,12 @@
     <Content Include="Content\FontAwesome\scss\_stacked.scss" />
     <Content Include="Content\FontAwesome\scss\_variables.scss" />
     <Content Include="Views\Articles\Edit.cshtml" />
-    <Content Include="Views\ManagementIndex\Index.cshtml" />
-    <Content Include="Views\ManagementPodcasts\Index.cshtml" />
-    <Content Include="Views\ManagementPodcasts\Add.cshtml" />
-    <Content Include="Views\ManagementPodcasts\Edit.cshtml" />
+    <Content Include="Views\Index\Admin.cshtml" />
+    <Content Include="Views\Podcasts\Admin.cshtml" />
+    <Content Include="Views\Podcasts\Add.cshtml" />
+    <Content Include="Views\Podcasts\Edit.cshtml" />
     <Content Include="Views\Articles\Delete.cshtml" />
+    <Content Include="Views\Podcasts\Delete.cshtml" />
     <None Include="Views\Podcasts\RSS.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

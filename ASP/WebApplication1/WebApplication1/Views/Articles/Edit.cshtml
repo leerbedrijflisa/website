@@ -1,19 +1,22 @@
 ﻿@model Article
 @{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
 @section css{
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/ManagementCSS/Articles/articleEdit.css")">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/ManagementCSS/Articles/articleEditResponsive.css")">
+	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/Articles/articleEdit.css")">
 }
 
-<h1>Artikel Bewerken:</h1>
+<header>
+	<h1>Artikel Bewerken:</h1>
+</header>
 
-<form method="post" class="editArticle">
-    <ul>
-        <li><span>Titel: </span><input type="text" name="Title" value="@Model.Title" /></li>
-        <li><span>Afbeelding: </span><input type="text" name="Image" value="@Model.Image"/></li>
-        <li id="contentField">Inhoud:</li>
-        <li><textarea name="Content">@Model.Content</textarea></li>
-        @Html.HiddenFor(m => m.Date)
-        <li><input type="submit" value="Opslaan" /></li>
-    </ul>
-</form>
+<section>
+	<form method="post">
+		<ul>
+			<li><span>Titel: </span><input type="text" name="Title" value="@Model.Title" /></li>
+			<li><span>Afbeelding: </span><input type="text" name="Image" value="@Model.Image"/></li>
+			<li id="contentField">Inhoud:</li>
+			<li><textarea name="Content">@Model.Content</textarea></li>
+			@Html.HiddenFor(m => m.Date)
+			<li><input type="submit" value="Opslaan" /></li>
+		</ul>
+	</form>
+</section>

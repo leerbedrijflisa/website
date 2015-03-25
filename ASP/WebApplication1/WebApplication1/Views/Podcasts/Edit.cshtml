@@ -1,0 +1,28 @@
+﻿@model Podcast
+@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+@section css{
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/CSS/Podcasts/podcastEdit.css")">
+}
+
+<header>
+	<h1>Artikel Bewerken:</h1>
+</header>
+
+<section>
+	<form method="post">
+		<ul>
+			<li><span>Titel: </span><input type="text" name="Title" value="@Model.Title" /></li>
+			<li><span>Afbeelding: </span><input type="text" name="Image" value="@Model.Image" /></li>
+			<li><span>Bestand:</span><input type="text" name="File" value="@Model.File"/></li>
+			<li><span>Auteur(s):</span><input type="text" name="Author" value="@Model.Author"/></li>
+			<li>
+				<span>Referencties:</span><input type="text" name="References" value="@Model.References" />
+				<span id="Reference">Huidige Referenctie: </span><a target="_blank" href="http://@Model.References">@Model.References</a>
+			</li>
+			<li id="contentField">Inhoud:</li>
+			<li><textarea name="Content">@Model.Content</textarea></li>
+			@Html.HiddenFor(m => m.Date)
+			<li><input type="submit" value="Opslaan" /></li>
+		</ul>
+	</form>
+</section>

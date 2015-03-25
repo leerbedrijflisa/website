@@ -1,101 +1,44 @@
 ﻿@{var controllerName = ViewContext.RouteData.Values["controller"];}
 
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
-    <head>
-        <title>Home</title>
-        <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/CSS/style.css")">
-        <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/CSS/styleResponsive.css")">
-        @RenderSection("css", false)
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/icon" href="@Url.Content("~/Content/Images/lisalogo_ico.png")" />
-        
-        <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="@Url.Content("~/Podcasts/RSS.cshtml")" />
+	<head>
+		<title>Home</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/style.css")">
+		@RenderSection("css", false)
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="icon" type="image/icon" href="@Url.Content("~/Content/Images/lisalogo_ico.png")" />
 
-        <script src="@Url.Content("~/Scripts/jquery1.11.1-min.js")"></script>
-    </head>
-    <body>
+		<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="@Url.Content("~/Podcasts/RSS.cshtml")" />
 
-        <span class="jump-button" id="topPosition">Contact</span>
+		<script src="@Url.Content("~/Scripts/jquery1.11.1-min.js")"></script>
+	</head>
+	<body>
+		<a name="top"></a>
 
-        @if (controllerName.Equals("Index") || controllerName.Equals("index"))
-        {
-            <div class="menu">
-                <ul>
-                    <li id="logobutton"><a href="#topPosition"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
-                    <li id="menubutton"><a href="#topPosition"><span>Home</span></a></li>
-                    <li id="menubutton"><a href="#artikelenButton"><span>Artikelen</span></a></li>
-                    <li id="menubutton"><a href="#podcastsButton"><span>Podcasts</span></a></li>
-                    <li id="menubutton"><a href="#projectenButton"><span>Projecten</span></a></li>
-                    <li id="menubutton"><a href="#footerButton"><span>Contact</span></a></li>
-                </ul>
-            </div>
+		<div id="responsiveButton">
+			<a href="#menu"></a>
+		</div>
 
-            <div class="responsive-menu">
-                <ul>
-                    <li id="logobutton"><a href="index.html"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
-                    <li id="menubutton"><a href="#topPosition"><span>Home</span></a></li>
-                    <li id="menubutton"><a href="#artikelenButton"><span>Artikelen</span></a></li>
-                    <li id="menubutton"><a href="#podcastsButton"><span>Podcasts</span></a></li>
-                    <li id="menubutton"><a href="#projectenButton"><span>Projecten</span></a></li>
-                    <li id="menubutton"><a href="#footerButton"><span>Contact</span></a></li>
-                    <li id="menubutton"><a id="responsiveClose"><span>Sluiten</span></a></li>
-                </ul>
-            </div>
-        }
-        else
-        {
-            <div class="menu">
-                <ul>
-                    <li id="logobutton"><a href="@Url.Action("Index", "Index")"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Index")"><span>Home</span></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Articles")"><span>Artikelen</span></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Podcasts")"><span>Podcasts</span></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Projects")"><span>Projecten</span></a></li>
-                    <li id="menubutton"><a href="#footerButton"><span>Contact</span></a></li>
-                </ul>
-            </div>
+		@RenderBody()
 
-            <div class="responsive-menu">
-                <ul>
-                    <li id="logobutton"><a href="@Url.Action("Index", "Index")"><img src="@Url.Content("~/Content/Images/lisa-logo.png")"></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Index")"><span>Home</span></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Articles")"><span>Artikelen</span></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Podcasts")"><span>Podcasts</span></a></li>
-                    <li id="menubutton"><a href="@Url.Action("Index", "Projects")"><span>Projecten</span></a></li>
-                    <li id="menubutton"><a href="#footerButton"><span>Contact</span></a></li>
-                    <li id="menubutton"><a id="responsiveClose"><span>Sluiten</span></a></li>
-                </ul>
-            </div>
-        }
+		<footer>
+			<a name="footer"></a> <!--anchor tag for jump buttons-->
+			<h2>Contact</h2>
+			<address>
+				<p>E-mail: lisa@davinci.nl</p>
+				<p>Telefoon:</p>
+				<p>Adres:</p>
+				<p>Blablabla:</p>
+			</address>
+		</footer>
 
-        <div id="responsiveButton">
-            <ul>
-                <li><a><span></span><span></span><span></span></a></li>
-            </ul>
-        </div>
+		<!-- Add any scripts with or without exeptions here -->
 
-        @RenderBody()
-
-        <div class="footer">
-            <span class="jump-button" id="footerButton">Contact</span>
-            <div id="footerdiv">
-                <h2>Contact</h2>
-                <div id="content-footer">
-                    <p>E-mail: lisa@davinci.nl</p>
-                    <p>Telefoon:</p>
-                    <p>Adres:</p>
-                    <p>Blablabla:</p>
-                </div>
-            </div>
-        </div>
-
-        <script src="@Url.Content("~/Scripts/script.js")"></script>
-
-        @if (controllerName.Equals("Articles") || controllerName.Equals("articles"))
-        { 
-            <script src="@Url.Content("~/Scripts/Articles.js")"></script>
-        }
-    </body>
+		@if (controllerName.Equals("Articles") || controllerName.Equals("articles"))
+		{ 
+			<script src="@Url.Content("~/Scripts/Articles.js")"></script>
+		}
+	</body>
 </html>

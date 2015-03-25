@@ -1,77 +1,74 @@
 ﻿@model IEnumerable<Article>
 @section css{
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/CSS/Articles/articleIndex.css")">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/CSS/Articles/articleIndexResponsive.css")">
+	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/Articles/articleIndex.css")">
 }
 
-<div class="banner">
-    <h1>Artikelen</h1>
-</div>
+@Html.Partial("~/Views/Shared/_Menu.cshtml")
 
-<div class="content">
-    <div>
-        <ul>
-            <li>
-                <a>
-                    <img src="@Url.Content("~/Content/Images/Penguin.png")">
-                    <h2>titel</h2>
-                    <p>
-                        tekst
-                    </p>
-                </a>
-            </li>
+<header>
+	<h1>Artikelen</h1>
+</header>
 
-            <li>
-                <a>
-                    <img src="@Url.Content("~/Content/Images/Raven.png")">
-                    <h2>titel</h2>
-                    <p>
-                        tekst
-                    </p>
-                </a>
-            </li>
+<section class="content">
+	<div>
+		<article>
+			<a>
+				<img src="@Url.Content("~/Content/Images/Penguin.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
 
-            <li>
-                <a>
-                    <img src="@Url.Content("~/Content/Images/Kiwi.png")">
-                    <h2>titel</h2>
-                    <p>
-                        tekst
-                    </p>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
+		<article>
+			<a>
+				<img src="@Url.Content("~/Content/Images/Raven.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
 
-<div class="articlesContent">
-    <div>
-        <ul>
-            @{int i = 0;}
+		<article>
+			<a>
+				<img src="@Url.Content("~/Content/Images/Kiwi.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
+	</div>
+</section>
 
-            @foreach (var article in Model)
-            {
-                i++;
+<section class="articlesContent">
+	<div>
+		@{int i = 0;}
 
-                string articleContent = article.Content;
-                if (articleContent.Length > 690)
-                {
-                    articleContent = articleContent.Substring(0, 690);
-                    articleContent = articleContent + "...";
-                }
-                
-                string url = string.Format("~/Content/Images/{0}", article.Image);
-                
-                <li id="@article.Id">
-                    <a href="@Url.Action("Details", new { id = article.Id })">
-                        <img src="@Url.Content(url)">
-                        <div class="articleInside">
-                            <h2>@article.Title</h2>
-                            <p>@articleContent</p>
-                        </div>
-                    </a>
-                </li>
-            }
-        </ul>
-    </div>
-</div>
+		@foreach (var article in Model)
+		{
+			i++;
+
+			string articleContent = article.Content;
+			if (articleContent.Length > 690)
+			{
+				articleContent = articleContent.Substring(0, 690);
+				articleContent = articleContent + "...";
+			}
+				
+			string url = string.Format("~/Content/Images/{0}", article.Image);
+				
+			<article>
+				<a id="@i" href="@Url.Action("Details", new { id = article.Id })">
+					<img src="@Url.Content(url)">
+					<div class="articleInside">
+						<h2 id="bugfix">@article.Title</h2>
+						<p>@articleContent</p>
+					</div>
+				</a>
+			</article>
+		}
+	</div>
+</section>

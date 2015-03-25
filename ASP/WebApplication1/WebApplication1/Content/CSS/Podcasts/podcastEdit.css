@@ -1,0 +1,36 @@
+﻿/*The css is ordered in the way the html is nested in the edit page of podcasts. */
+
+section ul
+{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+section span
+{
+	width: 100px;
+	display: inline-block;
+}
+
+#Reference
+{
+	width: 140px;
+}
+
+section a
+{
+	text-decoration: none;
+	color: blue;
+}
+
+section a:hover
+{
+	text-decoration: underline;
+}
+
+section textarea
+{
+	width: 500px;
+	height: 500px;
+}

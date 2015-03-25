@@ -1,145 +1,242 @@
-﻿.banner h1
+﻿/*The css is ordered in the way the html is nested in the index page of home. */
+
+header
 {
-	color: white;
 	text-align: center;
-	font-size: 60px;
-	position: absolute;
-	width: 100%;
-	top: 10%;
-	font-weight: normal;
 }
 
-.banner h2
+header h1
 {
-	font-size: 30px;
-	padding: 0.5%;
-	margin: 0px;
+	margin-top: 0;
+	position: absolute;
+	top: 10%;
+	color: white;
+	width: 100%;
 	font-weight: normal;
 }
 
-.banner div
+header div
 {
 	background-color: rgba(0,0,0,0.5);
 	width: 100%;
-	height: 35%;
 	color: white;
 	text-align: center;
 	position: absolute;
-	bottom: 0px;
+	bottom: 0;
+	max-height: 60%;
+	overflow: auto;
 }
 
-.banner p
+header h2
 {
-	margin: 0px;
 	padding: 0.5%;
-	font-size: 100%;
-}
-
-.content h1
-{
-	padding-top: 10px;
-	margin-left: 20px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-top: 0px;
+	margin: 0 auto;
 	font-weight: normal;
+	max-width: 1080px;
 }
 
-.content li
+header p
 {
-	display: inline;
-	width: 350px;
-	height: 320px;
+	margin: 0 auto;
+	max-width: 1080px;
+	padding: 0.5%;
+}
+
+section
+{
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	background-color: white;
+}
+
+#middle /*makes the middle section another color*/
+{
 	background-color: #DEDEDE;
-	margin-left: 20px;
-	margin-right: 0px;
-	margin-bottom: 20px;
-	margin-top: 10px;
-	padding: 0px;
-	float: left;
 }
 
-.content ul
-{
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-}
-
-.content img
-{
-	width: 350px;
-	height: auto;
-	padding: 0px;
-	margin: 0px;
-}
-
-.content p
-{
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 20px;
-	padding-top: 10px;
-	margin: 0px;
-	font-size: 15px;
-}
-
-.content h2
-{
-	margin: 0px;
-	font-size: 15px;
-	padding-top: 20px;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 10px;
-	font-weight: normal;
-}
-
-.content div
+section div
 {
 	max-width: 1130px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.content
+section h1
 {
-	width: 100%;
-	min-height: 450px;
-	padding: 0px;
-	margin: 0px;
-	background-color: white;
-	
+	padding-top: 10px;
+	font-weight: normal;
 }
 
-#link a
+section article
 {
-	text-align: right;
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding: 0px; 
+	display: inline;
+	background-color: #DEDEDE;
+	padding: 0px;
+	float: left;
+}
+
+section div > a
+{
+    margin: 0 20px 0 20px;
+    padding: 0px;
 	color: #DC0000;
 	text-decoration: none;
-	width: 100%;
-	float: right;
+	width: calc(100% - 40px);
+	text-align: right;
+    display: block;
 }
 
-#link a:hover
+section div > a:hover
 {
 	text-decoration: underline;
 }
 
-#link
+section img
 {
-	width: 100%;
-	height: 30px;
+	height: auto;
+	padding: 0px;
 	margin: 0px;
-	background-color: rgba(0,0,0,0);
 }
 
-#middle
+section h2
 {
-	background-color: #DEDEDE;
+	margin: 0px;
+	font-weight: normal;
+}
+
+section p
+{
+	margin: 0px;
+}
+
+/*The code below is style that only applies to that element when it is wider than 801px*/
+
+@media all and (min-width: 801px) 
+{
+	header div
+    {
+        min-height: 35%;
+	}
+    
+    header h1
+	{
+		font-size: 60px;
+	}
+
+	header h2
+	{
+		font-size: 30px;
+	}
+
+	header p
+	{
+		font-size: 100%;
+	}
+
+	section
+	{
+		min-height: 450px;
+	}
+
+	section h1
+	{
+		margin: 0 0 0 20px;
+	}
+
+	section article
+	{
+		margin: 10px 0 20px 20px;
+		width: 350px;
+		height: 320px;
+	}
+
+	section img
+	{
+		width: 350px;
+	}
+
+	section h2
+	{
+		font-size: 15px;
+		padding: 20px 20px 10px 20px;
+	}
+
+	section p
+	{
+		padding: 10px 20px 20px 20px;
+		font-size: 15px;
+	}
+}
+
+/*The code below is style that only applies to that element when it is smaller than 800px. This style is used for mobile devices and small tablets.*/
+
+@media all and (max-width: 800px) 
+{
+	header h1
+	{
+		font-size: 30px;
+	}
+
+	header div
+	{
+		height: 50%;
+	}
+
+	header h2
+	{
+		font-size: 15px;
+	}
+
+	header p
+	{
+		font-size: 10px;
+	}
+
+	section
+	{
+		min-height: 200px;
+	}
+
+	section h1
+	{
+		font-size: 20px;
+		margin: 0 0 0 2%;
+	}
+
+	section article
+	{
+		width: 96%;
+		height: auto;
+		margin: 5px 0 5px 2%;
+	}
+
+    section div > a 
+    {
+        font-size: 14px;
+    }
+
+	#link a
+	{
+		font-size: 10px;
+	}
+
+	section img
+	{
+		width: 100px;
+		float: left;
+	}
+
+	section h2
+	{
+		font-size: 13px;
+		padding: 5px 5px 0 5px;
+		float: left;
+	}
+
+	section p
+	{
+		padding: 5px;
+		font-size: 10px;
+	}
 }

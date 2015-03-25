@@ -1,46 +1,47 @@
 ﻿@model Podcast
 @section css{
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/CSS/Podcasts/podcastDetail.css")">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/CSS/Podcasts/podcastDetailResponsive.css")">
+	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/Podcasts/podcastDetail.css")">
 }
 
-<div class="banner">
-    <h1>@Model.Title</h1>
-</div>
+@Html.Partial("~/Views/Shared/_Menu.cshtml")
 
-<div class="podcast">
-    <div>
-        <h2>@Model.Title</h2>
+<header>
+	<h1>@Model.Title</h1>
+</header>
 
-        <div id="leftcontainer">
-            <span>
-                <audio controls>
-                    <source src="@Url.Content("~/Content/Audio/" + Model.File)" type="audio/mpeg">
-                    Your browser cannot play this audio file.
-                </audio>
-            </span>
-            <p>@Model.Content</p>
-        </div>
-        <ul>
-            <li>Geplaatst op:</li>
-            <li>@Model.Date</li>
-            <li id="morespace">Geplaatst door:</li>
-            <li>@Model.Author</li>
-            <li id="morespace">Links:</li>
-            <li><a id="references">@Model.References</a></li>
-        </ul>
-        <span id="button_container">
-            <a class="podcastLink" href="@Url.Content("~/Content/Audio/" + Model.File)" download="@Model.File"><img src="@Url.Content("~/Content/Images/icon_arrow.png")" />Download</a>
-            <a class="podcastLink" id="RSS" rel="alternate" type="application/rss+xml" href="@Url.Action("RSS", "Podcasts")"><img src="@Url.Content("~/Content/Images/icon_rss.png")" />RSS</a>
-        </span>
-    </div>
-</div>
+<section class="podcast">
+	<article>
+		<h2>@Model.Title</h2>
 
-<div class="reply">
-    <h2>Reacties</h2>
-    <div>
-        <h3></h3>
-        <h3>Datum</h3>
-        <p>hier komt de inhoud van een reactie</p>
-    </div>
-</div>
+		<div id="leftcontainer">
+			<span>
+				<audio controls>
+					<source src="@Url.Content("~/Content/Audio/" + Model.File)" type="audio/mpeg">
+					Your browser cannot play this audio file.
+				</audio>
+			</span>
+			<p>@Model.Content</p>
+		</div>
+		<ul>
+			<li>Geplaatst op:</li>
+			<li>@Model.Date</li>
+			<li id="morespace">Geplaatst door:</li>
+			<li>@Model.Author</li>
+			<li id="morespace">Links:</li>
+			<li><a id="references">@Model.References</a></li>
+		</ul>
+		<span id="button_container">
+			<a class="podcastLink" href="@Url.Content("~/Content/Audio/" + Model.File)" download="@Model.File"><img src="@Url.Content("~/Content/Images/icon_arrow.png")" />Download</a>
+			<a class="podcastLink" id="RSS" rel="alternate" type="application/rss+xml" href="@Url.Action("RSS", "Podcasts")"><img src="@Url.Content("~/Content/Images/icon_rss.png")" />RSS</a>
+		</span>
+	</article>
+</section>
+
+<section class="reply">
+	<h2>Reacties</h2>
+	<article>
+		<h3>Titel</h3>
+		<h3>Datum</h3>
+		<p>hier komt de inhoud van een reactie</p>
+	</article>
+</section>
