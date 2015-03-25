@@ -1,129 +1,135 @@
 ﻿@section css{
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/CSS/Index/index.css")">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/CSS/Index/indexResponsive.css")">
+	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/Index/Index.css")">
 }
 
-<div class="banner">
-    <h1>Welkom bij Lisa</h1>
-    <div>
-        <h2>Titel</h2>
-        <p>content</p>
-    </div>
-</div>
+@*Menu for index page only. Html comment tags are there to remove any spacing between the buttons. If these comments are not there the buttons wont fit in the menu.*@
+<nav id="menu">
+	<ul>
+		<li><a href="#top">&nbsp;</a></li><!--
+		--><li><a href="#top">Home</a></li><!--
+		--><li><a href="#articles">Artikelen</a></li><!--
+		--><li><a href="#podcasts">Podcasts</a></li><!--
+		--><li><a href="#projects">Projecten</a></li><!--
+		--><li><a href="#footer">Contact</a></li><!--
+		--><li><a href="#">Sluiten</a></li>
+	</ul>
+</nav>
 
-<div class="content">
-    <div>
-        <span class="jump-button" id="artikelenButton">Artikelen</span>
-        <h1>Artikelen</h1>
-        <ul>
-            <li>
-                <a>
-                    <img src="@Url.Content("~/Content/Images/Penguin.png")">
-                    <h2>titel</h2>
-                    <p>
-                        tekst
-                    </p>
-                </a>
-            </li>
+<header>
+	<h1>Welkom bij Lisa</h1>
+	<div>
+		<h2>Titel</h2>
+		<p>Literatuur van eigen bodem en de beste boeken die naar het Nederlands zijn vertaald: op bruna.nl bestel je eenvoudig en snel je favoriete Nederlandse boeken! Bekijk onze huidige boeken top 10 met de populairste boeken van dit moment, of één van onze speciaal samengestelde Bruna collecties. Alle Nederlandse boeken zijn overzichtelijk voor je gepresenteerd, van de leukste kinderboeken tot de spannendste thrillers en van reisboek tot kookboek. En heb je een bijzonder boek op tv gezien? Ook die vind je natuurlijk gemakkelijk terug!</p>
+	</div>
+</header>
 
-            <li>
-                <a>
-                    <img src="@Url.Content("~/Content/Images/Raven.png")">
-                    <h2>titel</h2>
-                    <p>
-                        tekst
-                    </p>
-                </a>
-            </li>
+<section>
+	<div>
+		<a name="articles"></a>
+		<h1>Artikelen</h1>
+		<article>
+			<a>
+				<img src="@Url.Content("~/Content/Images/Penguin.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
 
-            <li>
-                <a>
-                    <img src="@Url.Content("~/Content/Images/Kiwi.png")">
-                    <h2>titel</h2>
-                    <p>
-                        tekst
-                    </p>
-                </a>
-            </li>
-            <li id="link"><a href="@Url.Action("Index", "Articles")">Meer artikelen</a></li>
-        </ul>
-    </div>
-</div>
+		<article>
+			<a>
+				<img src="@Url.Content("~/Content/Images/Raven.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
 
-<div class="content" id="middle">
-    <div>
-        <span class="jump-button" id="podcastsButton">Podcasts</span>
-        <h1 name="podcasts">Podcasts</h1>
-        <ul>
-            <li>
-                <a>
-                    <img src="@Url.Content("~/Content/Images/Penguin.png")">
-                    <h2>titel</h2>
-                    <p>
-                        tekst
-                    </p>
-                </a>
-            </li>
+		<article>
+			<a>
+				<img src="@Url.Content("~/Content/Images/Kiwi.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
+		<a href="@Url.Action("Index", "Articles")">Meer artikelen</a>
+	</div>
+</section>
 
-            <li>
-                <a>
-                    <img src="@Url.Content("~/Content/Images/Raven.png")">
-                    <h2>titel</h2>
-                    <p>
-                        tekst
-                    </p>
-                </a>
-            </li>
+<section id="middle">
+	<div>
+		<a name="podcasts"></a>
+		<h1>Podcasts</h1>
+		<article>
+			<a>
+				<img src="@Url.Content("~/Content/Images/Penguin.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
 
-            <li>
-                <a>
-                    <img src="@Url.Content("~/Content/Images/Kiwi.png")">
-                    <h2>titel</h2>
-                    <p>
-                        tekst
-                    </p>
-                </a>
-            </li>
-            <li id="link"><a href="@Url.Action("Index", "Podcasts")">Meer podcasts...</a></li>
-        </ul>
-    </div>
-</div>
+		<article>
+			<a>
+				<img src="@Url.Content("~/Content/Images/Raven.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
 
-<div class="content">
-    <div>
-        <span class="jump-button" id="projectenButton">Projecten</span>
-        <h1 name="projecten">Projecten</h1>
-        <ul>
-            <li>
-                <a>
-                    <img src="@Url.Content("~/Content/Images/Penguin.png")">
-                    <h2>titel</h2>
-                    <p>
-                        tekst
-                    </p>
-                </a>
-            </li>
+		<article>
+			<a>
+				<img src="@Url.Content("~/Content/Images/Kiwi.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
+		<a href="@Url.Action("Index", "Podcasts")">Meer podcasts</a>
+	</div>
+</section>
 
-            <li>
-                <a>
-                    <img src="@Url.Content("~/Content/Images/Raven.png")">
-                    <h2>titel</h2>
-                    <p>
-                        tekst
-                    </p>
-                </a>
-            </li>
+<section>
+	<div>
+		<a name="projects"></a>
+		<h1>Projecten</h1>
+		<article>
+			<a>
+				<img src="@Url.Content("~/Content/Images/Penguin.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
 
-            <li>
-                <a>
-                    <img src="@Url.Content("~/Content/Images/Kiwi.png")">
-                    <h2>titel</h2>
-                    <p>
-                        tekst
-                    </p>
-                </a>
-            </li>
-            <li id="link"><a href="@Url.Action("Index", "Projects")">Meer projecten...</a></li>
-        </ul>
-    </div>
-</div>
+		<article>
+			<a>
+				<img src="@Url.Content("~/Content/Images/Raven.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
+
+		<article>
+			<a>
+				<img src="@Url.Content("~/Content/Images/Kiwi.png")">
+				<h2>titel</h2>
+				<p>
+					tekst
+				</p>
+			</a>
+		</article>
+		<a href="@Url.Action("Index", "Projects")">Meer projecten</a>
+	</div>
+</section>

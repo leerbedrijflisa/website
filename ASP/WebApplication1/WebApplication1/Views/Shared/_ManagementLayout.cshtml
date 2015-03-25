@@ -1,16 +1,16 @@
 ﻿@{Layout = null;}
 
 <html>
-    <head>
-        <link rel="stylesheet" href="@Url.Content("~/Content/FontAwesome/css/font-awesome.min.css")">
-        <link rel="stylesheet" type="text/css" media="screen and (min-width:801px)" href="@Url.Content("~/Content/ManagementCSS/style.css")">
-        <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/ManagementCSS/styleResponsive.css")">
-        @RenderSection("css", false)
-        <link rel="icon" type="image/icon" href="@Url.Content("~/Content/Images/lisalogo_ico.png")" />
-        <title>Beheer</title>
-    </head>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="@Url.Content("~/Content/FontAwesome/css/font-awesome.min.css")">
+		<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/management.css")">
+		@RenderSection("css", false)
+		<link rel="icon" type="image/icon" href="@Url.Content("~/Content/Images/lisalogo_ico.png")" />
+		<title>Beheer</title>
+	</head>
 
-    <body>
-        @RenderBody()
-    </body>
+	<body>
+		@RenderBody()
+	</body>
 </html>

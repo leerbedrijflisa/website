@@ -1,15 +1,18 @@
 ﻿@model Article
 @section css{
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/CSS/Articles/articleDetail.css")">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/CSS/Articles/articleDetailResponsive.css")">
+	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/Articles/articleDetail.css")">
 }
 
-<div class="banner">
+@Html.Partial("~/Views/Shared/_Menu.cshtml")
+
+<header>
 	<h1>@Model.Title</h1>
-</div>
+</header>
 		
-<div class="artikel">
-	<h2>@Model.Title</h2>
-    <img src="@Url.Content("~/Content/Images/" + Model.Image)"/>
-	<p>@Model.Content</p>
-</div>
+<section>
+	<article>
+		<h1>@Model.Title</h1>
+		<img src="@Url.Content("~/Content/Images/" + Model.Image)"/>
+		<p>@Model.Content</p>
+	</article>
+</section>

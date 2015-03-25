@@ -1,103 +1,62 @@
-﻿.banner h1
+﻿/*The css is ordered in the way the html is nested in the index page of podcasts. */
+
+header h1
 {
 	color: white;
 	text-align: center;
-	font-size: 90px;
 	position: absolute;
 	width: 100%;
 	margin-top: 10%;
 	font-weight: normal;
 }
 
-.content li
+.content
+{
+	width: 100%;
+	margin: 0px;
+}
+
+.content div
+{
+	margin: 0 auto 0 auto;
+}
+
+.content article
 {
 	display: inline;
-	width: 350px;
-	height: 320px;
-	background-color: #DEDEDE;
-	margin-left: 20px;
-	margin-right: 0px;
-	margin-bottom: 20px;
-	margin-top: 10px;
 	padding: 0px;
 	float: left;
+	background-color: #DEDEDE;
 }
 
 .content a
 {
-	padding: 0px;
-	margin: 0px;
-	cursor: pointer;
 	color: black;
 	text-decoration: none;
 }
 
-.content a:hover
-{
-	cursor: hand;
-}
-
-.content ul
-{
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-}
-
 .content img
 {
-	width: 350px;
 	height: auto;
-	padding: 0px;
-	margin: 0px;
-}
-
-.content p
-{
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 20px;
-	padding-top: 10px;
-	margin: 0px;
-	font-size: 15px;
+	padding: 0;
+	margin: 0;
 }
 
 .content h2
 {
 	margin: 0px;
-	font-size: 15px;
-	padding-top: 20px;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 10px;
 	font-weight: normal;
 }
 
-.content div
+.content p
 {
-	max-width: 1130px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0px;
-	margin-top: 0px;
-}
-
-.content
-{
-	width: 100%;
-	min-height: 350px;
 	margin: 0px;
-	background-color: #DEDEDE;
-	padding-top: 70px;
-	padding-bottom: 20px;
-	padding-right: 0px;
-	padding-left: 0px;
+	font-size: 15px;
 }
 
 .podcast
 {
 	width: 100%;
-	min-height: 75px;
 	margin: 0px;
 	background-color: white;
 	padding: 0px;
@@ -108,16 +67,12 @@
 	background-color: #DEDEDE;
 }
 
-.podcast ul
+.podcast div
 {
-	max-width: 1130px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0px;
-	margin-top: 0px;
+    margin: 0 auto 0 auto;
 }
 
-.podcast li
+.podcast article
 {
 	padding: 0px;
 	margin: 0px;
@@ -140,42 +95,196 @@
 
 .podcast img
 {
-	width: 175px;
 	height: auto;
-	padding-left: 0px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-right: 10px;
+	padding: 10px 10px 10px 0;
 	margin: 0px;
 	float: left;
 }
 
 .podcast h1
 {
-	font-size: 20px;
-	padding-top: 5px;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-bottom: 5px;
 	font-weight: normal;
 }
 
 .podcast h2
 {
-	font-size: 15px;
-	padding-top: 5px;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-bottom: 5px;
 	font-weight: normal;
 }
 
 .podcast p
 {
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-bottom: 20px;
-	padding-top: 0px;
+	padding: 0 0 20px 0;
 	margin: 0px;
-	font-size: 15px;
+}
+
+/*The code below is style that only applies to that element when it is wider than 801px*/
+
+@media all and (min-width: 801px) 
+{
+	header h1
+	{
+		font-size: 90px;
+	}
+
+	.content
+	{
+		min-height: 350px;
+		background-color: #DEDEDE;
+		padding: 70px 0 20px 0;
+	}
+
+	.content div
+	{
+		max-width: 1130px;
+	}
+
+	.content article
+	{
+		width: 350px;
+		height: 320px;
+		margin: 10px 0 20px 20px;
+	}
+
+	.content a
+	{
+		padding: 0px;
+		margin: 0px;
+		cursor: initial;
+	}
+
+	.content a:hover
+	{
+		cursor: pointer;
+	}
+
+	.content img
+	{
+		width: 350px;
+	}
+
+	.content h2
+	{
+		font-size: 15px;
+		padding: 20px 20px 10px 20px;
+	}
+
+	.content p
+	{
+		padding: 10px 20px 20px 20px;
+	}
+
+	.podcast 
+	{
+		min-height: 75px;
+	}
+
+    .podcast div
+    {
+        max-width: 1090px;
+    }
+
+	.podcast img
+	{
+		width: 175px;
+	}
+
+	.podcast h1
+	{
+		font-size: 20px;
+		padding: 5px 0 5px 0;
+	}
+
+	.podcast h2
+	{
+		font-size: 15px;
+		padding: 5px 0 5px 0;
+	}
+
+	.podcast p
+	{
+		font-size: 15px;
+	}
+}
+
+/*The code below is style that only applies to that element when it is smaller than 800px. This style is used for mobile devices and small tablets.*/
+
+@media all and (max-width: 800px) 
+{
+	header h1
+	{
+		font-size: 40px;
+	}
+
+	.content
+	{
+		min-height: 0px;
+		padding: 10px 0 10px 0;
+		background-color: white;
+        overflow: hidden;
+	}
+
+	.content article
+	{
+		width: 96%;
+		height: auto;
+		margin: 5px 2% 0 2%;
+	}
+
+	.content a
+	{
+		width: 100%;
+		height: auto;
+	}
+
+	.content img
+	{
+		width: 100px;
+		height: auto;
+		float: left;
+	}
+
+	.content h2
+	{
+		font-size: 13px;
+		padding: 5px 5px 0 5px;
+		float: left;
+	}
+
+	.content p
+	{
+		padding: 5px;
+		float: left;
+	}
+
+	.podcast
+	{
+		min-height: 0px;
+	}
+
+    .podcast div
+    {
+        padding: 0 2% 0 2%;
+    }
+
+	.podcast img
+	{
+		width: 100px;
+	}
+
+	.podcast h1
+	{
+		font-size: 15px;
+		padding: 5px 0 0 0;
+	}
+
+	.podcast h2
+	{
+		font-size: 10px;
+		padding: 0 0 5px 0;
+	}
+
+	.podcast p
+	{
+		font-size: 10px;
+	}
 }

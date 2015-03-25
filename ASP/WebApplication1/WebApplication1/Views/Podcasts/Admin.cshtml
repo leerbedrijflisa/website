@@ -1,0 +1,52 @@
+﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+@section css{
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/CSS/Podcasts/podcastAdmin.css")">
+}
+
+<header>
+	<h1>Podcasts Beheren:</h1>
+</header>
+
+<nav>
+	<a href="@Url.Action("Add", "Podcasts")">Podcast Toevoegen</a>
+	<a href="@Url.Action("Admin", "Index")">Terug naar hoofdpagina</a>
+</nav>
+
+<section>
+	<table>
+		<tr>
+			<th>Artikelnummer:</th>
+			<th>Titel:</th>
+			<th>Datum van publiceren:</th>
+			<th>Bestand:</th>
+			<th>Inhoud:</th>
+			<th>Auteur(s):</th>
+			<th>Referenties:</th>
+			<th>Opties:</th>
+		</tr>
+
+		@foreach (var podcast in Model)
+		{
+			string podcastContent = podcast.Content;
+			if (podcastContent.Length > 200)
+			{
+				podcastContent = podcastContent.Substring(0, 200);
+				podcastContent = podcastContent + "...";
+			}
+
+			<tr>
+				<td>@podcast.Id</td>
+				<td>@podcast.Title</td>
+				<td>@podcast.Date</td>
+				<td><audio controls><source src="@Url.Content("~/Content/Audio/" + podcast.File)" type="audio/mp3" />Dit bestand kan niet afgespeeld worden!</audio></td>
+				<td>@podcastContent</td>
+				<td>@podcast.Author</td>
+				<td><a target="_blank" href="http://@podcast.References">@podcast.References</a></td>
+				<td>
+					<a id="iconButton" href="@Url.Action("Edit", "Podcasts", new { id = podcast.Id })" class="fa fa-pencil-square-o"></a>
+					<a id="iconButton" href="@Url.Action("Delete", "Podcasts", new { id = podcast.Id })" class="fa fa-times"></a>
+				</td>
+			</tr>
+		}
+	</table>
+</section>

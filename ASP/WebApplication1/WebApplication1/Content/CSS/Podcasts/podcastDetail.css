@@ -1,11 +1,11 @@
-﻿.banner h1
+﻿/*The css is ordered in the way the html is nested in the detail page of podcasts. */
+
+header h1
 {
 	color: white;
 	text-align: center;
-	font-size: 50px;
 	position: absolute;
 	width: 100%;
-	margin-top: 10%;
 	font-weight: normal;
 }
 
@@ -18,87 +18,23 @@
 	padding: 0px;
 }
 
-.podcast div
+.podcast article
 {
 	max-width: 1130px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0px;
-	margin-top: 0px;
-	padding-bottom: 60px;
-	padding-top: 40px;
-	padding-right: 0px;
-	padding-left: 0px;
+	margin: 0 auto 0 auto;
 }
 
 .podcast h2
 {
-	margin: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-top: 10px;
-	padding-bottom: 0px;
-	margin-left: 5px;
-	margin-right: 0px;
-	margin-bottom: 40px;
-	margin-top: 0px;
+	padding: 10px 0 0 0;
 	display: block;
 	width: 100%;
 }
 
-.podcastLink
+#leftcontainer
 {
-	background-color: #FAC8D0;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-bottom: 5px;
-	padding-top: 5px;
-	margin-right: 5px;
-	margin-top: 6px;
-	margin-bottom: 0px;
-	margin-left: 5px;
-	border: 1px solid black;
-	font-size: 15px;
-    text-decoration: none;
-    position: absolute;
-    color: black;
-}
-
-.podcastLink:hover 
-{
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-}
-
-#references
-{
-    color: blue;
-    text-decoration: none;
-}
-
-#references:hover
-{
-    color: red;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-#RSS
-{
-    margin-left: 130px;
-    color: black;
-}
-
-.podcast img
-{
-	height: 12px;
-	width: 15px;
-	padding: 0px;
-	margin-right: 5px;
-	margin-left: 0px;
-	margin-bottom: 0px;
-	margin-top: 0px;
+	display: block;
+	margin: 0px;
 }
 
 .podcast span
@@ -110,78 +46,34 @@
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border: 2px solid black;
-	margin-left: 5px;
-	margin-right: 0px;
-	margin-top: 0px;
-	margin-bottom: 15px;
 	display: block;
+}
+
+.podcast audio
+{
+	height: 35px;
 }
 
 .podcast p
 {
-	width: 100%;
 	display: block;
-	margin-left: 5px;
-	margin-right: 4px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-left: 5px;
-	padding-right: 5px;
-	padding-top: 5px;
-	padding-bottom: 5px;
 }
 
 .podcast ul
 {
-	width: 35%;
 	min-height: 150px;
-	float: left;
 	display: block;
-	margin-left: 5px;
-	margin-right: 0px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-top: 0px;
-	padding-bottom: 20px;
+	padding: 0 0 20px 0;
 }
 
 .podcast li
 {
-	width: 100%;
-	margin-top: 0px;
-	margin-bottom: 5px;
-	margin-left: 0px;
-	margin-right: 0px;
 	padding: 0px;
-	display: inline-block;
-}
-
-#morespace
-{
-	margin-top: 20px;
-	margin-bottom: 5px;
-	margin-left: 0px;
-	margin-right: 0px;
-}
-
-#leftcontainer
-{
-	width: 58%;
-	display: block;
-	margin: 0px;
-	padding-bottom: 15px;
-	padding-right: 35px;
-	padding-left: 0px;
-	padding-top: 0px;
-	float: left;
 }
 
 #button_container
 {
 	width: 100%;
-    height: 50px;
 	background-color: #DEDEDE;
 	padding: 0px;
 	border: 0px solid black;
@@ -190,71 +82,237 @@
 	overflow: hidden;
 }
 
+.podcastLink
+{
+	background-color: #FAC8D0;
+	padding: 5px 10px 5px 10px;
+	margin: 6px 5px 0 10px;
+	border: 1px solid black;
+	font-size: 15px;
+	text-decoration: none;
+	position: absolute;
+	color: black;
+}
+
+.podcastLink:hover 
+{
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+
+#RSS
+{
+	margin-left: 135px;
+	color: black;
+}
+
+.podcast img
+{
+	height: 12px;
+	width: 15px;
+	padding: 0px;
+	margin: 0 5px 0 0;
+}
+
 .reply
 {
 	background-color: white;
 	max-width: 1130px;
 	min-height: 50px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 40px;
-	margin-top: 40px;
+	margin: 40px auto 40px auto;
 	padding: 0px;
 }
 
 .reply h2
 {
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0px;
-	margin-top: 0px;
+	padding: 10px;
+	margin: 0 auto 0 auto;
 }
 
-.reply div
+.reply article
 {
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 10px;
-	margin-top: 10px;
 	background-color: #DEDEDE;
-	max-width: 58%;
 }
 
 .reply h3
 {
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	margin-left: 5%;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-top: 0px;
+	padding: 5px 0 5px 0;
+	margin: 0 0 0 5%;
 	font-size: 15px;
 }
 
 .reply p
 {
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	margin-left: 5%;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-top: 0px;
+	padding: 5px 0 5px 0;
+	margin: 0 0 0 5%;
 }
 
-.podcast audio
+/*The code below is style that only applies to that element when it is wider than 801px*/
+
+@media all and (min-width: 801px) 
 {
-    width: 630px;
-    height: 35px;
+	header h1 
+	{
+		font-size: 50px;
+		margin-top: 10%;
+	}
+
+    .podcast article
+    {
+        padding: 40px 0 60px 0;
+    }
+
+	.podcast h2
+	{
+        margin: 0 0 40px 5px;
+	}
+
+	#leftcontainer
+	{
+		width: 58%;
+		padding: 0 35px 15px 0;
+		float: left;
+	}
+
+	.podcast span
+	{
+		margin: 0 0 15px 5px;
+	}
+
+	.podcast audio
+	{
+		width: 98%;
+		padding: 0 1% 0 1%;
+	}
+
+	.podcast p
+	{
+		width: 100%;
+		margin: 0 4px 0 5px;
+		padding: 5px;
+	}
+
+	#references
+	{
+		color: blue;
+		text-decoration: none;
+	}
+
+	#references:hover
+	{
+		color: red;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	.podcast ul
+	{
+		float: left;
+		width: 35%;
+		margin: 0 0 0 5px;
+	}
+
+	.podcast li
+	{
+		width: 100%;
+		margin: 0 0 5px 0;
+		display: inline-block;
+	}
+
+	#morespace
+	{
+		margin: 20px 0 5px 0;
+	}
+
+	#button_container
+	{
+		height: 50px;
+	}
+
+	.reply article
+	{
+		padding: 20px 0 20px 0;
+		margin: 10px;
+		max-width: 58%;
+	}
+}
+
+/*The code below is style that only applies to that element when it is smaller than 800px. This style is used for mobile devices and small tablets.*/
+
+@media all and (max-width: 800px) 
+{
+	header h1
+	{
+		font-size: 25px;
+		margin: 5% 0 0 0;
+        padding: 0;
+	}
+
+    .podcast article
+    {
+        padding: 10px 0 40px 0;
+    }
+
+	.podcast h2
+	{
+        margin: 5px 10px 15px 10px;
+        font-size: 20px;
+	}
+
+	#leftcontainer
+	{
+		width: 100%;
+		padding: 0 0 15px 0;
+		float: none;
+	}
+
+	.podcast span
+	{
+		margin: 0 10px 15px 10px;
+	}
+
+	.podcast audio
+	{
+		width: 100%;
+	}
+
+	.podcast p
+	{
+		width: auto;
+		margin: 0;
+		padding: 5px 10px 5px 10px;
+	}
+
+	.podcast ul
+	{
+		width: 100%;
+		float: none;
+		margin: 0;
+	}
+
+	.podcast li
+	{
+		width: auto;
+		margin: 0 10px 5px 10px;
+		display: table;
+	}
+
+	#morespace
+	{
+		margin: 20px 5px 5px 10px;
+	}
+
+	.reply article
+	{
+		padding: 0;
+		margin: 5px 0 5px 0;
+		max-width: 100%;
+		border: 10px solid white;
+	}
+
+    .reply h2
+    {
+        font-size: 20px;
+    }
 }

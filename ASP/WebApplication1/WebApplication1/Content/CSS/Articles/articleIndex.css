@@ -1,19 +1,34 @@
-﻿.banner h1
+﻿/*The css is ordered in the way the html is nested in the index page of articles. */
+
+header h1
 {
 	color: white;
 	text-align: center;
-	font-size: 90px;
 	position: absolute;
 	width: 100%;
 	margin-top: 10%;
 	font-weight: normal;
 }
 
-.content li
+.content
+{
+	width: 100%;
+	margin: 0px;
+}
+
+.content div
+{
+	max-width: 1130px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-top: 0px;
+    overflow: hidden;
+}
+
+.content article
 {
 	display: inline;
-	width: 350px;
-	height: 320px;
 	background-color: #DEDEDE;
 	margin-left: 20px;
 	margin-right: 0px;
@@ -25,9 +40,6 @@
 
 .content a 
 {
-	padding: 0px;
-	margin: 0px;
-	cursor: pointer;
 	color: black;
 	text-decoration: none;
 }
@@ -37,99 +49,45 @@
 	cursor: pointer;
 }
 
-.content ul
-{
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-}
-
 .content img
 {
-	width: 350px;
-	height: auto;
 	padding: 0px;
 	margin: 0px;
-}
-
-.content p
-{
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 20px;
-	padding-top: 10px;
-	margin: 0px;
-	font-size: 15px;
 }
 
 .content h2
 {
 	margin: 0px;
-	font-size: 15px;
-	padding-top: 20px;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 10px;
 	font-weight: normal;
 }
 
-.content div
+.content p
 {
-	max-width: 1130px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0px;
-	margin-top: 0px;
+	margin: 0px;
 }
 
-.content
+.articlesContent
 {
 	width: 100%;
-	min-height: 350px;
-	margin: 0px;
-	background-color: #DEDEDE;
-	padding-top: 70px;
-	padding-bottom: 20px;
-	padding-right: 0px;
-	padding-left: 0px;
-}
-
-.articlesContent ul
-{
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-}
-
-.articlesContent img
-{
-	width: 350px;
-	height: 230px;
-	padding: 0px;
-	margin: 0px;
-	position: absolute;
-	left: 0px;
-	top: 0px;
+	background-color: white;
+    overflow: hidden;  
 }
 
 .articlesContent div
 {
-	max-width: 1130px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0px;
+    margin: 0 auto 0 auto;
+}
+
+.articlesContent article
+{
+	padding: 0px;
+	float: left;
 }
 
 .articlesContent a
 {
-	padding: 0px;
-	margin: 0px;
-	cursor: pointer;
 	color: black;
 	text-decoration: none;
-	position: relative;
-	width: 350px;
-	height: 230px;
 }
 
 .articlesContent a:hover
@@ -137,31 +95,9 @@
 	cursor: pointer;
 }
 
-.articlesContent li
+.articlesContent img
 {
-	display: inline;
-	width: 350px;
-	height: 230px;
-	margin-left: 20px;
-	margin-right: 0px;
-	margin-bottom: 20px;
-	margin-top: 0px;
-	padding: 0px;
-	float: left;
-}
-
-.articlesContent p
-{
-	color: white;
-	width: 340px;
-	height: 0px;
-	background-color: rgba(0,0,0,0.5);
-	margin-top: 0px ;
-	padding-bottom: 0px;
-	padding-top: 0px;
-	padding-left: 5px;
-	padding-right: 5px;
-    font-size: 12px;
+	margin: 0px;
 }
 
 .articlesContent h2
@@ -169,30 +105,246 @@
 	margin: 0px;
 	font-size: 15px;
 	font-weight: normal;
-	z-index: 3;
-	color: white;
-	background-color: rgba(0,0,0,0.5);
-	padding-left: 5px;
-	padding-right: 5px;
-	width: 340px;
-	height: 20px;
-    margin-top: 210px;
 }
 
-.articlesContent
+.articlesContent p
 {
-	width: 100%;
-	min-height: 350px;
-	margin: 0px;
-	background-color: white;
-	padding-top: 70px;
-	padding-bottom: 40px;
-	padding-right: 0px;
-	padding-left: 0px;
+	font-size: 12px;
 }
 
-.articlesInside
+/*The code below is style that only applies to that element when it is wider than 801px*/
+
+@media all and (min-width: 801px) 
 {
-	height: 20px;
-	margin-top: 210px;
+	header h1
+	{
+		font-size: 90px;
+	}
+
+	.content
+	{
+		min-height: 350px;
+		background-color: #DEDEDE;
+		padding: 70px 0 20px 0;
+	}
+
+	.content article
+	{
+		width: 350px;
+		height: 320px;
+		margin: 5px 0 5px 20px;
+	}
+
+	.content a
+	{
+		padding: 0px;
+		margin: 0px;
+		cursor: pointer;
+	}
+
+	.content img
+	{
+		width: 350px;
+		height: auto;
+	}
+
+	.content h2
+	{
+		font-size: 15px;
+		padding: 20px 20px 10px 20px;
+	}
+
+	.content p
+	{
+		padding: 10px 20px 20px 20px;
+		font-size: 15px;
+	}
+
+	.articlesContent
+	{
+		min-height: 350px;
+		padding: 70px 0 40px 0;
+		height: auto;
+		margin: 0;
+		padding-left: 0px;
+		top: 0px;
+		position: inherit;
+	}
+
+	.articlesContent div
+	{
+		max-width: 1130px;
+	}
+
+	.articlesContent article
+	{
+		display: inline;
+		width: 350px;
+		height: 230px;
+		margin: 0 0 20px 20px;
+	}
+
+	.articlesContent a
+	{
+		padding: 0px;
+		margin: 0px;
+		cursor: pointer;
+		position: relative;
+		width: 350px;
+		height: 230px;
+	}
+
+	.articlesContent img 
+	{
+		width: 350px;
+		height: 230px;
+		padding: 0px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+	}
+
+	.articleInside
+	{
+		height: 20px;
+        position: absolute;
+	}
+
+	.articlesContent h2
+	{
+		z-index: 3;
+		color: white;
+		background-color: rgba(0,0,0,0.5);
+		padding-left: 5px;
+		padding-right: 5px;
+		width: 340px;
+		height: 20px;
+		margin-top: 210px;
+        overflow: hidden;
+	}
+
+	.articlesContent p
+	{
+		color: white;
+		width: 340px;
+		height: 0px;
+		background-color: rgba(0,0,0,0.5);
+		margin: 0;
+		padding: 0 5px 0 5px;
+        display: block;
+        overflow: hidden;
+	}
+}
+
+/*The code below is style that only applies to that element when it is smaller than 800px. This style is used for mobile devices and small tablets.*/
+
+@media all and (max-width: 800px) 
+{
+	header h1
+	{
+		font-size: 40px;
+	}
+
+	.content
+	{
+		min-height: 0px;
+	}
+
+	.content article
+	{
+		width: 96%;
+		height: auto;
+		margin: 5px 0 5px 2%;
+	}
+
+	.content a
+	{
+		width: 100%;
+		height: auto;
+		padding: 0 0 10px 0;
+		background-color: white;
+	}
+
+	.content img
+	{
+		float: left;
+		max-width: 40%;
+		height: 50px;
+	}
+
+	.content h2
+	{
+		font-size: 13px;
+		padding: 5px 5px 0 5px;
+	}
+
+	.content p
+	{
+		padding: 5px;
+		font-size: 10px;
+		float: left;
+	}
+
+	.articlesContent
+	{
+		min-height: 0px;
+		padding: 0;
+	}
+
+	.articlesContent ul
+	{
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.articlesContent article
+	{
+		display: block;
+		width: 96%;
+		min-height: 20px;
+		margin: 0 2% 10px 2%;
+		background-color: #DEDEDE;
+	}
+
+	.articlesContent a
+	{
+		color: black;
+		text-decoration: none;
+		position: static;
+		width: 96%;
+		min-height: 20px;
+	}
+
+	.articlesContent img
+	{
+        display:inline-block;
+		max-width: 40%;
+		height: 50px;
+		padding: 0 5px 0 0;
+		float: left;
+	}
+
+	.articlesContent h2
+	{
+		z-index: 1;
+		color: black;
+		background-color: rgba(0,0,0,0);
+		padding-left: 0px;
+		padding-right: 5px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		width: auto;
+        float: left;
+	}
+
+	.articlesContent p
+	{
+		color: black;
+		width: auto;
+		min-height: 20px;
+		background-color: rgba(0,0,0,0);
+		margin: 0px ;
+		padding: 0 2% 0 2%;
+        display: inline-block;
+	}
 }
