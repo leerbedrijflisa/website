@@ -107,6 +107,28 @@
     <Content Include="Content\CSS\Podcasts\podcastEdit.css" />
     <Content Include="Content\CSS\Podcasts\podcastAdmin.css" />
     <Content Include="Content\CSS\management.css" />
+    <Content Include="Content\Images\AchtergrondLisarood.png" />
+    <Content Include="Content\Images\afbeeldingict.jpg" />
+    <Content Include="Content\Images\background-ict.jpg" />
+    <Content Include="Content\Images\banner16-6-small.png" />
+    <Content Include="Content\Images\banner16-6.png" />
+    <Content Include="Content\Images\bottom.png" />
+    <Content Include="Content\Images\fiber.jpg" />
+    <Content Include="Content\Images\footer-small.png" />
+    <Content Include="Content\Images\footer.png" />
+    <Content Include="Content\Images\Hamburger.png" />
+    <Content Include="Content\Images\home.jpg" />
+    <Content Include="Content\Images\icon_arrow.png" />
+    <Content Include="Content\Images\icon_rss.png" />
+    <Content Include="Content\Images\ICT.png" />
+    <Content Include="Content\Images\ICT_w1.jpg" />
+    <Content Include="Content\Images\Kiwi.png" />
+    <Content Include="Content\Images\Lisa-logo.png" />
+    <Content Include="Content\Images\lisalogo_ico.png" />
+    <Content Include="Content\Images\PCTELCOM.jpg" />
+    <Content Include="Content\Images\Penguin.png" />
+    <Content Include="Content\Images\Raven.png" />
+    <Content Include="Content\Images\shutter.jpg" />
     <Content Include="Global.asax" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Contacts.cs" />
@@ -190,7 +212,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Audio\" />
-    <Folder Include="Content\Images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
