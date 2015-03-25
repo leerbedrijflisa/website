@@ -211,6 +211,11 @@ section p
 		margin: 5px 0 5px 2%;
 	}
 
+    section div > a 
+    {
+        font-size: 14px;
+    }
+
 	#link a
 	{
 		font-size: 10px;
