@@ -181,6 +181,7 @@
     <Content Include="Views\Articles\Delete.cshtml" />
     <Content Include="Views\Podcasts\Delete.cshtml" />
     <None Include="Views\Podcasts\RSS.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
