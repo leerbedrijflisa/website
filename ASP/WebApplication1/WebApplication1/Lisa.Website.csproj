@@ -95,8 +95,6 @@
     <Content Include="Content\FontAwesome\css\font-awesome.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.min.css" />
     <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\CSS\Icons\delete.png" />
-    <Content Include="Content\CSS\Icons\edit.png" />
     <Content Include="Content\CSS\Index\Index.css" />
     <Content Include="Content\CSS\Podcasts\podcastDetail.css" />
     <Content Include="Content\CSS\Podcasts\podcastIndex.css" />
