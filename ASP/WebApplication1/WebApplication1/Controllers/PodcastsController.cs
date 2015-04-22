@@ -7,19 +7,22 @@ using System.Data.Entity;
 
 namespace Lisa.Website.Controllers
 {
-    public class PodcastsController : Controller
+    public class PodcastsController : BaseController
     {
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(GetPodcast());
         }
 
+        [AllowAnonymous]
         public ActionResult Details(int id)
         {
             var podcast = _db.Podcasts.Find(id);
             return View(podcast);
         }
 
+        [AllowAnonymous]
         public ActionResult RSS()
         {
             return View(GetPodcast());

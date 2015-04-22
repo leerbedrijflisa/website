@@ -7,8 +7,9 @@ using System.Data.Entity;
 
 namespace Lisa.Website.Controllers
 {
-    public class IndexController : Controller
+    public class IndexController : BaseController
     {
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View();

@@ -7,8 +7,9 @@ using System.Data.Entity;
 
 namespace Lisa.Website
 {
-    public class ArticlesController : Controller
+    public class ArticlesController : BaseController
     {
+        [AllowAnonymous]
         public ActionResult Index()
         {
             ViewBag.css = "Articles/articleIndex.css";
@@ -19,6 +20,7 @@ namespace Lisa.Website
             return View(articles);
         }
 
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             ViewBag.css = "Articles/articleDetail.css";
