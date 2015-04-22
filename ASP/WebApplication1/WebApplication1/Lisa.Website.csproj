@@ -130,6 +130,7 @@
     <Content Include="Content\Images\Raven.png" />
     <Content Include="Content\Images\shutter.jpg" />
     <Content Include="Global.asax" />
+    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Contacts.cs" />
     <Compile Include="Models\WebsiteContext.cs" />
