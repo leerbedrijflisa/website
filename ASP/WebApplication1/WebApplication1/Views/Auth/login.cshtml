@@ -1,0 +1,16 @@
+﻿@model Lisa.Website.ViewModels.LogInModel
+@{
+	ViewBag.Title = "Log In";
+}
+
+<h2>Welkom op de inlogpagina.</h2>
+
+@Html.ValidationSummary(true)
+
+@using (Html.BeginForm())
+{
+	@Html.EditorForModel()
+	<p>
+		<button type="submit">Inloggen</button>
+	</p>
+}

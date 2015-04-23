@@ -1,0 +1,13 @@
+﻿@model Lisa.Website.ViewModels.CreateModel
+
+<h2>Gebruiker aanmaken</h2>
+
+@Html.ValidationSummary(false)
+
+@using (Html.BeginForm())
+{
+	@Html.EditorForModel()
+	<p>
+		<button type="submit">Aanmaken</button>
+	</p>
+}
