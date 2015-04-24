@@ -13,5 +13,6 @@ namespace Lisa.Website
         public DbSet<Podcast> Podcasts { get; set; }
         public DbSet<Article> Articles { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Project> Projects { get; set; }
     }
 }
