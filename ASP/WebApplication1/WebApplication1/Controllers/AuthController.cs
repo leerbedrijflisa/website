@@ -68,12 +68,10 @@ namespace Lisa.Website
         [HttpPost]
         public async Task<ActionResult> Create(CreateModel model)
         {
-            /*
             if (!ModelState.IsValid)
             {
                 return View();
             }
-             */
 
             var user = new User
             {
