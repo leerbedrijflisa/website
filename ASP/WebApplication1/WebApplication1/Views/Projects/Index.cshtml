@@ -1,1 +1,16 @@
-﻿
+﻿@model IEnumerable<Project>
+@section css{
+	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/Projects/projectIndex.css")">
+}
+
+@Html.Partial("~/Views/Shared/_Menu.cshtml")
+
+<header>
+	<h1>Projecten</h1>
+</header>
+
+<section class="projectsContent">
+	<article>
+		<p>Aan deze pagina wordt nog gewerkt. U kunt hier binnenkort informatie over onze projecten vinden, zoals deze pagina.</p>
+	</article>
+</section>

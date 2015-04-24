@@ -124,6 +124,7 @@
     <Content Include="Content\CSS\Articles\articleDetail.css" />
     <Content Include="Content\CSS\Articles\articleIndex.css" />
     <Content Include="Content\CSS\Index\Contact.css" />
+    <Content Include="Content\CSS\Projects\projectIndex.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.min.css" />
     <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.svg" />
@@ -238,6 +239,12 @@
     <Content Include="Views\Auth\Create.cshtml" />
     <None Include="Views\Podcasts\RSS.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Projects\Add.cshtml" />
+    <Content Include="Views\Projects\Admin.cshtml" />
+    <Content Include="Views\Projects\Delete.cshtml" />
+    <Content Include="Views\Projects\Details.cshtml" />
+    <Content Include="Views\Projects\Edit.cshtml" />
+    <Content Include="Views\Projects\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
