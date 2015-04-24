@@ -115,7 +115,7 @@ namespace Lisa.Website
         {
             if (string.IsNullOrEmpty(returnUrl) || !Url.IsLocalUrl(returnUrl))
             {
-                return Url.Action("index", "home");
+                return Url.Action("admin", "index");
             }
 
             return returnUrl;
