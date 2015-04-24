@@ -49,8 +49,6 @@ namespace Lisa.Website
 
             if (user != null)
             {
-                var identity = await userManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);
-
                 await SignIn(user);
 
                 return Redirect(GetRedirectUrl(model.ReturnUrl));
