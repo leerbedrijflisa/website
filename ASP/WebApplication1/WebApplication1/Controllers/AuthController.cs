@@ -10,7 +10,6 @@ using System.Web;
 
 namespace Lisa.Website
 {
-    [AllowAnonymous]
     public class AuthController : Controller
     {
         private readonly UserManager<User> userManager;
@@ -25,6 +24,7 @@ namespace Lisa.Website
             this.userManager = userManager;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public ActionResult LogIn(string returnUrl)
         {
@@ -36,6 +36,7 @@ namespace Lisa.Website
             return View(model);
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public async Task<ActionResult> LogIn(LogInModel model)
         {
@@ -59,7 +60,6 @@ namespace Lisa.Website
             return View();
         }
 
-        [HttpGet]
         public ActionResult Create()
         {
             return View();

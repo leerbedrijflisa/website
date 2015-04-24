@@ -123,6 +123,7 @@
     <Compile Include="ViewPage.cs" />
     <Content Include="Content\CSS\Articles\articleDetail.css" />
     <Content Include="Content\CSS\Articles\articleIndex.css" />
+    <Content Include="Content\CSS\Auth\Login.css" />
     <Content Include="Content\CSS\Index\Contact.css" />
     <Content Include="Content\CSS\Projects\projectIndex.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.css" />

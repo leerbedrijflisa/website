@@ -1,7 +1,6 @@
 ﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
 @section css{
-	<link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/ManagementCSS/Index/Index.css")">
-	<link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="@Url.Content("~/Content/ManagementCSS/Index/IndexResponsive.css")">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/CSS/Index/Admin.css")">
 }
 
 <header>
@@ -32,5 +31,6 @@
 
 <section>
 	<h2>Accountbeheer:</h2>
-	<a href="@Url.Action("Create", "Auth")">Projecten beheren</a>
+	<a href="@Url.Action("Admin", "Auth")">Accounts beheren</a>
+	<a href="@Url.Action("Create", "Auth")">Account maken</a>
 </section>
