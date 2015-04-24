@@ -25,11 +25,6 @@ namespace Lisa.Website
             this.userManager = userManager;
         }
 
-        public ActionResult Login()
-        {
-            return View();
-        }
-
         [HttpGet]
         public ActionResult LogIn(string returnUrl)
         {
