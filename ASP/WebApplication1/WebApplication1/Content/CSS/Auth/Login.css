@@ -1,0 +1,11 @@
+﻿section
+{
+    max-width: 1020px;
+    margin: 80px auto 0 auto;
+}
+
+.footer
+{
+    bottom: 0px;
+    position: fixed;
+}

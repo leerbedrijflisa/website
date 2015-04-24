@@ -1,16 +1,18 @@
 ﻿@model Lisa.Website.ViewModels.LogInModel
-@{
-	ViewBag.Title = "Log In";
+@section css{
+	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/Auth/Login.css")">
 }
 
-<h2>Welkom op de inlogpagina.</h2>
+@Html.Partial("~/Views/Shared/_Menu.cshtml")
 
-@Html.ValidationSummary(true)
+<section>
+	<h2>Welkom op de inlogpagina.</h2>
 
-@using (Html.BeginForm())
-{
-	@Html.EditorForModel()
-	<p>
-		<button type="submit">Inloggen</button>
-	</p>
-}
+	@Html.ValidationSummary(true)
+
+	<form method="post">
+		<p>Email: </p><p><input type="text" value="" name="email"/></p>
+		<p>Password: </p><p><input type="password" value="" name="password"/></p>
+		<p><button type="submit">Inloggen</button></p>
+	</form>
+</section>
