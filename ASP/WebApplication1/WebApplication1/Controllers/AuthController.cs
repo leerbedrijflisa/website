@@ -5,6 +5,8 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using System.Web;
+using System.Data.Entity;
+using System;
 
 //User gets redirected to this controller when the user is not logged in. This needs to be accesible by anonymous/not logged in users so [AllowAnonymous] is required.
 
@@ -60,6 +62,11 @@ namespace Lisa.Website
             return View();
         }
 
+        public ActionResult Admin()
+        {
+            return View();
+        }
+
         public ActionResult Create()
         {
             return View();
@@ -85,7 +92,21 @@ namespace Lisa.Website
                 ModelState.AddModelError("", error);
             }
 
-            return View();
+            return RedirectToAction("admin", "index");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var user = _db.Users.Find(id);
+            return View(user);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(User EditUser)
+        {
+            _db.Entry(EditUser).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Admin");
         }
 
         public ActionResult LogOut()
@@ -99,6 +120,7 @@ namespace Lisa.Website
 
         private async Task SignIn(User user)
         {
+            user.SecurityStamp = Guid.NewGuid().ToString();  // HACK: Find out how we should deal with security stamps.
             var identity = await userManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);
             GetAuthenticationManager().SignIn(identity);
         }
@@ -118,5 +140,7 @@ namespace Lisa.Website
 
             return returnUrl;
         }
+
+        private WebsiteContext _db = new WebsiteContext();
     }
 }

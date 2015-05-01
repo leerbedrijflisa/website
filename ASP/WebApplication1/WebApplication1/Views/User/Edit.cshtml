@@ -1,0 +1,16 @@
+﻿@model User
+@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+@section css{
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/.css")">
+}
+
+<header>
+    <h1>Mijn gegevens aanpassen:</h1>
+</header>
+
+<section>
+    <form method="post">
+        <span>Gebruikersnaam: </span><input type="text" name="email" value="@Model.UserName" />
+        <p><input type="submit" value="Opslaan" /></p>
+    </form>
+</section>

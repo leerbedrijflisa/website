@@ -114,6 +114,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Models\CreateModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\Projects.cs" />
@@ -141,6 +142,8 @@
     <Content Include="Content\CSS\Podcasts\podcastEdit.css" />
     <Content Include="Content\CSS\Podcasts\podcastAdmin.css" />
     <Content Include="Content\CSS\management.css" />
+    <Content Include="Content\Icons\delete.png" />
+    <Content Include="Content\Icons\edit.png" />
     <Content Include="Content\Images\AchtergrondLisarood.png" />
     <Content Include="Content\Images\afbeeldingict.jpg" />
     <Content Include="Content\Images\background-ict.jpg" />
@@ -238,6 +241,8 @@
     <Content Include="Views\Podcasts\Delete.cshtml" />
     <Content Include="Views\Auth\Login.cshtml" />
     <Content Include="Views\Auth\Create.cshtml" />
+    <Content Include="Views\Auth\Edit.cshtml" />
+    <Content Include="Views\Auth\Admin.cshtml" />
     <None Include="Views\Podcasts\RSS.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\Projects\Add.cshtml" />
@@ -246,6 +251,8 @@
     <Content Include="Views\Projects\Details.cshtml" />
     <Content Include="Views\Projects\Edit.cshtml" />
     <Content Include="Views\Projects\Index.cshtml" />
+    <Content Include="Views\User\Admin.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

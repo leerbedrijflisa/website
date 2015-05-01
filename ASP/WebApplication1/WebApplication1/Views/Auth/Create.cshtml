@@ -1,13 +1,17 @@
 ﻿@model Lisa.Website.ViewModels.CreateModel
-
-<h2>Gebruiker aanmaken</h2>
-
-@Html.ValidationSummary(false)
-
-@using (Html.BeginForm())
-{
-	@Html.EditorForModel()
-	<p>
-		<button type="submit">Aanmaken</button>
-	</p>
+@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+@section css{
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/Auth/Create.css")">
 }
+
+<section>
+    <h2>Gebruiker aanmaken:</h2>
+
+    @Html.ValidationSummary(false)
+
+    <form method="post">
+        <p>Email: </p><p><input type="text" value="" name="email" /></p>
+        <p>Password: </p><p><input type="password" value="" name="password" /></p>
+        <p><button type="submit">Aanmaken</button></p>
+    </form>
+</section>
