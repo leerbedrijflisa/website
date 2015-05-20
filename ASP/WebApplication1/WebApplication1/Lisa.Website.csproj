@@ -117,6 +117,7 @@
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Models\CreateModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\Password.cs" />
     <Compile Include="Models\Projects.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="User.cs" />
@@ -253,6 +254,7 @@
     <Content Include="Views\Projects\Index.cshtml" />
     <Content Include="Views\User\Admin.cshtml" />
     <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\PassEdit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

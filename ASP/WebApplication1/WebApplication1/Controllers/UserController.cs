@@ -57,12 +57,42 @@ namespace Lisa.Website
             user.AccessFailedCount = user.AccessFailedCount;
             user.UserName = model.Email;
 
-            //if (!ModelState.IsValid)
-            //{
-            //    return View(user);
-            //}
-
             var result = await userManager.UpdateAsync(user);
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error);
+            }
+
+            return RedirectToAction("admin", "user");
+        }
+
+        public ActionResult PassEdit()
+        {
+            /*
+            string Id = this.User.Identity.GetUserId();
+            var user = await userManager.FindByIdAsync(Id);
+
+            if (user == null)
+            {
+                return HttpNotFound();
+            }*/
+
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> PassEdit(Password model)
+        {
+            string Id = this.User.Identity.GetUserId();
+            var user = await userManager.FindByIdAsync(Id);
+
+            if(model.NewPassword != model.PasswordConfirm)
+            {
+                ModelState.AddModelError("", "Wachtwoorden komen niet overeen.");
+            }
+
+            var result = await userManager.ChangePasswordAsync(user.Id, model.CurrentPassword, model.NewPassword);
 
             foreach (var error in result.Errors)
             {

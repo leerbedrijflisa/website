@@ -1,0 +1,18 @@
+﻿@model Password
+@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+@section css{
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/.css")">
+}
+
+<header>
+    <h1>Wachtwoord Wijzigen:</h1>
+</header>
+
+<section>
+    <form method="post">
+        <span>Huidig Wachtwoord: </span><input type="password" name="CurrentPassword" />
+        <span>Nieuw Wachtwoord: </span><input type="password" name="NewPassword"/>
+        <span>Wachtwoord Bevestigen: </span><input type="password" name="PasswordConfirm"/>
+        <p><input type="submit" value="Opslaan" /></p>
+    </form>
+</section>
