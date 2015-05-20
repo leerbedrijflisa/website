@@ -8,7 +8,7 @@ using System.Web;
 using System.Data.Entity;
 using System;
 
-//User gets redirected to this controller when the user is not logged in. This needs to be accesible by anonymous/not logged in users so [AllowAnonymous] is required.
+//User gets redirected to this controller when the user is not logged in. This needs to be accesible by anonymous a.k.a. not logged in users so [AllowAnonymous] is required.
 
 namespace Lisa.Website
 {

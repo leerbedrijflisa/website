@@ -1,6 +1,7 @@
 ﻿
 using Lisa.Website.ViewModels;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -41,22 +42,20 @@ namespace Lisa.Website
         public async Task<ActionResult> Edit(CreateModel model)
         {
             string Id = this.User.Identity.GetUserId();
-            var currentUser = await userManager.FindByIdAsync(Id);
+            var user = await userManager.FindByIdAsync(Id);
 
-            var user = new User
-            {
-                Email = model.Email,
-                EmailConfirmed = currentUser.EmailConfirmed,
-                PasswordHash = currentUser.PasswordHash,
-                SecurityStamp = currentUser.SecurityStamp,
-                PhoneNumber = currentUser.PhoneNumber,
-                PhoneNumberConfirmed = currentUser.PhoneNumberConfirmed,
-                TwoFactorEnabled = currentUser.TwoFactorEnabled,
-                LockoutEndDateUtc = currentUser.LockoutEndDateUtc,
-                LockoutEnabled = currentUser.LockoutEnabled,
-                AccessFailedCount = currentUser.AccessFailedCount,
-                UserName = model.Email
-            };
+            user.Id = user.Id;
+            user.Email = user.Email;
+            user.EmailConfirmed = user.EmailConfirmed;
+            user.PasswordHash = user.PasswordHash;
+            user.SecurityStamp = user.SecurityStamp;
+            user.PhoneNumber = user.PhoneNumber;
+            user.PhoneNumberConfirmed = user.PhoneNumberConfirmed;
+            user.TwoFactorEnabled = user.TwoFactorEnabled;
+            user.LockoutEndDateUtc = user.LockoutEndDateUtc;
+            user.LockoutEnabled = user.LockoutEnabled;
+            user.AccessFailedCount = user.AccessFailedCount;
+            user.UserName = model.Email;
 
             //if (!ModelState.IsValid)
             //{
