@@ -115,6 +115,7 @@
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\UserManagementController.cs" />
     <Compile Include="Models\CreateModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\Password.cs" />
@@ -241,9 +242,9 @@
     <Content Include="Views\Articles\Delete.cshtml" />
     <Content Include="Views\Podcasts\Delete.cshtml" />
     <Content Include="Views\Auth\Login.cshtml" />
-    <Content Include="Views\Auth\Create.cshtml" />
-    <Content Include="Views\Auth\Edit.cshtml" />
-    <Content Include="Views\Auth\Admin.cshtml" />
+    <Content Include="Views\UserManagement\Create.cshtml" />
+    <Content Include="Views\UserManagement\Edit.cshtml" />
+    <Content Include="Views\UserManagement\Admin.cshtml" />
     <None Include="Views\Podcasts\RSS.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\Projects\Add.cshtml" />

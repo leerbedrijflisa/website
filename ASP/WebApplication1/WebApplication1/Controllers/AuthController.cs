@@ -62,53 +62,6 @@ namespace Lisa.Website
             return View();
         }
 
-        public ActionResult Admin()
-        {
-            return View();
-        }
-
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<ActionResult> Create(CreateModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-
-            var user = new User
-            {
-                UserName = model.Email,
-            };
-
-            var result = await userManager.CreateAsync(user, model.Password);
-
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError("", error);
-            }
-
-            return RedirectToAction("admin", "index");
-        }
-
-        public ActionResult Edit(int id)
-        {
-            var user = _db.Users.Find(id);
-            return View(user);
-        }
-
-        [HttpPost]
-        public ActionResult Edit(User EditUser)
-        {
-            _db.Entry(EditUser).State = EntityState.Modified;
-            _db.SaveChanges();
-            return RedirectToAction("Admin");
-        }
-
         public ActionResult LogOut()
         {
             var ctx = Request.GetOwinContext();
