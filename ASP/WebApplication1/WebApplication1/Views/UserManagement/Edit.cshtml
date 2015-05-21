@@ -1,1 +1,17 @@
-﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+﻿@model User
+@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+
+<header>
+    <h1>Gebruiker @Model.UserName aanpassen</h1>
+</header>
+
+<section>
+    @Html.ValidationSummary(false)
+
+    <form method="post">
+        <p>Email: </p><p><input type="text" value="@Model.UserName" name="email" /></p>
+        <p>Password: </p><p><input type="password" value="" name="newPassword" /></p>
+        <p>Password: </p><p><input type="password" value="" name="confirmPassword" /></p>
+        <p><button type="submit">Aanmaken</button></p>
+    </form>
+</section>

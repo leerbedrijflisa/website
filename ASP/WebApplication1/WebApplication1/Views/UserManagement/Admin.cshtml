@@ -1,5 +1,36 @@
-﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+﻿@model IEnumerable<User>
+@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
 
-<h2>Gebruikers Beheren</h2>
+<header>
+    <h1>Gebruikers Beheren</h1>
+</header>
 
-<a href="@Url.Action("Create", "Auth")">Account maken</a>
+<nav>
+    <a href="@Url.Action("Create", "Auth")">Account maken</a>
+</nav>
+
+<section>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Username:</th>
+        </tr>
+
+        @{
+            int i = 0;
+            foreach (var user in Model)
+            {
+                i++;
+                <tr>
+                    <td>@i</td>
+                    <td>@user.UserName</td>
+                    <td>
+                        <a id="iconButton" href="@Url.Action("Edit", "UserManagement", user.Id)" class="fa fa-pencil-square-o"></a>
+                        <a id="iconButton" href="@Url.Action("Delete", "UserManagement", user.Id)" class="fa fa-times"></a>
+                    </td>
+                </tr>
+            }
+          }
+    </table>
+</section>
+

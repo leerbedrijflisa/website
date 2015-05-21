@@ -14,5 +14,6 @@ namespace Lisa.Website
         public DbSet<Article> Articles { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Project> Projects { get; set; }
+        //public DbSet<User> Users { get; set; }
     }
 }

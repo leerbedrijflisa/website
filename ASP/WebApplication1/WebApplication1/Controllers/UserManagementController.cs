@@ -22,7 +22,7 @@ namespace Lisa.Website
 
         public ActionResult Admin()
         {
-            return View();
+            return View(_db.Users);
         }
 
         public ActionResult Create()
@@ -53,6 +53,7 @@ namespace Lisa.Website
             return RedirectToAction("admin", "index");
         }
 
+        [HttpGet]
         public ActionResult Edit(int id)
         {
             var user = _db.Users.Find(id);
@@ -62,11 +63,17 @@ namespace Lisa.Website
         [HttpPost]
         public ActionResult Edit(User EditUser)
         {
+            var user = _db.Users.Find(EditUser.Id);
+            return View(user);
+
+            EditUser.PasswordHash = user.PasswordHash;
+
             _db.Entry(EditUser).State = EntityState.Modified;
             _db.SaveChanges();
             return RedirectToAction("Admin");
         }
 
         private WebsiteContext _db = new WebsiteContext();
+        
     }
 }
