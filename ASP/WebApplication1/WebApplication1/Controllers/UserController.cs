@@ -69,15 +69,6 @@ namespace Lisa.Website
 
         public ActionResult PassEdit()
         {
-            /*
-            string Id = this.User.Identity.GetUserId();
-            var user = await userManager.FindByIdAsync(Id);
-
-            if (user == null)
-            {
-                return HttpNotFound();
-            }*/
-
             return View();
         }
 
