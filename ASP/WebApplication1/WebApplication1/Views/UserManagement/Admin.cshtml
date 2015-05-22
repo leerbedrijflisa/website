@@ -25,8 +25,8 @@
                     <td>@i</td>
                     <td>@user.UserName</td>
                     <td>
-                        <a id="iconButton" href="@Url.Action("Edit", "UserManagement", user.Id)" class="fa fa-pencil-square-o"></a>
-                        <a id="iconButton" href="@Url.Action("Delete", "UserManagement", user.Id)" class="fa fa-times"></a>
+                        <a id="iconButton" href="@Url.Action("Edit", "UserManagement", new { id = user.Id } )" class="fa fa-pencil-square-o"></a>
+                        <a id="iconButton" href="@Url.Action("Delete", "UserManagement", new { id = user.Id } )" class="fa fa-times"></a>
                     </td>
                 </tr>
             }

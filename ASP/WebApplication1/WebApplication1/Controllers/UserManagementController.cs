@@ -54,7 +54,7 @@ namespace Lisa.Website
         }
 
         [HttpGet]
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string id)
         {
             var user = _db.Users.Find(id);
             return View(user);
@@ -64,12 +64,18 @@ namespace Lisa.Website
         public ActionResult Edit(User EditUser)
         {
             var user = _db.Users.Find(EditUser.Id);
-            return View(user);
 
             EditUser.PasswordHash = user.PasswordHash;
+            EditUser.UserName = EditUser.Email;
+            EditUser.Email = null;
 
-            _db.Entry(EditUser).State = EntityState.Modified;
-            _db.SaveChanges();
+            var result = userManager.Update(EditUser);
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error);
+            }
+
             return RedirectToAction("Admin");
         }
 
