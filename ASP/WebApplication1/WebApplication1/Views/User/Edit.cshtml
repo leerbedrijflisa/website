@@ -11,6 +11,10 @@
 <section>
     <form method="post">
         <span>Gebruikersnaam: </span><input type="text" name="email" value="@Model.UserName" />
+        <span>Wachtwoord Aanpassen:</span>
+        <span>(Onderstaande velden leeglaten als het wachtwoord niet veranderd wordt)</span>
+        <span>Nieuw Wachtwoord: </span><input type="password" name="passwordNew" value="" />
+        <span>Wachtwoord Bevestigen: </span><input type="password" name="passwordConfirm" value="" />
         <p><input type="submit" value="Opslaan" /></p>
     </form>
 </section>
