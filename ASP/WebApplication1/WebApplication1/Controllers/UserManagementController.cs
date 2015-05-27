@@ -61,15 +61,27 @@ namespace Lisa.Website
         }
 
         [HttpPost]
-        public ActionResult Edit(User EditUser)
+        public async Task<ActionResult> Edit(User EditUser)
         {
-            var user = _db.Users.Find(EditUser.Id);
+            var user = await userManager.FindByIdAsync(EditUser.Id);
 
-            EditUser.PasswordHash = user.PasswordHash;
-            EditUser.UserName = EditUser.Email;
-            EditUser.Email = null;
+            if (EditUser.PasswordNew != null)
+            {
+                if (EditUser.PasswordNew != EditUser.PasswordConfirm)
+                {
+                    ModelState.AddModelError("", "Wachtwoorden zijn niet gelijk!");
+                }
+                else
+                {
+                    userManager.RemovePassword(user.Id);
+                    userManager.AddPassword(user.Id, EditUser.PasswordNew);
+                }
+            }
 
-            var result = userManager.Update(EditUser);
+            user.UserName = EditUser.Email;
+            
+
+            var result = await userManager.UpdateAsync(user);
 
             foreach (var error in result.Errors)
             {
