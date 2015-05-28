@@ -6,4 +6,5 @@ public class User : IdentityUser
 {
     public string PasswordConfirm {get; set;}
     public string PasswordNew {get; set;}
+    public bool ChangePassword { get; set; }
 }

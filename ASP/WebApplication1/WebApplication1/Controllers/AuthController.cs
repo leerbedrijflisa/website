@@ -54,6 +54,11 @@ namespace Lisa.Website
             {
                 await SignIn(user);
 
+                if(user.ChangePassword == true)
+                {
+                    return RedirectToAction("ChangePass", "User", GetRedirectUrl(model.ReturnUrl));
+                }
+
                 return Redirect(GetRedirectUrl(model.ReturnUrl));
             }
 

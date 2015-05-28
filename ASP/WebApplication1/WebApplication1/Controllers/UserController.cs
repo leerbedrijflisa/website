@@ -51,7 +51,8 @@ namespace Lisa.Website
             {
                 UserName = model.Email,
                 PasswordNew = null,
-                PasswordConfirm = null
+                PasswordConfirm = null,
+                ChangePassword = true
             };
 
             var result = await userManager.CreateAsync(user, model.Password);
@@ -81,13 +82,14 @@ namespace Lisa.Website
             {
                 if (EditUser.PasswordNew != EditUser.PasswordConfirm)
                 {
-                    ModelState.AddModelError("", "Wachtwoorden zijn niet gelijk!");
+                    ModelState.AddModelError("", "De ingevulde wachtwoorden komen niet overeen.");
                     errorState = true;
                 }
                 else
                 {
                     userManager.RemovePassword(user.Id);
                     userManager.AddPassword(user.Id, EditUser.PasswordNew);
+                    user.ChangePassword = true;
                 }
             }
 
@@ -112,6 +114,58 @@ namespace Lisa.Website
             else
             {
                 return RedirectToAction("Admin");
+            }
+        }
+
+        public ActionResult ChangePass()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> ChangePass(ChangePass changePass)
+        {
+            var Id = this.User.Identity.GetUserId();
+            var user = await userManager.FindByIdAsync(Id);
+            var errorState = false;
+
+            if (changePass.PasswordNew == null || changePass.PasswordConfirm == null)
+            {
+                ModelState.AddModelError("", "U bent vergeten een wachtwoord in te vullen.");
+                errorState = true;
+            }
+            else
+            {
+                if (changePass.PasswordNew != changePass.PasswordConfirm)
+                {
+                    ModelState.AddModelError("", "De ingevulde wachtwoorden komen niet overeen.");
+                    errorState = true;
+                }
+                else
+                {
+                    userManager.RemovePassword(user.Id);
+                    userManager.AddPassword(user.Id, changePass.PasswordNew);
+                }
+            }
+
+            user.ChangePassword = false;
+
+            var result = await userManager.UpdateAsync(user);
+
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error);
+                errorState = true;
+            }
+
+            if (errorState == true)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction(changePass.ReturnUrl);
             }
         }
 
