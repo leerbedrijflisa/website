@@ -41,6 +41,8 @@ namespace Lisa.Website
             var user = new User
             {
                 UserName = model.Email,
+                PasswordNew = null,
+                PasswordConfirm = null
             };
 
             var result = await userManager.CreateAsync(user, model.Password);
@@ -64,12 +66,14 @@ namespace Lisa.Website
         public async Task<ActionResult> Edit(User EditUser)
         {
             var user = await userManager.FindByIdAsync(EditUser.Id);
+            var errorState = false;
 
             if (EditUser.PasswordNew != null)
             {
                 if (EditUser.PasswordNew != EditUser.PasswordConfirm)
                 {
                     ModelState.AddModelError("", "Wachtwoorden zijn niet gelijk!");
+                    errorState = true;
                 }
                 else
                 {
@@ -79,16 +83,27 @@ namespace Lisa.Website
             }
 
             user.UserName = EditUser.Email;
+            user.PasswordNew = null;
+            user.PasswordConfirm = null;
             
-
             var result = await userManager.UpdateAsync(user);
-
+            
+            
             foreach (var error in result.Errors)
             {
                 ModelState.AddModelError("", error);
+                errorState = true;
             }
 
-            return RedirectToAction("Admin");
+            if (errorState == true)
+            {
+                EditUser.UserName = EditUser.Email;
+                return View(EditUser);
+            }
+            else
+            {
+                return RedirectToAction("Admin");
+            }
         }
 
         private WebsiteContext _db = new WebsiteContext();
