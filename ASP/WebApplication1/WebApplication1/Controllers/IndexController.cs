@@ -4,11 +4,26 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Lisa.Website.ViewModels;
 
 namespace Lisa.Website.Controllers
 {
     public class IndexController : BaseController
     {
+        private readonly UserManager<User> userManager;
+
+        public IndexController(): this(Startup.UserManagerFactory.Invoke())
+        {
+        }
+
+        public IndexController(UserManager<User> userManager)
+        {
+            this.userManager = userManager;
+        }
+
+
         [AllowAnonymous]
         public ActionResult Index()
         {
@@ -17,7 +32,9 @@ namespace Lisa.Website.Controllers
 
         public ActionResult Admin()
         {
-            return View();
+            var Id = this.User.Identity.GetUserId();
+            var user = userManager.FindById(Id);
+            return View(user);
         }
 
         public ActionResult Contact()

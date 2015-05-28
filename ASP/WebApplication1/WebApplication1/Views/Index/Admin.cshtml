@@ -1,4 +1,5 @@
-﻿@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+﻿@model User
+@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
 @section css{
 	<link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)" href="@Url.Content("~/Content/CSS/Index/Admin.css")">
 }
@@ -31,12 +32,12 @@
 
 <section>
 	<h2>Accountbeheer:</h2>
-	<a href="@Url.Action("Admin", "UserManagement")">Accounts beheren</a>
-	<a href="@Url.Action("Create", "UserManagement")">Account maken</a>
+	<a href="@Url.Action("Admin", "User")">Accounts beheren</a>
+	<a href="@Url.Action("Create", "User")">Account maken</a>
 </section>
 
 <section>
     <h2>Mijn Account</h2>
-    <a href="@Url.Action("Admin", "User")">Gegevens Beheren</a>
-    <a href="@Url.Action("PassEdit", "User")">Wachtwoord Wijzigen</a>
+    <a href="@Url.Action("MyAccount", "User", new { id = Model.Id })">Gegevens Beheren</a>
+    <a href="@Url.Action("Edit", "User", new { id = Model.Id })">Gegevens Wijzigen</a>
 </section>

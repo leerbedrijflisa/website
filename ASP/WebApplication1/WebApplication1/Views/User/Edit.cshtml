@@ -1,20 +1,18 @@
 ﻿@model User
 @{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
-@section css{
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/.css")">
-}
 
 <header>
-    <h1>Mijn gegevens aanpassen:</h1>
+    <h1>Gebruiker @Model.UserName aanpassen</h1>
 </header>
 
 <section>
+    @Html.ValidationSummary(false)
+
     <form method="post">
-        <span>Gebruikersnaam: </span><input type="text" name="email" value="@Model.UserName" />
-        @*<span>Wachtwoord Aanpassen:</span>
-        <span>(Onderstaande velden leeglaten als het wachtwoord niet veranderd wordt)</span>
-        <span>Nieuw Wachtwoord: </span><input type="password" name="passwordNew" value="" />
-        <span>Wachtwoord Bevestigen: </span><input type="password" name="passwordConfirm" value="" />*@
-        <p><input type="submit" value="Opslaan" /></p>
+        <p>Email: </p><p><input type="text" value="@Model.UserName" name="email" /></p>
+        <p>Wachtwoord aanpassen:</p>
+        <p>Wachtwoord: </p><p><input type="text" value="" name="passwordNew" /></p>
+        <p>Wachtwoord bevestigen: </p><p><input type="text" value="" name="passwordConfirm" /></p>
+        <p><button type="submit">Aanpassen</button></p>
     </form>
 </section>

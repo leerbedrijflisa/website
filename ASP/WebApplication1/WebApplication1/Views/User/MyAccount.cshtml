@@ -1,0 +1,22 @@
+﻿@model User
+@{Layout = "~/Views/Shared/_ManagementLayout.cshtml";}
+
+<header>
+    <h1>Gebruikers Beheren</h1>
+</header>
+
+<nav>
+    <a href="@Url.Action("Edit", "User", new { id = Model.Id })">Mijn Gegevens Aanpasen</a>
+</nav>
+
+<section>
+    <table>
+        <tr>
+            <th>Username:</th>
+        </tr>
+
+        <tr>
+            <td>@Model.UserName</td>         
+        </tr>
+    </table>
+</section>

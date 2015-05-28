@@ -1,13 +1,14 @@
-﻿
-using Lisa.Website.ViewModels;
+﻿using Lisa.Website.ViewModels;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
+using System.Data.Entity;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+
 namespace Lisa.Website
 {
-    public class UserController:BaseController
+    public class UserController : BaseController
     {
         private readonly UserManager<User> userManager;
 
@@ -22,77 +23,99 @@ namespace Lisa.Website
 
         public ActionResult Admin()
         {
+            ViewBag.LoggedUserId = this.User.Identity.GetUserId();
+            return View(_db.Users);
+        }
+
+        public ActionResult MyAccount()
+        {
+            var Id = this.User.Identity.GetUserId();
+            var user = userManager.FindById(Id);
+            return View(user);
+        }
+
+        public ActionResult Create()
+        {
             return View();
         }
 
-        public async Task<ActionResult> Edit()
+        [HttpPost]
+        public async Task<ActionResult> Create(CreateModel model)
         {
-            string Id = this.User.Identity.GetUserId();
-            var user = await userManager.FindByIdAsync(Id);
-
-            if (user == null)
+            if (!ModelState.IsValid)
             {
-                return HttpNotFound();
+                return View();
             }
 
+            var user = new User
+            {
+                UserName = model.Email,
+                PasswordNew = null,
+                PasswordConfirm = null
+            };
+
+            var result = await userManager.CreateAsync(user, model.Password);
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error);
+            }
+
+            return RedirectToAction("admin", "index");
+        }
+
+        [HttpGet]
+        public ActionResult Edit(string id)
+        {
+            var user = _db.Users.Find(id);
             return View(user);
         }
 
         [HttpPost]
-        public async Task<ActionResult> Edit(CreateModel model)
+        public async Task<ActionResult> Edit(User EditUser)
         {
-            string Id = this.User.Identity.GetUserId();
-            var user = await userManager.FindByIdAsync(Id);
+            var user = await userManager.FindByIdAsync(EditUser.Id);
+            var errorState = false;
 
-            user.Id = user.Id;
-            user.Email = user.Email;
-            user.EmailConfirmed = user.EmailConfirmed;
-            user.PasswordHash = user.PasswordHash;
-            user.SecurityStamp = user.SecurityStamp;
-            user.PhoneNumber = user.PhoneNumber;
-            user.PhoneNumberConfirmed = user.PhoneNumberConfirmed;
-            user.TwoFactorEnabled = user.TwoFactorEnabled;
-            user.LockoutEndDateUtc = user.LockoutEndDateUtc;
-            user.LockoutEnabled = user.LockoutEnabled;
-            user.AccessFailedCount = user.AccessFailedCount;
-            user.UserName = model.Email;
+            if (EditUser.PasswordNew != null)
+            {
+                if (EditUser.PasswordNew != EditUser.PasswordConfirm)
+                {
+                    ModelState.AddModelError("", "Wachtwoorden zijn niet gelijk!");
+                    errorState = true;
+                }
+                else
+                {
+                    userManager.RemovePassword(user.Id);
+                    userManager.AddPassword(user.Id, EditUser.PasswordNew);
+                }
+            }
 
+            user.UserName = EditUser.Email;
+            user.PasswordNew = null;
+            user.PasswordConfirm = null;
+            
             var result = await userManager.UpdateAsync(user);
-
+            
+            
             foreach (var error in result.Errors)
             {
                 ModelState.AddModelError("", error);
+                errorState = true;
             }
 
-            return RedirectToAction("admin", "user");
-        }
-
-        public ActionResult PassEdit()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<ActionResult> PassEdit(Password model)
-        {
-            string Id = this.User.Identity.GetUserId();
-            var user = await userManager.FindByIdAsync(Id);
-
-            if(model.NewPassword != model.PasswordConfirm)
+            if (errorState == true)
             {
-                ModelState.AddModelError("", "Wachtwoorden komen niet overeen.");
+                EditUser.UserName = EditUser.Email;
+                return View(EditUser);
             }
-
-            var result = await userManager.ChangePasswordAsync(user.Id, model.CurrentPassword, model.NewPassword);
-
-            foreach (var error in result.Errors)
+            else
             {
-                ModelState.AddModelError("", error);
+                return RedirectToAction("Admin");
             }
-
-            return RedirectToAction("admin", "user");
         }
 
         private WebsiteContext _db = new WebsiteContext();
+        
     }
 }
