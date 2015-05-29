@@ -88,11 +88,17 @@ namespace Lisa.Website
                 else
                 {
                     userManager.RemovePassword(user.Id);
-                    userManager.AddPassword(user.Id, EditUser.PasswordNew);
+                    var addResult = userManager.AddPassword(user.Id, EditUser.PasswordNew);
                     user.ChangePassword = true;
+
+                    foreach (var error in addResult.Errors)
+                    {
+                        ModelState.AddModelError("", error);
+                        errorState = true;
+                    }
                 }
             }
-
+            
             user.UserName = EditUser.Email;
             user.PasswordNew = null;
             user.PasswordConfirm = null;
@@ -144,7 +150,7 @@ namespace Lisa.Website
                 else
                 {
                     userManager.RemovePassword(user.Id);
-                    userManager.AddPassword(user.Id, changePass.PasswordNew);
+                    userManager.AddPassword(Id, changePass.PasswordNew);
                 }
             }
 
@@ -165,11 +171,10 @@ namespace Lisa.Website
             }
             else
             {
-                return RedirectToAction(changePass.ReturnUrl);
+                return RedirectToAction("Admin","Index");
             }
         }
 
-        private WebsiteContext _db = new WebsiteContext();
-        
+        private WebsiteContext _db = new WebsiteContext();  
     }
 }
