@@ -12,18 +12,6 @@ namespace Lisa.Website.Controllers
 {
     public class IndexController : BaseController
     {
-        private readonly UserManager<User> userManager;
-
-        public IndexController(): this(Startup.UserManagerFactory.Invoke())
-        {
-        }
-
-        public IndexController(UserManager<User> userManager)
-        {
-            this.userManager = userManager;
-        }
-
-
         [AllowAnonymous]
         public ActionResult Index()
         {

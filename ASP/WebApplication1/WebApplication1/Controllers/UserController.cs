@@ -10,17 +10,6 @@ namespace Lisa.Website
 {
     public class UserController : BaseController
     {
-        private readonly UserManager<User> userManager;
-
-        public UserController(): this(Startup.UserManagerFactory.Invoke())
-        {
-        }
-
-        public UserController(UserManager<User> userManager)
-        {
-            this.userManager = userManager;
-        }
-
         public ActionResult Admin()
         {
             ViewBag.LoggedUserId = this.User.Identity.GetUserId();
