@@ -75,6 +75,8 @@ namespace Lisa.Website
             var user = await userManager.FindByIdAsync(EditUser.Id);
             var errorState = false;
 
+            user.ChangePassword = EditUser.ChangePassword;
+
             if (EditUser.PasswordNew != null)
             {
                 if (EditUser.PasswordNew != EditUser.PasswordConfirm)

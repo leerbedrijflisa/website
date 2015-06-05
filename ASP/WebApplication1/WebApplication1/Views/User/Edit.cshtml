@@ -11,6 +11,22 @@
     <form method="post">
         <p>Email: </p><p><input type="text" value="@Model.UserName" name="email" /></p>
         <p>Wachtwoord aanpassen:</p>
+        <p>Gebruiker verplichten zijn wachtwoord aan te passen: </p>
+        <p>
+            <select name="ChangePassword">
+                @if (Model.ChangePassword == true)
+                {
+                    <option value="true">Wachtwoord aanpassen</option>
+                    <option value="false">Wachtwoord behouden</option>
+                }
+                else
+                {
+                    <option value="false">Wachtwoord behouden</option>
+                    <option value="true">Wachtwoord aanpassen</option>
+                }
+            </select>
+        </p>
+
         <p>Wachtwoord: </p><p><input type="text" value="" name="passwordNew" /></p>
         <p>Wachtwoord bevestigen: </p><p><input type="text" value="" name="passwordConfirm" /></p>
         <p><button type="submit">Aanpassen</button></p>

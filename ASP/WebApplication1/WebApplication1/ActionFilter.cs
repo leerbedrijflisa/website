@@ -44,8 +44,6 @@ namespace Lisa.Website
                         { "action", "ChangePass" } 
                     });
                 }
-
-                
             }
         }
 
