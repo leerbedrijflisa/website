@@ -112,6 +112,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionFilter.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -126,7 +127,6 @@
     <Content Include="Content\CSS\Articles\articleDetail.css" />
     <Content Include="Content\CSS\Articles\articleIndex.css" />
     <Content Include="Content\CSS\Auth\Login.css" />
-    <Content Include="Content\CSS\Index\Contact.css" />
     <Content Include="Content\CSS\Projects\projectIndex.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.min.css" />

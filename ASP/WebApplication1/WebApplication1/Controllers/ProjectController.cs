@@ -14,11 +14,13 @@ namespace Lisa.Website.Controllers
             return View(GetProject());
         }
 
+        [PasswordCheck]
         public ActionResult Admin()
         {
             return View(GetProject());
         }
 
+        [PasswordCheck]
         public ActionResult Delete(int? id)
         {
             var project = _db.Projects.Find(id);
@@ -45,6 +47,7 @@ namespace Lisa.Website.Controllers
             return RedirectToAction("Admin");
         }
 
+        [PasswordCheck]
         public ActionResult Add()
         {
             return View();
@@ -66,6 +69,7 @@ namespace Lisa.Website.Controllers
             return RedirectToAction("Admin");
         }
 
+        [PasswordCheck]
         public ActionResult Edit(int id)
         {
             var project = _db.Projects.Find(id);

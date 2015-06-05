@@ -18,25 +18,12 @@ namespace Lisa.Website.Controllers
             return View();
         }
 
+        [PasswordCheck]
         public ActionResult Admin()
         {
             var Id = this.User.Identity.GetUserId();
             var user = userManager.FindById(Id);
             return View(user);
-        }
-
-        public ActionResult Contact()
-        {
-            return View(_db.Contacts.Find(1));
-        }
-
-        [HttpPost]
-        public ActionResult Contact(Contact contact)
-        {
-            contact.Id = 1;
-            _db.Entry(contact).State = EntityState.Modified;
-            _db.SaveChanges();
-            return RedirectToAction("Admin");
         }
 
         private WebsiteContext _db = new WebsiteContext();

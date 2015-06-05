@@ -10,12 +10,19 @@ namespace Lisa.Website
 {
     public class UserController : BaseController
     {
+        public new RedirectToRouteResult RedirectToAction(string action, string controller)
+        {
+            return base.RedirectToAction(action, controller);
+        }
+
+        [PasswordCheck]
         public ActionResult Admin()
         {
             ViewBag.LoggedUserId = this.User.Identity.GetUserId();
             return View(_db.Users);
         }
 
+        [PasswordCheck]
         public ActionResult MyAccount()
         {
             var Id = this.User.Identity.GetUserId();
@@ -23,6 +30,7 @@ namespace Lisa.Website
             return View(user);
         }
 
+        [PasswordCheck]
         public ActionResult Create()
         {
             return View();
@@ -54,7 +62,7 @@ namespace Lisa.Website
             return RedirectToAction("admin", "index");
         }
 
-        [HttpGet]
+        [PasswordCheck]
         public ActionResult Edit(string id)
         {
             var user = _db.Users.Find(id);
@@ -145,7 +153,7 @@ namespace Lisa.Website
 
             user.ChangePassword = false;
 
-            var result = await userManager.UpdateAsync(user);
+            var result = userManager.Update(user);
 
 
             foreach (var error in result.Errors)

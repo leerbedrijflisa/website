@@ -35,11 +35,13 @@ namespace Lisa.Website
             return View(article);
         }
 
+        [PasswordCheck]
         public ActionResult Admin()
         {
             return View(GetArticles());
         }
 
+        [PasswordCheck]
         public ActionResult Delete(int? id)
         {
             var article = _db.Articles.Find(id);
@@ -71,6 +73,7 @@ namespace Lisa.Website
             return RedirectToAction("Admin");
         }
 
+        [PasswordCheck]
         public ActionResult Add()
         {
             return View();
@@ -90,6 +93,7 @@ namespace Lisa.Website
             return RedirectToAction("Admin");
         }
 
+        [PasswordCheck]
         public ActionResult Edit(int id)
         {
             var article = _db.Articles.Find(id);

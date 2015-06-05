@@ -15,7 +15,6 @@ namespace Lisa.Website
     public class AuthController : BaseController
     {
         [AllowAnonymous]
-        [HttpGet]
         public ActionResult LogIn(string returnUrl)
         {
             var model = new LogInModel
@@ -42,10 +41,12 @@ namespace Lisa.Website
             {
                 await SignIn(user);
 
-                if(user.ChangePassword == true)
-                {
-                    return RedirectToAction("ChangePass", "User", GetRedirectUrl(model.ReturnUrl));
-                }
+                //RE ENABLE IF BASECONTROLLER CHECK PASS CHANGE CODE DOES NOT WORK!
+
+                //if(user.ChangePassword == true)
+                //{
+                //    return RedirectToAction("ChangePass", "User", GetRedirectUrl(model.ReturnUrl));
+                //}
 
                 return Redirect(GetRedirectUrl(model.ReturnUrl));
             }
