@@ -149,7 +149,13 @@ namespace Lisa.Website
                 else
                 {
                     userManager.RemovePassword(user.Id);
-                    userManager.AddPassword(Id, changePass.PasswordNew);
+                    var addResult = userManager.AddPassword(user.Id, changePass.PasswordNew);
+
+                    foreach (var error in addResult.Errors)
+                    {
+                        ModelState.AddModelError("", error);
+                        errorState = true;
+                    }
                 }
             }
 
