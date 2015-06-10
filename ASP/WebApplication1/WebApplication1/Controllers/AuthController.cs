@@ -46,14 +46,6 @@ namespace Lisa.Website
                 if (user != null)
                 {
                     await SignIn(user);
-
-                    //RE ENABLE IF BASECONTROLLER CHECK PASS CHANGE CODE DOES NOT WORK!
-
-                    //if(user.ChangePassword == true)
-                    //{
-                    //    return RedirectToAction("ChangePass", "User", GetRedirectUrl(model.ReturnUrl));
-                    //}
-
                     return Redirect(GetRedirectUrl(model.ReturnUrl));
                 }
 

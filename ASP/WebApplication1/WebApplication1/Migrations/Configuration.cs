@@ -19,18 +19,10 @@ namespace Lisa.Website.Migrations
 
         protected override void Seed(Lisa.Website.WebsiteContext context)
         {
-            //var user = new User
-            //{
-            //    UserName = "administrator@leerbedrijflisa.nl"
-            //};
-
-            //public Configuration(UserManager<User> userManager)
-            //{
-            //    this.userManager = userManager;
-            //}
-
             var userManager = new UserManager<User>(new UserStore<User>(context));
-            // Add a test administrator account (name=admin pass=iets)
+
+            // Add a test administrator account (name=admin pass=something)
+
             var user = new User();
             user.Email = "Administrator@leerbedrijflisa.nl";
             user.Activity = true;
@@ -38,21 +30,7 @@ namespace Lisa.Website.Migrations
             
             userManager.CreateAsync(user, "j%Dvlz4&keI!iPGebOtWeV4G");
 
-            //NOTE: Zorg at de code een default user aanmaakt door middel van de bestaande usermanager.
-            //(De andere methode werkte niet omdat je niet kan nagaan aan welke eisen je user moet voldoen en deze er niet aan voldeed).
-
-            //var DefaultAdministrator = new User
-            //{
-            //    UserName = "administrator",
-            //    PasswordHash = "AJKAyuBOWURPHBb5vFcL/+aQZjQdCtm0Tx+Fs0oAQ+TT2zqLdNIHhEo0aMUhcl6xJQ==",
-            //    SecurityStamp = Guid.NewGuid().ToString()
-            //};
-
-            //Password for administrator: j%Dvlz4&keI!iPGebOtWeV4G
-
-            //context.Users.Add(DefaultAdministrator);
-            //context.SaveChanges();
-
+            //NOTE: make sure the code generates a default user with the usermanager.
         }
     }
 }
