@@ -34,7 +34,7 @@ namespace Lisa.Website
             if (authUser != null && authUser.Identity.IsAuthenticated == true)
             {
                 var Id = authUser.Identity.GetUserId();
-                var user = userManager.FindById(Id);
+                var user = _db.Users.Find(Id);
 
                 if (user.ChangePassword == true)
                 {
@@ -48,5 +48,7 @@ namespace Lisa.Website
         }
 
         public ClaimsPrincipal User { get; set; }
+
+        private WebsiteContext _db = new WebsiteContext();  
     }
 }
