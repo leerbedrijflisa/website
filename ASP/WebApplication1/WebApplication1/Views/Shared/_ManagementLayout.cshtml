@@ -11,6 +11,19 @@
 	</head>
 
 	<body>
-		@RenderBody()
+        <nav id="menu">
+            <ul>
+                <li><a target="_blank" href="@Url.Action("Index", "Index")">&nbsp;</a></li>
+                <li><a href="@Url.Action("Admin", "Index")"><span>CMS Home</span></a></li>
+                <li><a href="@Url.Action("Admin", "Podcasts")"><span>Podcasts</span></a></li>
+                <li><a href="@Url.Action("Admin", "Projects")"><span>Projecten</span></a></li>
+                <li><a href="@Url.Action("Admin", "Articles")"><span>Artikelen</span></a></li>
+                <li><a href="@Url.Action("Admin", "User")"><span>Gebruikers</span></a></li>
+                <li><a href="@Url.Action("MyAccount", "User")"><span>Mijn Account</span></a></li>
+                <li><a target="_blank" href="@Url.Action("Index", "Index")"><span>Website Hoofdpagina</span></a></li>
+            </ul>
+        </nav>
+
+        @RenderBody()
 	</body>
 </html>

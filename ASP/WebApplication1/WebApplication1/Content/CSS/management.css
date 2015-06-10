@@ -1,6 +1,85 @@
 ﻿/*The css is ordered in the way the html is nested in the managementlayout.cshtml. */
 
-#importnantMessage
+body
 {
-	color: red;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*the menu*/
+
+#menu
+{
+	background-color: #DC0000;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	top: 0px;
+}
+
+#menu ul
+{
+	padding: 0px;
+	margin: 0 auto 0 auto;
+}
+
+#menu li
+{
+	padding: 0px;
+	text-decoration: none;
+	display: inline;
+	text-align: center;
+	margin: 0;
+}
+
+#menu li:first-child a
+{
+	background-color: transparent;	/* make sure background color doesn't change on hover */
+	background-image: url(../Images/Lisa-logo.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+    width: 100px;
+}
+
+#menu a
+{
+	float: left;
+	color: white;
+	text-decoration: none;
+	margin: 0;
+    display: block;
+	height: 35px;
+	text-align: center;
+	padding: 20px 20px 0 20px;
+}
+
+#menu a:hover
+{
+	background-color: #FF0000;
+}
+
+#menu a:active
+{
+	background-color: #BE0000;
+}
+
+/*End of menu*/
+
+header
+{
+    margin: 55px 10px 10px 10px;
+    padding-top: 10px;
+}
+
+nav
+{
+    margin: 10px;
+}
+
+section
+{
+    margin: 10px;
 }
