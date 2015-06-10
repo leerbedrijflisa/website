@@ -86,14 +86,21 @@ namespace Lisa.Website
                 }
                 else
                 {
-                    userManager.RemovePassword(user.Id);
-                    var addResult = userManager.AddPassword(user.Id, EditUser.PasswordNew);
-                    user.ChangePassword = true;
-
-                    foreach (var error in addResult.Errors)
+                    if(EditUser.PasswordNew.Length > 5)
                     {
-                        ModelState.AddModelError("", error);
-                        errorState = true;
+                        userManager.RemovePassword(user.Id);
+                        var addResult = userManager.AddPassword(user.Id, EditUser.PasswordNew);
+                        user.ChangePassword = true;
+
+                        foreach (var error in addResult.Errors)
+                        {
+                            ModelState.AddModelError("", error);
+                            errorState = true;
+                        }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Het wachtwoord moet minimaal 6 tekens zijn.");
                     }
                 }
             }
@@ -148,18 +155,27 @@ namespace Lisa.Website
                 }
                 else
                 {
-                    userManager.RemovePassword(user.Id);
-                    var addResult = userManager.AddPassword(user.Id, changePass.PasswordNew);
-
-                    foreach (var error in addResult.Errors)
+                    if(changePass.PasswordNew.Length > 5)
                     {
-                        ModelState.AddModelError("", error);
+                        user.ChangePassword = false;
+
+                        userManager.RemovePassword(user.Id);
+                        var addResult = userManager.AddPassword(user.Id, changePass.PasswordNew);
+
+                        foreach (var error in addResult.Errors)
+                        {
+                            ModelState.AddModelError("", error);
+                            errorState = true;
+                            user.ChangePassword = true;
+                        }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Het wachtwoord moet minimaal 6 tekens zijn.");
                         errorState = true;
                     }
                 }
             }
-
-            user.ChangePassword = false;
 
             var result = userManager.Update(user);
 
