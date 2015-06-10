@@ -16,6 +16,8 @@
         <tr>
             <th>#</th>
             <th>Username:</th>
+            <th>Account activiteit:</th>
+            <th>Wachtwoord veranderen bij login:</th>
         </tr>
 
         @{
@@ -26,6 +28,25 @@
                 <tr>
                     <td>@i</td>
                     <td>@user.UserName</td>
+
+                    @if (user.Activity == true)
+                    {
+                        <td>Actief</td>
+                    }
+                    else
+                    {
+                        <td>Inactief</td>
+                    }
+                    
+                    @if (user.ChangePassword == true)
+                    {
+                        <td>Veranderen</td>
+                    }
+                    else
+                    {
+                        <td>Geen actie</td>
+                    }
+
                     <td>
                         <a id="iconButton" href="@Url.Action("Edit", "User", new { id = user.Id } )" class="fa fa-pencil-square-o"></a>
                         <a id="iconButton" href="@Url.Action("Delete", "User", new { id = user.Id } )" class="fa fa-times"></a>

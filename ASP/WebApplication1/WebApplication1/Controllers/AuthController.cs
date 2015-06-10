@@ -37,22 +37,30 @@ namespace Lisa.Website
 
             var user = await userManager.FindAsync(model.Email, model.Password);
 
-            if (user != null)
+            if (user.Activity == false)
             {
-                await SignIn(user);
+                ModelState.AddModelError("", "Uw account is inactief. Neem contact op met een Administrator.");
+            }
+            else
+            {
+                if (user != null)
+                {
+                    await SignIn(user);
 
-                //RE ENABLE IF BASECONTROLLER CHECK PASS CHANGE CODE DOES NOT WORK!
+                    //RE ENABLE IF BASECONTROLLER CHECK PASS CHANGE CODE DOES NOT WORK!
 
-                //if(user.ChangePassword == true)
-                //{
-                //    return RedirectToAction("ChangePass", "User", GetRedirectUrl(model.ReturnUrl));
-                //}
+                    //if(user.ChangePassword == true)
+                    //{
+                    //    return RedirectToAction("ChangePass", "User", GetRedirectUrl(model.ReturnUrl));
+                    //}
 
-                return Redirect(GetRedirectUrl(model.ReturnUrl));
+                    return Redirect(GetRedirectUrl(model.ReturnUrl));
+                }
+
+                //Login is false.
+                ModelState.AddModelError("", "Het wachwoord of de gebruikersnaam klopt niet.");
             }
 
-            //Login is false.
-            ModelState.AddModelError("", "Invalid email or password");
             return View();
         }
 

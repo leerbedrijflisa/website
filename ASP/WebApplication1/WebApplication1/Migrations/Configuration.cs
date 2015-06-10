@@ -29,9 +29,13 @@ namespace Lisa.Website.Migrations
             //    this.userManager = userManager;
             //}
 
-            var userManager = new UserManager<IdentityUser>(new UserStore<IdentityUser>(context));
+            var userManager = new UserManager<User>(new UserStore<User>(context));
             // Add a test administrator account (name=admin pass=iets)
-			var user = new IdentityUser("administrator@leerbedrijflisa.nl");
+            var user = new User();
+            user.Email = "Administrator@leerbedrijflisa.nl";
+            user.Activity = true;
+            user.ChangePassword = true;
+            
             userManager.CreateAsync(user, "j%Dvlz4&keI!iPGebOtWeV4G");
 
             //NOTE: Zorg at de code een default user aanmaakt door middel van de bestaande usermanager.

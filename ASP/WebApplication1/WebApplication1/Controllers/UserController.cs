@@ -75,8 +75,6 @@ namespace Lisa.Website
             var user = await userManager.FindByIdAsync(EditUser.Id);
             var errorState = false;
 
-            user.ChangePassword = EditUser.ChangePassword;
-
             if (EditUser.PasswordNew != null)
             {
                 if (EditUser.PasswordNew != EditUser.PasswordConfirm)
@@ -104,10 +102,12 @@ namespace Lisa.Website
                     }
                 }
             }
-            
+
+            user.ChangePassword = EditUser.ChangePassword;
             user.UserName = EditUser.Email;
             user.PasswordNew = null;
             user.PasswordConfirm = null;
+            user.Activity = EditUser.Activity;
             
             var result = await userManager.UpdateAsync(user);
             

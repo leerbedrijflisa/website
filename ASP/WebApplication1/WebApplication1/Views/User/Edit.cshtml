@@ -9,6 +9,22 @@
     @Html.ValidationSummary(false)
 
     <form method="post">
+        <p>Account actief/inactief: </p>
+        <p>
+            <select name="Activity">
+                @if (Model.Activity == true)
+                {
+                    <option value="true">Actief</option>
+                    <option value="false">Inactief</option>
+                }
+                else
+                {
+                    <option value="false">Inactief</option>
+                    <option value="true">Actief</option>
+                }
+            </select>
+        </p>
+
         <p>Email: </p><p><input type="text" value="@Model.UserName" name="email" /></p>
         <p>Wachtwoord aanpassen:</p>
         <p>Gebruiker verplichten zijn wachtwoord aan te passen: </p>
